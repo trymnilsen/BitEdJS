@@ -12,8 +12,8 @@
 	<p>* Pane-resizing is disabled because ui.draggable.js is not linked</p>
 	<p>* Pane-animation is disabled because ui.effects.js is not linked</p>
 </div>
-<div class="ui-layout-north">North</div>
-<div class="ui-layout-south">South</div>
+<div class="ui-layout-north" style="background: red;">North</div>
+<div class="ui-layout-south"><div id="editorPanelSouth" ></div></div>
 <div class="ui-layout-east">East</div>
 <div class="ui-layout-west">West</div>
 </body>

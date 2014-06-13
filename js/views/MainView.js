@@ -5,7 +5,8 @@ define([
   'underscore',
   'backbone',
   'jquery.layout',
-], function($, _, Backbone){
+  'text!templates/debug/profileTemplate.html'
+], function($, _, Backbone, profileTemplate){
   var MainView = Backbone.View.extend({
     el: $('body'),
     render: function(){
@@ -16,6 +17,8 @@ define([
         west__minSize: 150,
         fxName: 'none'
         });
+      this.$el.html(profileTemplate);
+      //console.log($('#editorPanelSouth').append('<h1>Hellooooo</h1>'));
 
     }
   });

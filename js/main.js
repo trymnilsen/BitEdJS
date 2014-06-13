@@ -8,7 +8,8 @@ require.config({
     "jquery.layout": "libs/jquerylayout/jquery.layout-latest",
     "jqueryui":"libs/jqueryui/jquery-ui-latest",
     "underscore": "libs/underscore/underscore",
-    "backbone": "libs/backbone/backbone"
+    "backbone": "libs/backbone/backbone",
+    "templates": "../templates"
   },
   "shim": {
   	"jquery.layout" : ["jquery","jqueryui"]
