@@ -1,43 +1,51 @@
 'use strict';
 // Filename: router.js
+// Filename: router.js
 define([
   'jquery',
   'underscore',
   'backbone',
-  'views/MainView'
-], function($, _, Backbone, MainView) {
+  'views/HomeView'
+], function($, _, Backbone, HomeView) {
+  
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
       'projects': 'showProjects',
-      'users': 'showUsers',
-
+      'users': 'showContributors',
+      
       // Default
       '*actions': 'defaultAction'
     }
   });
-
+  
   var initialize = function(){
-    var app_router = new AppRouter();
+
+    var app_router = new AppRouter;
+    
     app_router.on('route:showProjects', function(){
-      // Call render on the module we loaded in via the dependency array
-      // 'views/projects/list'
-      console.log(' en route to Projects');
-      var layoutView = new MainView();
-      layoutView.render();
+   
+        // Call render on the module we loaded in via the dependency array
+        var homeView = new HomeView();
+        homeView.render();
+
     });
-      // As above, call render on our loaded module
-      // 'views/users/list'
-    app_router.on('route:showUsers', function(){
-      console.log('Users');
+
+    app_router.on('route:defaultAction', function (actions) {
+     
+       // We have no matching route, lets display the home page 
+       console.log("No route: ",actions)
     });
-    app_router.on('route:defaultAction', function(actions){
-      // We have no matching route, lets just log what the URL was
-      console.log('No route:', actions);
-    });
+
+    // Unlike the above, we don't call render on this view as it will handle
+    // the render call internally after it loads data. Further more we load it
+    // outside of an on-route function to have it loaded no matter which page is
+    // loaded initially.
+    //var footerView = new FooterView();
+
     Backbone.history.start();
   };
-  return {
+  return { 
     initialize: initialize
   };
 });
