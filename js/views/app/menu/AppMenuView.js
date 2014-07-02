@@ -31,11 +31,13 @@ define([
         console.log('hiding!');
         jQuery('#container').removeClass('open-sidebar');
     },
-    openMenu: function()
+    openMenu: function(evt)
     {
         //Open the menu
         jQuery('#container').addClass('open-sidebar');
         this.overlayElement.showOverlay();
+        console.log('Loooool');
+        console.log(evt);
     }
 
   });

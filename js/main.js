@@ -5,15 +5,17 @@
 // Their usage will become more apparent futher along in the tutorial.
 require.config({
   paths: {
-    'jquery': 'libs/jquery/jquery-min',
-    'underscore': 'libs/underscore/underscore-min',
-    'backbone': 'libs/backbone/backbone-min',
+    'jquery': 'libs/jquery-min',
+    'underscore': 'libs/underscore-min',
+    'backbone': 'libs/backbone-min',
     'templates': '../templates', 
-    'jquery.layout': 'libs/jquerylayout/jquery.layout-latest',
-    'jqueryui':'libs/jqueryui/jqueryui'
+    'jquery.layout': 'libs/jquery.layout-latest',
+    'jqueryui':'libs/jqueryui',
+    'bootstrap' : 'libs/bootstrap'
   },
 
   shim : {
+    'bootstrap' : ['jquery'],
     'jquery.layout' : ['jquery', 'jqueryui']
   }
 

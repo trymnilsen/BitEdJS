@@ -1,9 +1,10 @@
+'use strict';
 define([
   'underscore',
   'backbone',
 ], function(_, Backbone) {
 
-  var OwnerModel = Backbone.Model.extend({
+  var FileAssetModel = Backbone.Model.extend({
 
         defaults : {
           query : "unknown"
@@ -24,6 +25,6 @@ define([
 
     });
 
-    return OwnerModel;
+    return FileAssetModel;
 
 });
