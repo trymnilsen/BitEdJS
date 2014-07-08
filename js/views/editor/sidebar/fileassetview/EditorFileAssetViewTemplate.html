@@ -1,0 +1,20 @@
+<div>
+    <div class="editor-label-small">Filter By: </div>
+        <div>        
+            <form>
+                <input type="text" class="form-control col-lg-8" placeholder="Find Asset">
+            </form>
+        </div>
+    <div class="editor-list">
+    <ul>
+        <% _.each(files, function(file) { %>
+            <li draggable="true" class="editor-list-entry"> <%= file.get("fileName") %></li>
+        <% }); %>
+    </ul>
+    </div>
+</div>
+<div id="EditorAssetOptionsButtonsWrapper">
+    <a>Add</a>
+    <a>Remove</a>
+</div>
+ 
