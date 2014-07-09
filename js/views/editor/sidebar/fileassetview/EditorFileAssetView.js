@@ -8,9 +8,11 @@ define([
   'collections/editor/assets/EditorFileAssetsCollection',
   'text!views/editor/sidebar/fileassetview/EditorFileAssetViewTemplate.html',
   //Non argument
-  'bootstrap'
+  'bootstrap',
+  'jqueryui'
 ], function(
-    $, 
+    $,
+
     _, 
     Backbone, 
     AssetModel,
@@ -34,14 +36,31 @@ define([
 
         var compiledTemplate = _.template(fileAssetView, data);
         this.$el.append(compiledTemplate);
+        //loop through all our list elements now and enable the draggable
+        //functionality on them
+        //Store our this reference for use in drag events
+        var viewInstance = this;
+
         this.$el.find('li').each(function() {
-            console.log('attaching event');
-            $(this).on('dragstart', function(evt) {
-                console.log('drag started');
-                evt.foobar = 'test';
-                console.log('teehe');
+            //Set as draggable
+            $(this).draggable(
+            { 
+                /*Preferences*/
+                revert          : true,
+                /*helper        : 'clone',*/
+                revertDuration  : 100,
+                /*events*/
+                start           : _.bind(viewInstance.showRemove,viewInstance),
+                stop            : _.bind(viewInstance.hideRemove,viewInstance)
             });
         });
+    },
+
+    showRemove: function(){
+
+    },
+    hideRemove: function(){
+
     }
 
   });

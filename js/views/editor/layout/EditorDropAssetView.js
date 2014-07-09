@@ -97,7 +97,7 @@ define([
     onDropDropZone: function(evt)
     {
         evt.preventDefault();
-        eventor.trigger('editor.assets.dropadd',evt.originalEvent.dataTransfer.files);
+        eventor.trigger('editor.assets.dropRequest',evt.originalEvent.dataTransfer.files);
         this.dropZoneInitialized = false;
     },
     onDragLeaveDropZone: function()
