@@ -8,17 +8,18 @@ var game = {},
 // Their usage will become more apparent futher along in the tutorial.
 require.config({
   paths: {
-    'jquery': 'libs/jquery-min',
-    'underscore': 'libs/underscore-min',
-    'backbone': 'libs/backbone-min',
-    'templates': '../templates', 
-    'jquery.layout': 'libs/jquery.layout-latest',
-    'jqueryui':'libs/jqueryui',
-    'bootstrap' : 'libs/bootstrap'
+    'jquery'        : 'libs/jquery-min',
+    'underscore'    : 'libs/underscore-min',
+    'backbone'      : 'libs/backbone-min',
+    'templates'     : '../tmefplates', 
+    'jquery.layout' : 'libs/jquery.layout-latest',
+    'jqueryui'      : 'libs/jqueryui',
+    'bootstrap'     : 'libs/bootstrap',
+    'phaser'        : 'libs/phaser-io.min.js'
   },
 
   shim : {
-    'bootstrap' : ['jquery'],
+    'bootstrap'     : ['jquery'],
     'jquery.layout' : ['jquery', 'jqueryui']
   }
 
