@@ -57,10 +57,11 @@ define([
     },
 
     showRemove: function(){
-
+        $('.remove-asset-option').removeClass('remove-asset-option-hidden');
     },
     hideRemove: function(){
-
+        console.log('fsdfsdafd');
+         $('.remove-asset-option').addClass('remove-asset-option-hidden');
     }
 
   });
