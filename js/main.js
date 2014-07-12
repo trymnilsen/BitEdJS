@@ -11,16 +11,17 @@ require.config({
     'jquery'        : 'libs/jquery-min',
     'underscore'    : 'libs/underscore-min',
     'backbone'      : 'libs/backbone-min',
-    'templates'     : '../tmefplates', 
+    'templates'     : '../templates', 
     'jquery.layout' : 'libs/jquery.layout-latest',
     'jqueryui'      : 'libs/jqueryui',
     'bootstrap'     : 'libs/bootstrap',
-    'phaser'        : 'libs/phaser-io.min.js'
+    'phaser'        : 'libs/phaser-io.min'
   },
 
   shim : {
     'bootstrap'     : ['jquery'],
-    'jquery.layout' : ['jquery', 'jqueryui']
+    'jquery.layout' : ['jquery', 'jqueryui'],
+
   }
 
 });

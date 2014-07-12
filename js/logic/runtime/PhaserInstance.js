@@ -1,35 +1,50 @@
 'use strict';
 
 define([
-  'phaser',
-  'underscore'
-], function(phaser,_){
+  'underscore',
+  'phaser'
+], function(_){
 
   var PhaserInstance = {
 
     game : null,
 
-    attatch: function(domID) {
+    attach: function(domID) {
       if(domID === '' || domID === undefined)
       {
         console.log('phaser attach id not defined');
         return;
       }
-      this.game = new phaser.Game(600, 480, phaser.AUTO, domID, 
+      this.game = new Phaser.Game(600, 480, Phaser.AUTO, domID, 
           {
             preload: _.bind(this.preload,this),
             create: _.bind(this.create,this)
           });
+
     },
     preload: function(){
-
+        this.game.load.image('logo','phaserio/phaser.png');
     },
     create: function(){
-
+        var logo = this.game.add.sprite(this.game.world.centerX,this.game.world.centerY,'logo');
+            logo.anchor.setTo(0.5, 0.5);
+            logo.inputEnabled = true;
+            logo.events.onInputDown.add(this.testfunc,this);
+    },
+    testfunc: function()
+    {
+        console.log('helloooo click on img');
+    },
+    resizeRender: function(w, h)
+    {
+        this.game.scale.maxWidth = w;
+        this.game.scale.maxHeight = h;
+        this.game.scale.scaleMode = Phaser.ScaleManager.NO_SCALE;
+        this.game.scale.setScreenSize(true);
+        //this.game.scale.refresh();
     }
-
   };
 
-  return PhaserInstance;
+  return function() { return PhaserInstance; }
   
 });
