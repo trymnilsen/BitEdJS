@@ -5,30 +5,107 @@
         <title>hello phaser!</title>
         <script src="phaser.min.js"></script>
     </head>
-    <body>
+    <body style="padding: 0px; margin: 0px;">
 
     <script type="text/javascript">
+    var Game = null;
+    var topleft, topright, bottomleft, bottomright;
+    var level =
+    {
+        fullPixelW : 2400,
+        fullPixelH : 8000
+    };
+    window.onresize = function(event) {
+        size = {
+            width : window.innerWidth,
+            height : window.innerHeight
+        };
+        console.log('resizing to ', size.width, size.height);
 
+            Game.width = size.width;
+            Game.height = size.height;
+            Game.canvas.width = size.width;
+            Game.canvas.height = size.height;
+
+            Game.world.setBounds(0, 0, level.fullPixelW, level.fullPixelH);
+
+            Game.scale.width = size.width;
+            Game.scale.height = size.height;
+
+            if (Game.debug.sprite) {
+                Game.stage.removeChild(Game.debug.sprite);
+                Game.debug.sprite = null;
+                Game.debug.textureFrame = null;
+                if (Game.debug.texture) {
+                    Game.debug.texture.destroy();
+                }
+                Game.debug.texture = null;
+                if (Game.debug.baseTexture) {
+                    Game.debug.baseTexture.destroy();
+                }
+                Game.debug.baseTexture = null;
+                Game.debug.context = null;
+                Game.debug.canvas = null;
+                Game.debug.boot();
+            }
+
+            Game.renderer.resize(size.width, size.height);
+            Game.scale.setSize();
+
+            Game.camera.setSize(size.width, size.height);
+            //Game.camera.setBoundsToWorld();
+    };
     window.onload = function() {
 
-        var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+        Game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
+        //Game.world.setBounds(level.fullPixelW, level.fullPixelH);
         var logo = null;
         function preload () {
-            game.load.image('logo', 'phaser.png');
+            Game.load.image('logo', 'phaser.png');
         }
 
         function create () {
-            logo = game.add.sprite(game.world.centerX, game.world.centerY, 'logo');
+            logo = Game.add.sprite(Game.world.centerX, Game.world.centerY, 'logo');
             logo.anchor.setTo(0.5, 0.5);
-        
+            Game.world.setBounds(0, 0, level.fullPixelW, level.fullPixelH);
+            topleft = new Phaser.Rectangle(0, 0, 32, 32);        
+            topright = new Phaser.Rectangle(Game.world.width-32, 0, 32, 32);        
+            bottomleft = new Phaser.Rectangle(Game.world.width-32, Game.world.height-32, 32, 32);        
+            bottomright = new Phaser.Rectangle(0, Game.world.height-32, 32, 32);        
         }
         function update() {
-            logo.angle = game.input.mousePointer.x;
+            //logo.angle = Game.input.mousePointer.x;
 
-            if (game.input.keyboard.isDown(Phaser.Keyboard.UP)){
-                console.log("UP");
-                var test = game.add.sprite(0, 0, 'logo');
+            if (Game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)){
+                console.log("SPACE");
+                var x = Math.floor((Math.random() * Game.world.width) + 1 - 381);
+                var y = Math.floor((Math.random() * Game.world.height) + 1 - 331);
+                var test = Game.add.sprite(x, y, 'logo');
             } 
+            if(Game.input.keyboard.isDown(Phaser.Keyboard.UP))
+            {
+                Game.camera.y-=5;
+            }
+            if(Game.input.keyboard.isDown(Phaser.Keyboard.DOWN))
+            {
+                Game.camera.y+=5;
+            }
+            if(Game.input.keyboard.isDown(Phaser.Keyboard.LEFT))
+            {
+                Game.camera.x-=5;
+            }
+            if(Game.input.keyboard.isDown(Phaser.Keyboard.RIGHT))
+            {
+                Game.camera.x+=5;
+            }
+        }
+
+        function render () {
+            Game.debug.geom(topleft,'#0fffff');
+            Game.debug.geom(topright,'#0fffff');
+            Game.debug.geom(bottomleft,'#0fffff');
+            Game.debug.geom(bottomright,'#0fffff');
+            Game.debug.cameraInfo(Game.camera, 32, 32);
         }
 
     };

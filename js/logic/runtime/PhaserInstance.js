@@ -37,10 +37,7 @@ define([
     },
     resizeRender: function(w, h)
     {
-        this.game.scale.maxWidth = w;
-        this.game.scale.maxHeight = h;
-        this.game.scale.scaleMode = Phaser.ScaleManager.NO_SCALE;
-        this.game.scale.setScreenSize(true);
+        this.game.render.resize(w,h);
         //this.game.scale.refresh();
     }
   };
