@@ -9,7 +9,7 @@ define([
   'views/editor/layout/EditorDropAssetView',
   'views/editor/navbar/EditorNavbarView',
   'views/editor/sidebar/fileassetview/EditorFileAssetView',
-  'views/editor/screen/EditorScreenView',
+  'views/editor/document/screen/EditorScreenView',
   //non argument
   'jquery.layout'
 ], function(
