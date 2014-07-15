@@ -1,0 +1,63 @@
+.general-overlay-wrapper
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: inline;
+    background-color: rgb(25, 25, 25);
+    opacity: 0.5;
+    #general-overlay-icon
+    {
+        position: absolute;
+        display: inline;
+        width: 145px;
+        height: 172px;
+        left: calc(~"50% - 145px/2");
+        top: calc(~"50% - 172px/2");
+        transform: scale(1);
+        font-size: 130px;
+        text-align: center;
+    }
+    #general-overlay-text
+    {
+        position: absolute;
+        width: 100%;
+        text-align: center;    
+        left: 0px;
+        top: calc(~"50% + 172px/2");
+    }
+}
+.general-overlay-transition
+{
+    transition: all .2s ease-in-out 0.1s;
+}
+//In 
+.general-overlay-wrapper-hidden
+{
+    opacity: 0;
+}
+.general-overlay-icon-hidden
+{
+    transform: scale(1.3) !important;
+    opacity: 0;
+}
+.general-overlay-text-hidden
+{
+    opacity: 0 !important;
+    top: calc(~"50% + 172px") !important;
+}
+//Out
+.general-overlay-wrapper-fadeout
+{
+    opacity: 0;
+}
+.general-overlay-icon-fadeout
+{
+    opacity: 0;
+}
+.general-overlay-text-fadeout
+{
+    opacity: 0 !important;
+}
+

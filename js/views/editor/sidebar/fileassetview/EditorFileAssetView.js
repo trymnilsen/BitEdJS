@@ -7,12 +7,11 @@ define([
   'models/editor/assets/EditorFileAssetModel',
   'collections/editor/assets/EditorFileAssetsCollection',
   'text!views/editor/sidebar/fileassetview/EditorFileAssetViewTemplate.html',
-  //Non argument
+  //Non argument load globaly
   'bootstrap',
   'jqueryui'
 ], function(
     $,
-
     _, 
     Backbone, 
     AssetModel,
@@ -45,6 +44,7 @@ define([
             //Set as draggable
             $(this).draggable(
             { 
+                helper: "clone",
                 /*Preferences*/
                 revert          : true,
                 /*helper        : 'clone',*/
