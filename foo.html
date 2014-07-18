@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="http://jashkenas.github.io/underscore/underscore-min.js"></script>
+<script src="http://jashkenas.github.io/backbone/backbone-min.js"></script>
+
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+
+  <style>
+    div
+    {
+        display: block;
+    }
+    .foo-control
+     {
+       background-color: red;
+       width: 100px;
+       height: 100px;
+     }
+    .screen
+    {
+      background-color: blue;
+      width: 100px;
+      height: 100px;
+    }
+    .files
+    {
+      background-color: green;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+<script>
+$(function(){
+
+    var FooControls = Backbone.View.extend({
+        el: $('<div></div>').addClass('foo-control')
+    });
+    var ScreenView = Backbone.View.extend({
+        el: $('<div></div>').addClass('screen'),
+        render: function() {
+            var fooOne = new FooControls();
+            this.$el.append(fooOne.$el);
+        }
+    });
+    var FileView = Backbone.View.extend({
+        el: $('<div></div>').addClass('files'),
+        render: function() {
+            var fooOne = new FooControls();
+            this.$el.append(fooOne.$el);
+        }
+    });
+
+    var screenInstance = new ScreenView;
+    var fileInstance = new FileView;
+    screenInstance.render();
+    fileInstance.render();
+    $('#wrapper').append(screenInstance.$el);
+    $('#wrapper').append(fileInstance.$el);
+});
+</script>
+<div id="wrapper">
+  
+</div>
+</body>
+</html>

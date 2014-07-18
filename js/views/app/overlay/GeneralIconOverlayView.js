@@ -11,11 +11,11 @@ define([
     ){
 
     var GeneralIconOverlay = Backbone.View.extend({
-        el: $('<div></div>')
-            .addClass('general-overlay-wrapper')
-            .addClass('general-overlay-wrapper-hidden')
-            .addClass('general-overlay-transition'),
+
             //.hide(),
+        className           : 'general-overlay-wrapper'
+                            + ' general-overlay-wrapper-hidden'
+                            + ' general-overlay-transition',
         overlayText         : '',
         overlayIconClass    : '',
         attachedNode        : {},

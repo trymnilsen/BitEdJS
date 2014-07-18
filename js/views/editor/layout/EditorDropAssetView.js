@@ -4,8 +4,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'eventor'
-], function($, _, Backbone, eventor){
+  'eventor',
+  'views/app/overlay/GeneralIconOverlayView'
+], function($, _, Backbone, eventor, OverlayView){
 
   var EditorDropAssetView = Backbone.View.extend({
     //members
@@ -15,6 +16,7 @@ define([
     dropZoneInitialized : false,
     dropOverlay         : null,
     dropZone            : null,
+    dropZoneVisual      : null,
         //Subscribe to events
     // events : {
     //     'click' : 'handleClickOverlay'
@@ -24,7 +26,10 @@ define([
     render: function(){
         //Create drop overlayes (we use two in order to handle the events)
         this.dropOverlay = $('<div></div>').attr('id', 'editorFileDropOverlay').hide();
-        this.dropZone = $('<div></div>').attr('id', 'editorFileDropZone').html('drop on me').hide();
+        this.dropZone = new OverlayView();//$('<div></div>').attr('id', 'editorFileDropZone').hide();
+       // this.dropZoneVisual = 
+        this.dropZone.setIcon('fa fa-paperclip');
+        this.dropZone.setText('Import File');
         
         //Attach event-listeners
         //For window
@@ -36,12 +41,17 @@ define([
             .on('dragleave',_.bind(this.onDragLeaveOverlay,this))
             .on('drop',_.bind(this.onDropOverlay,this));
         //Dropzone <- Visual Part
-        this.dropZone.on('dragenter',_.bind(this.onDragEnterDropZone,this))
+        this.dropZone.$el.on('dragenter',_.bind(this.onDragEnterDropZone,this))
             .on('dragleave',_.bind(this.onDragLeaveDropZone,this))
             .on('drop',_.bind(this.onDropDropZone,this));
+
+        this.dropZone.render();
         //Append
         jQuery(document.body).append(this.dropOverlay);
-        jQuery(document.body).append(this.dropZone);
+        jQuery(document.body).append(this.dropZone.$el);
+
+        
+
 
     },
     onDragOverWindow: function(evt){
@@ -53,7 +63,7 @@ define([
         }
         this.windowInitialized = true;
         this.dropOverlay.show();
-        this.dropZone.show();
+        this.dropZone.showOverlay();
         console.log('Over window');
     },
     onDragLeaveWindow: function(){
@@ -64,7 +74,7 @@ define([
             console.log('leaving window');
             this.windowInitialized = false;
             this.dropOverlay.hide();
-            this.dropZone.hide();
+            this.dropZone.hideOverlay();
 
     },
     onDropWindow: function(evt){
@@ -75,7 +85,7 @@ define([
         this.dropZoneInitialized = false;
 
         this.dropOverlay.hide();
-        this.dropZone.hide();
+        this.dropZone.hideOverlay();
     },
     onDropOverlay: function(evt){
         evt.preventDefault();
@@ -83,7 +93,7 @@ define([
     onDragLeaveOverlay: function(){
         if(!this.dropZoneInitialized)
         {
-            this.dropZone.hide();
+            this.dropZone.hideOverlay();
         }
         this.overlayInitialized = false;
     },

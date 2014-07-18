@@ -25,7 +25,6 @@ define([
     render: function(){
         var testModel = new AssetModel({fileName : 'tjoo'});
         var testModel2 = new AssetModel({fileName : 'lolhei'});
-
         var filesCollection = new AssetCollection([testModel,testModel2]);
         this.collection = filesCollection;
         var data = {
@@ -44,7 +43,7 @@ define([
             //Set as draggable
             $(this).draggable(
             { 
-                helper: "clone",
+                helper: 'clone',
                 /*Preferences*/
                 revert          : true,
                 /*helper        : 'clone',*/
