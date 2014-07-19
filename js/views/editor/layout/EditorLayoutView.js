@@ -49,10 +49,21 @@ define([
         screenView.render();
         //Run Layout
         console.log('time: ', performance.now());
-        this.layoutObject = jQuery('#mainContent').layout({ 
-            fxName              : 'none',
+        this.layoutObject = jQuery('#mainContent').layout({
+            defaults: { 
+                fxName              : 'none',
+            },
+            north: {
+                size        : 72,
+                resizable   : false,
+                closable    : false,
+            },
+            center: 
+            {
+                onresize    : _.bind(this.onLayoutResize,this)
+            }
             //livePaneResizing    : true,
-            center__onresize: _.bind(this.onLayoutResize,this)
+
         });
         console.log('time: ', performance.now());
         console.log('rendering finished');

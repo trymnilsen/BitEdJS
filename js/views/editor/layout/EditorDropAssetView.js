@@ -27,6 +27,7 @@ define([
         //Create drop overlayes (we use two in order to handle the events)
         this.dropOverlay = $('<div></div>').attr('id', 'editorFileDropOverlay').hide();
         this.dropZone = new OverlayView();//$('<div></div>').attr('id', 'editorFileDropZone').hide();
+       
        // this.dropZoneVisual = 
         this.dropZone.setIcon('fa fa-paperclip');
         this.dropZone.setText('Import File');
@@ -46,6 +47,7 @@ define([
             .on('drop',_.bind(this.onDropDropZone,this));
 
         this.dropZone.render();
+        this.dropZone.hideOverlay();
         //Append
         jQuery(document.body).append(this.dropOverlay);
         jQuery(document.body).append(this.dropZone.$el);

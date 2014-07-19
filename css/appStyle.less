@@ -30,6 +30,7 @@ body, html {
 
 #main-content
 {
+    display         : table-row;
     width           : 100%;
     height          : 100%;
     padding         : 10px;
@@ -37,6 +38,20 @@ body, html {
     -moz-box-sizing : border-box;
     position        : relative;
 }
+#statusbarWrapper
+{
+    display: table-row;
+    width: 100%;
+    height: 20px;
+    background-color: @layout-pane-background-color;
+}
+#editorWrapper
+{
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
 .editor-label-small
 {
     color       : @font-color;
@@ -50,7 +65,7 @@ body, html {
  *  RESIZER-BARS
  */
 .ui-layout-resizer  { /* all 'resizer-bars' */
-    background:     #DDD;
+    background:     @layout-resizebar-color;
     border:         1px solid #BBB;
     border-width:   0;
     }
@@ -62,7 +77,7 @@ body, html {
         otherwise color shifts while dragging when bar can't keep up with mouse */
     .ui-layout-resizer-open-hover , /* hover-color to 'resize' */
     .ui-layout-resizer-dragging {   /* resizer beging 'dragging' */
-        background: #C4E1A4;
+        background: @layout-resizebar-hover-color;
     }
     .ui-layout-resizer-dragging {   /* CLONED resizer being dragged */
         border:      1px solid #BBB;
