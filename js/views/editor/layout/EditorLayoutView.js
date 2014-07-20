@@ -10,6 +10,8 @@ define([
   'views/editor/navbar/EditorNavbarView',
   'views/editor/sidebar/fileassetview/EditorFileAssetView',
   'views/editor/document/screen/EditorScreenView',
+  'views/editor/layout/EditorLayoutBottomView',
+  'views/editor/layout/EditorLayoutSidebarRightView',
   //non argument
   'jquery.layout'
 ], function(
@@ -21,7 +23,9 @@ define([
     EditorDropAssetView, 
     EditorNavbarView,
     EditorFileAssetView,
-    EditorScreenView
+    EditorScreenView,
+    EditorBottomLayout,
+    EditorSidebarLayout
     ){
 
   var EditorLayoutView = Backbone.View.extend({
@@ -38,9 +42,11 @@ define([
         var appMenu = new AppMenuView();
         var assetView = new EditorFileAssetView();
         var screenView = new EditorScreenView();
+        var bottomLayout = new EditorBottomLayout();
         //As the layout is appended here as well we find the west layout container and append it to
-        $('.ui-layout-west').append(assetView.el);
-        $('.ui-layout-center').append(screenView.el);
+        $('#mainLayoutWestPane').append(assetView.el);
+        $('#mainLayoutCenterPane').append(screenView.el);
+        $('#mainLayoutSouthPane').append(bottomLayout.render().el);
         //Render
         assetView.render();
         dragAndDropAssetField.render();
@@ -58,9 +64,12 @@ define([
                 resizable   : false,
                 closable    : false,
             },
-            center: 
-            {
+            center: {
                 onresize    : _.bind(this.onLayoutResize,this)
+            },
+            south : {
+                size        : 200,
+                minSize     : 150
             }
             //livePaneResizing    : true,
 
