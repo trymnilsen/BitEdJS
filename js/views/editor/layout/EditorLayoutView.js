@@ -10,8 +10,8 @@ define([
   'views/editor/navbar/EditorNavbarView',
   'views/editor/sidebar/fileassetview/EditorFileAssetView',
   'views/editor/document/screen/EditorScreenView',
-  'views/editor/layout/EditorLayoutBottomView',
   'views/editor/layout/EditorLayoutSidebarRightView',
+  'text!views/editor/layout/EditorBottomLayoutTemplate.html',
   //non argument
   'jquery.layout'
 ], function(
@@ -24,8 +24,8 @@ define([
     EditorNavbarView,
     EditorFileAssetView,
     EditorScreenView,
-    EditorBottomLayout,
-    EditorSidebarLayout
+    EditorSidebarLayout,
+    EditorBottomLayoutTemplate
     ){
 
   var EditorLayoutView = Backbone.View.extend({
@@ -42,11 +42,10 @@ define([
         var appMenu = new AppMenuView();
         var assetView = new EditorFileAssetView();
         var screenView = new EditorScreenView();
-        var bottomLayout = new EditorBottomLayout();
         //As the layout is appended here as well we find the west layout container and append it to
         $('#mainLayoutWestPane').append(assetView.el);
         $('#mainLayoutCenterPane').append(screenView.el);
-        $('#mainLayoutSouthPane').append(bottomLayout.render().el);
+        $('#mainLayoutSouthPane').append(EditorBottomLayoutTemplate);
         //Render
         assetView.render();
         dragAndDropAssetField.render();
@@ -68,8 +67,22 @@ define([
                 onresize    : _.bind(this.onLayoutResize,this)
             },
             south : {
-                size        : 200,
-                minSize     : 150
+                size            : 200,
+                minSize         : 150,
+                childOptions    : {
+                    defaults: {
+
+                    },
+                    west    : {
+                        paneSelector    : '#bottom-ui-layout-west'
+                    },
+                    center  : {
+                        paneSelector    : '#bottom-ui-layout-center'
+                    },
+                    east    : {
+                        paneSelector    : '#bottom-ui-layout-east'
+                    }
+                }
             }
             //livePaneResizing    : true,
 
