@@ -12,6 +12,7 @@ define([
   'views/editor/document/screen/EditorScreenView',
   'views/editor/layout/EditorLayoutSidebarRightView',
   'text!views/editor/layout/EditorBottomLayoutTemplate.html',
+  'text!views/editor/layout/EditorRightLayoutTemplate.html',
   //non argument
   'jquery.layout'
 ], function(
@@ -25,7 +26,8 @@ define([
     EditorFileAssetView,
     EditorScreenView,
     EditorSidebarLayout,
-    EditorBottomLayoutTemplate
+    EditorBottomLayoutTemplate,
+    EditorRightLayoutTemplate
     ){
 
   var EditorLayoutView = Backbone.View.extend({
@@ -45,6 +47,7 @@ define([
         //As the layout is appended here as well we find the west layout container and append it to
         $('#mainLayoutWestPane').append(assetView.el);
         $('#mainLayoutCenterPane').append(screenView.el);
+        $('#mainLayoutEastPane').append(EditorRightLayoutTemplate);
         $('#mainLayoutSouthPane').append(EditorBottomLayoutTemplate);
         //Render
         assetView.render();
@@ -62,6 +65,19 @@ define([
                 size        : 72,
                 resizable   : false,
                 closable    : false,
+            },
+            east: {
+                childOptions : {
+                    defaults: {
+
+                    },
+                    north: {
+                        paneSelector : '#right-ui-layout-north'
+                    },
+                    center: {
+                        paneSelector : '#right-ui-layout-center'
+                    }
+                }
             },
             center: {
                 onresize    : _.bind(this.onLayoutResize,this)
