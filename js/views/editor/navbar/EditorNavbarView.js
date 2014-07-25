@@ -4,16 +4,17 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!views/editor/navbar/EditorNavbarViewTemplate.html',
-  //Non argument
-  'bootstrap'
-], function($, _, Backbone, navbarTemplate){
+  'views/app/menu/AppMenuButton',
+  'text!views/editor/navbar/EditorNavbarViewTemplate.html'
+], function($, _, Backbone, AppMenuButton, navbarTemplate){
 
   var EditorNavbarView = Backbone.View.extend({
-    el: $('#editornavbar'),
-
+    className: 'editor-navbar',
     render: function(){
-      this.$el.html(navbarTemplate);
+      var button = new AppMenuButton();
+      this.$el.append(button.render().el);
+      this.$el.append(navbarTemplate);
+      return this;
     }
 
   });

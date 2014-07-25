@@ -49,10 +49,10 @@ define([
         $('#mainLayoutCenterPane').append(screenView.el);
         $('#mainLayoutEastPane').append(EditorRightLayoutTemplate);
         $('#mainLayoutSouthPane').append(EditorBottomLayoutTemplate);
+        $('#mainLayoutNorthPane').append(editorNavBar.render().el);
         //Render
         assetView.render();
         dragAndDropAssetField.render();
-        editorNavBar.render();
         appMenu.render();
         screenView.render();
         //Run Layout
@@ -72,7 +72,8 @@ define([
 
                     },
                     north: {
-                        paneSelector : '#right-ui-layout-north'
+                        paneSelector : '#right-ui-layout-north',
+                        size: 100
                     },
                     center: {
                         paneSelector : '#right-ui-layout-center'
