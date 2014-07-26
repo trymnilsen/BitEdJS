@@ -11,6 +11,7 @@ define([
   'views/editor/sidebar/fileassetview/EditorFileAssetView',
   'views/editor/document/screen/EditorScreenView',
   'views/editor/layout/EditorLayoutSidebarRightView',
+  'views/editor/layout/panelcontainer/EditorPanelContainerView',
   'text!views/editor/layout/EditorBottomLayoutTemplate.html',
   'text!views/editor/layout/EditorRightLayoutTemplate.html',
   //non argument
@@ -26,6 +27,7 @@ define([
     EditorFileAssetView,
     EditorScreenView,
     EditorSidebarLayout,
+    EditorPanelContainer,
     EditorBottomLayoutTemplate,
     EditorRightLayoutTemplate
     ){
@@ -44,12 +46,14 @@ define([
         var appMenu = new AppMenuView();
         var assetView = new EditorFileAssetView();
         var screenView = new EditorScreenView();
+        var containerPanel = new EditorPanelContainer();
         //As the layout is appended here as well we find the west layout container and append it to
         $('#mainLayoutWestPane').append(assetView.el);
         $('#mainLayoutCenterPane').append(screenView.el);
         $('#mainLayoutEastPane').append(EditorRightLayoutTemplate);
         $('#mainLayoutSouthPane').append(EditorBottomLayoutTemplate);
         $('#mainLayoutNorthPane').append(editorNavBar.render().el);
+        $('.right-ui-layout-north').append(containerPanel.render().el);
         //Render
         assetView.render();
         dragAndDropAssetField.render();
