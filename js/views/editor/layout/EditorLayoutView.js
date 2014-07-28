@@ -46,14 +46,22 @@ define([
         var appMenu = new AppMenuView();
         var assetView = new EditorFileAssetView();
         var screenView = new EditorScreenView();
-        var containerPanel = new EditorPanelContainer();
+        var containerPanelSN = new EditorPanelContainer();
+        var containerPanelSC = new EditorPanelContainer();
+        var containerPanelBR = new EditorPanelContainer();
+        containerPanelSN.headerText = 'Treeview';
+        containerPanelSC.headerText = 'Properties';
+        containerPanelBR.headerText = 'Toolbox';
         //As the layout is appended here as well we find the west layout container and append it to
         $('#mainLayoutWestPane').append(assetView.el);
         $('#mainLayoutCenterPane').append(screenView.el);
         $('#mainLayoutEastPane').append(EditorRightLayoutTemplate);
         $('#mainLayoutSouthPane').append(EditorBottomLayoutTemplate);
         $('#mainLayoutNorthPane').append(editorNavBar.render().el);
-        $('.right-ui-layout-north').append(containerPanel.render().el);
+        $('#right-ui-layout-north').append(containerPanelSN.render().el);
+        $('#right-ui-layout-center').append(containerPanelSC.render().el);
+        $('#bottom-ui-layout-east').append(containerPanelBR.render().el);
+
         //Render
         assetView.render();
         dragAndDropAssetField.render();
