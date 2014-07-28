@@ -59,6 +59,7 @@ define([
         containerPanelBR.headerText = 'Toolbox';
 
         containerPanelEntity.panelContent = entityTree;//entityTree.render().el;
+        containerPanelSN.panelContent = assetView;
         //As the layout is appended here as well we find the west layout container and append it to
         $('#mainLayoutCenterPane').append(screenView.el);
         $('#mainLayoutEastPane').append(EditorRightLayoutTemplate);
