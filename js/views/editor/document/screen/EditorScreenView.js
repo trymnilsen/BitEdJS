@@ -53,7 +53,7 @@ define([
         //Set our size
         //Set our render area as droppable
         this.renderContainer.droppable({
-            accept  : '.editor-file-list-entry',
+            /*accept  : '.editor-file-list-entry',*/
             over    : _.bind(this.dragOver,this),
             out     : _.bind(this.dragOut,this),
             drop    : _.bind(this.onDropped,this)

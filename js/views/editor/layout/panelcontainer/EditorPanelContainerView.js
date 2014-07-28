@@ -10,14 +10,20 @@ define([
   var EditorPanelContainerView = Backbone.View.extend({
     
     headerText : 'No Header Set',
-    content : '',
+    className  : 'full-space-wrapper',
+    panelContent : 'empty',
     render: function(){
     	var data = {
-    		headerText : this.headerText
+    		headerText : this.headerText,
     	};
     	var compiledTemplate = _.template(PanelContainerTemplate,data);
     	this.$el.html(compiledTemplate);
-    	$('.editor-panel-container-content').append(this.content);
+        if(typeof this.panelContent !== 'string')
+        {
+            this.panelContent = this.panelContent.render().el;
+        }
+    	$('.editor-panel-container-content',this.$el)
+                        .append(this.panelContent);
       	return this;
     }
 

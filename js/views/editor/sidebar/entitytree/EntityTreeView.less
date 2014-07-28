@@ -1,0 +1,43 @@
+@import "../../../../css/darkColors.less";
+
+#editorEntityTreeView
+{
+    height: 100%;
+    width: 100%;
+
+
+    .entityTreeList
+    {
+        width: 100%;
+        height: calc(~"100% - 20px");
+    }
+
+    .editor-entity-tree-controls-cells
+    {
+        height: 20px;
+        width: 100%;
+        display: table;
+        border-top: solid @editor-dark-color 1px;
+        padding: 0px 5px;
+
+        .editor-entity-tree-controls-left
+        {
+            width: 32px;
+        }
+        .editor-entity-tree-controls-right
+        {
+            width: 48px;
+        }
+        .editor-add-icon
+        {
+            width: 100%;
+            color: @add-color;
+            text-align: center;
+        }
+
+        div 
+        {
+            display: table-cell;
+        }
+    }
+}

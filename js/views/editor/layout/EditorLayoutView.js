@@ -12,6 +12,7 @@ define([
   'views/editor/document/screen/EditorScreenView',
   'views/editor/layout/EditorLayoutSidebarRightView',
   'views/editor/layout/panelcontainer/EditorPanelContainerView',
+  'views/editor/sidebar/entitytree/EntityTreeView',
   'text!views/editor/layout/EditorBottomLayoutTemplate.html',
   'text!views/editor/layout/EditorRightLayoutTemplate.html',
   //non argument
@@ -28,6 +29,7 @@ define([
     EditorScreenView,
     EditorSidebarLayout,
     EditorPanelContainer,
+    EditorEntityTree,
     EditorBottomLayoutTemplate,
     EditorRightLayoutTemplate
     ){
@@ -46,24 +48,29 @@ define([
         var appMenu = new AppMenuView();
         var assetView = new EditorFileAssetView();
         var screenView = new EditorScreenView();
-        var containerPanelSN = new EditorPanelContainer();
+        var containerPanelEntity = new EditorPanelContainer();
         var containerPanelSC = new EditorPanelContainer();
+        var containerPanelSN = new EditorPanelContainer();
         var containerPanelBR = new EditorPanelContainer();
-        containerPanelSN.headerText = 'Treeview';
+        var entityTree = new EditorEntityTree();
+        containerPanelEntity.headerText = 'Treeview';
+        containerPanelSN.headerText = 'Assets';
         containerPanelSC.headerText = 'Properties';
         containerPanelBR.headerText = 'Toolbox';
+
+        containerPanelEntity.panelContent = entityTree;//entityTree.render().el;
         //As the layout is appended here as well we find the west layout container and append it to
-        $('#mainLayoutWestPane').append(assetView.el);
         $('#mainLayoutCenterPane').append(screenView.el);
         $('#mainLayoutEastPane').append(EditorRightLayoutTemplate);
         $('#mainLayoutSouthPane').append(EditorBottomLayoutTemplate);
         $('#mainLayoutNorthPane').append(editorNavBar.render().el);
-        $('#right-ui-layout-north').append(containerPanelSN.render().el);
+        $('#mainLayoutWestPane').append(containerPanelEntity.render().el);
         $('#right-ui-layout-center').append(containerPanelSC.render().el);
+        $('#right-ui-layout-north').append(containerPanelSN.render().el);
         $('#bottom-ui-layout-east').append(containerPanelBR.render().el);
 
         //Render
-        assetView.render();
+        //assetView.render();
         dragAndDropAssetField.render();
         appMenu.render();
         screenView.render();

@@ -1,14 +1,29 @@
-//Css imports are handled from the root while as less are handled relative from this (css) directory
+/*Css imports are handled from the root 
+while as less are handled relative from this (css) directory*/
 @import "css/bootstrap.css";
 @import "css/font-awesome.min.css";
+@import "css/jqtree.css";
 @import "appStyle.less";
+/* ---- APP STYLES ---- */
 @import "../js/views/app/menu/AppMenuView.less";
 @import "../js/views/app/overlay/GeneralIconOverlayView.less";
+@import "../js/views/app/menu/AppMenuButton.less";
+/* ---- ~ APP STYLES ---- */
+/* ---- EDITOR STYLES ---- */
+/*Layout Styles*/
 @import "../js/views/editor/layout/EditorDropAssetView.less";
 @import "../js/views/editor/layout/EditorLayoutView.less";
 @import "../js/views/editor/layout/EditorDropAssetView.less";
+/*File asset Styles*/
+@import "../js/views/editor/sidebar/fileassetview/EditorFileAssetControlsView.less";
 @import "../js/views/editor/sidebar/fileassetview/EditorFileAssetView.less";
+/*Entity Tree*/
+@import "../js/views/editor/sidebar/entitytree/EntityTreeView";
+/*Screen editor Styles*/
 @import "../js/views/editor/document/screen/EditorScreenView.less";
-@import "../js/views/app/menu/AppMenuButton.less";
+
+/*Navigation Styles */
 @import "../js/views/editor/navbar/EditorNavbarView.less";
+/* Generic Styles */
 @import "../js/views/editor/layout/panelcontainer/EditorPanelContainerView.less";
+/* ---- ~ EDITOR STYLES ---- */
