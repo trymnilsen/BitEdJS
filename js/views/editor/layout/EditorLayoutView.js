@@ -58,6 +58,7 @@ define([
         containerPanelSC.headerText = 'Properties';
         containerPanelBR.headerText = 'Toolbox';
 
+        containerPanelSC.panelContent = '<img src=\"dummies/properties.png\"></img>';
         containerPanelEntity.panelContent = entityTree;//entityTree.render().el;
         containerPanelSN.panelContent = assetView;
         //As the layout is appended here as well we find the west layout container and append it to
@@ -69,7 +70,10 @@ define([
         $('#right-ui-layout-center').append(containerPanelSC.render().el);
         $('#right-ui-layout-north').append(containerPanelSN.render().el);
         $('#bottom-ui-layout-east').append(containerPanelBR.render().el);
-
+        $('#bottom-ui-layout-west').append('<img src=\"dummies/log.png\"></img>');
+        $('#bottom-ui-layout-center').append('<img src=\"dummies/nodeeditor.png\"></img>');
+        //$('#mainLayoutWestPane').append(containerPanelEntity.render().el);
+        
         //Render
         //assetView.render();
         dragAndDropAssetField.render();
@@ -89,11 +93,11 @@ define([
             east: {
                 childOptions : {
                     defaults: {
-
+                        fxName              : 'none',
                     },
                     north: {
-                        paneSelector : '#right-ui-layout-north',
-                        size: 100
+                        size : 224,
+                        paneSelector : '#right-ui-layout-north'
                     },
                     center: {
                         paneSelector : '#right-ui-layout-center'
@@ -104,20 +108,22 @@ define([
                 onresize    : _.bind(this.onLayoutResize,this)
             },
             south : {
-                size            : 200,
+                size            : 150,
                 minSize         : 150,
                 childOptions    : {
                     defaults: {
-
+                        fxName              : 'none',
                     },
                     west    : {
-                        paneSelector    : '#bottom-ui-layout-west'
+                        paneSelector    : '#bottom-ui-layout-west',
+                        size: 625
                     },
                     center  : {
                         paneSelector    : '#bottom-ui-layout-center'
                     },
                     east    : {
-                        paneSelector    : '#bottom-ui-layout-east'
+                        paneSelector    : '#bottom-ui-layout-east',
+                        size: 202
                     }
                 }
             }

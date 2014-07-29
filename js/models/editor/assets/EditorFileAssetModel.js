@@ -8,7 +8,9 @@ define([
   var EditorFileAssetModel = Backbone.Model.extend({
 
         defaults : {
-          fileName : 'unknown'
+          fileName : 'unknown',
+          modified : 'no time',
+          size     : '0'
         },  
 
         initialize: function(options) {
