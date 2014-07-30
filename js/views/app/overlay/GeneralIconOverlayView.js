@@ -21,6 +21,10 @@ define([
         attachedNode        : {},
         iconDiv             : {},
         textDiv             : {},
+        events              : {
+                'drop' : 'lol'
+            },
+
         render: function()
         {
             this.iconDiv = $('<div></div>')
@@ -38,6 +42,10 @@ define([
             this.$el.append(this.iconDiv);
             this.$el.append(this.textDiv);
             this.iconDiv.append(icon);
+        },
+        lol: function()
+        {
+            console.log('fus ro daaah');
         },
         // attach: function()
         // {

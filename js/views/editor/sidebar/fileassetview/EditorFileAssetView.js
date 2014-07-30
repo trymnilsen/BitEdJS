@@ -25,10 +25,10 @@ define([
         render: function(){
             var testModel = new AssetModel({fileName : 'tjoo'});
             var testModel2 = new AssetModel({fileName : 'lolhei'});
-            var filesCollection = new AssetCollection([testModel,testModel2]);
-            this.collection = filesCollection;
+
+            //this.collection = filesCollection;
             var data = {
-                files   : this.collection.models,
+                files   : [],
                 _       : _
             };
 

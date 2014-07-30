@@ -2,8 +2,7 @@
 // Filename: main.js
 
 //Phaser.io globals
-var game = {},
-    app = {};
+var game = {};
 // Require.js allows us to configure shortcut alias
 // Their usage will become more apparent futher along in the tutorial.
 require.config({

@@ -41,13 +41,16 @@ define([
         this.dropOverlay.on('dragenter',_.bind(this.onDragEnterOverlay,this))
             .on('dragleave',_.bind(this.onDragLeaveOverlay,this))
             .on('drop',_.bind(this.onDropOverlay,this));
+        
+        this.dropZone.render();
+        this.dropZone.hideOverlay();
         //Dropzone <- Visual Part
-        this.dropZone.$el.on('dragenter',_.bind(this.onDragEnterDropZone,this))
+        this.dropZone.on('dragenter',_.bind(this.onDragEnterDropZone,this))
             .on('dragleave',_.bind(this.onDragLeaveDropZone,this))
             .on('drop',_.bind(this.onDropDropZone,this));
 
-        this.dropZone.render();
-        this.dropZone.hideOverlay();
+        //this.dropZone.render();
+
         //Append
         jQuery(document.body).append(this.dropOverlay);
         jQuery(document.body).append(this.dropZone.$el);
@@ -109,7 +112,9 @@ define([
     onDropDropZone: function(evt)
     {
         evt.preventDefault();
+        console.log(evt.originalEvent.dataTransfer);
         eventor.trigger('editor.assets.dropRequest',evt.originalEvent.dataTransfer.files);
+
         this.dropZoneInitialized = false;
     },
     onDragLeaveDropZone: function()
