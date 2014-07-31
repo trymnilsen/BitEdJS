@@ -1,15 +1,12 @@
 'use strict';
 
 define([
-    'underscore',
-    'collections/editor/assets/EditorFileAssetsCollection'
+    'underscore'
 ], 
 function (
-    _,
-    AssetCollection
+    _
     ) {
     var pipeLines = [];
-    var assetCollection = new AssetCollection();
     var getPipeline = function(fileExtension)
     {
         for (var i = 0; i < pipeLines.length; i++) {
@@ -29,7 +26,9 @@ function (
         {
             //Get extension
             var re = /(?:\.([^.]+))?$/;
-            var ext = re.exec(fileObject.name);
+            //returns an array of both ext with and without leading dot, select
+            //the string representation of the ext without a dot (array el 1)
+            var ext = re.exec(fileObject.name)[1];
 
             //Get responsible pipeline
             var pipe = getPipeline(ext);
@@ -48,15 +47,8 @@ function (
 
         addToEditor : function(file)
         {
-            if(Array.isArray(file))
-            {
-                for (var i = 0; i < file.length; i++) {
-                    addFile(file[i]);
-                }
-            }
-            else
-            {
-                addFile(file);
+            for (var i = 0; i < file.length; i++) {
+                addFile(file[i]);
             }
             //is it an array or an object?
 
@@ -64,8 +56,8 @@ function (
         },
         addPipeLine : function(pipeline)
         {
-
+            pipeLines.push(pipeline);
         }
     }
-    return assetPipe;
+    return function() { return assetPipe; }
 });

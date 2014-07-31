@@ -5,8 +5,9 @@ define([
   'underscore',
   'backbone',
   'eventor',
+  'logic/editor/Editor',
   'views/app/overlay/GeneralIconOverlayView'
-], function($, _, Backbone, eventor, OverlayView){
+], function($, _, Backbone, eventor, editorData, OverlayView){
 
   var EditorDropAssetView = Backbone.View.extend({
     //members
@@ -94,6 +95,7 @@ define([
     },
     onDropOverlay: function(evt){
         evt.preventDefault();
+        editorData.assetPipeline.addToEditor(evt.originalEvent.dataTransfer.files);
     },
     onDragLeaveOverlay: function(){
         if(!this.dropZoneInitialized)
