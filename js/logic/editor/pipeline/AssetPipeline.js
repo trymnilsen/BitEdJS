@@ -50,9 +50,12 @@ function (
             for (var i = 0; i < file.length; i++) {
                 addFile(file[i]);
             }
-            //is it an array or an object?
-
-            //Get the extention of the file
+            console.log('Added '+file.length+' files');
+            return {
+                status  : 'ok',
+                count   : file.length
+            }
+            //return appropriate status object
         },
         addPipeLine : function(pipeline)
         {

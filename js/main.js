@@ -15,13 +15,15 @@ require.config({
     'jqueryui'      : 'libs/jqueryui',
     'bootstrap'     : 'libs/bootstrap',
     'phaser'        : 'libs/phaser-io.min',
-    'jqtree'        : 'libs/jqtree'
+    'jqtree'        : 'libs/jqtree',
+    'toastr'        : 'libs/toastr'
   },
 
   shim : {
     'bootstrap'     : ['jquery'],
     'jquery.layout' : ['jquery', 'jqueryui'],
-    'jqtree'        : ['jquery']
+    'jqtree'        : ['jquery'],
+    'toastr'        : ['jquery']
   }
 
 });

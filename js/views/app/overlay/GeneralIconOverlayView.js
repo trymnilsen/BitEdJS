@@ -21,9 +21,6 @@ define([
         attachedNode        : {},
         iconDiv             : {},
         textDiv             : {},
-        events              : {
-                'drop' : 'lol'
-            },
 
         render: function()
         {

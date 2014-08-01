@@ -5,9 +5,10 @@ define([
   'underscore',
   'backbone',
   'eventor',
+  'toastr',
   'logic/editor/Editor',
   'views/app/overlay/GeneralIconOverlayView'
-], function($, _, Backbone, eventor, editorData, OverlayView){
+], function($, _, Backbone, eventor, toastr, editorData, OverlayView){
 
   var EditorDropAssetView = Backbone.View.extend({
     //members
@@ -95,7 +96,19 @@ define([
     },
     onDropOverlay: function(evt){
         evt.preventDefault();
-        editorData.assetPipeline.addToEditor(evt.originalEvent.dataTransfer.files);
+        var result = editorData.assetPipeline
+                            .addToEditor(evt.originalEvent.dataTransfer.files);
+        if(result.status !== undefined)
+        {
+            switch(result.status)
+            {
+                case 'ok':
+                {
+                    //was one or more files added?
+                    toastr.info('Added '+result.count+' files');
+                }
+            }
+        }
     },
     onDragLeaveOverlay: function(){
         if(!this.dropZoneInitialized)
