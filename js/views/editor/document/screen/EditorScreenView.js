@@ -71,7 +71,7 @@ define([
         //Calculates the size of our containers as we do not want to use css to make
         //sure our containers are correct size since this makes the render size 
         //different from the element size
-        var renderHeight = evt.height - this.$controlsContainer.height();
+        var renderHeight = evt.height - this.controlsContainer.height();
         var renderWidth = evt.width;
 
         this.phaserScreen.resizeRender(renderWidth,renderHeight);

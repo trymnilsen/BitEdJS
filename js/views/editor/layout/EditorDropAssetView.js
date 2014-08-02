@@ -103,10 +103,15 @@ define([
             switch(result.status)
             {
                 case 'ok':
-                {
+                    var puralFiles = result.count>1?'files':'file';
                     //was one or more files added?
-                    toastr.info('Added '+result.count+' files');
-                }
+                    toastr.success('Added '+result.count+' '+puralFiles);
+                    break;
+
+                case 'info':
+                    break;
+                default:
+                    break;
             }
         }
     },

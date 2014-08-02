@@ -41,7 +41,7 @@ define([
     },
     resizeRender: function(w, h)
     {
-        this.game.render.resize(w,h);
+        //this.game.render.resize(w,h);
         //this.game.scale.refresh();
     }
   };
