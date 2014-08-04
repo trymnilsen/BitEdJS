@@ -49,7 +49,9 @@ define([
         //enabling us to handle the resize (with camera/render etc) ourself
         eventor.on('editor.layout.resize.center',_.bind(this.resizeScreenView,this));
         this.phaserScreen = new PhaserInstance();
-        this.phaserScreen.attach('editorScreenViewDiv');
+        var w = $('#editorScreenViewDiv').width();
+        var h = $('#editorScreenViewDiv').height();
+        this.phaserScreen.attach('editorScreenViewDiv',w,h);
         //Set our size
         //Set our render area as droppable
         this.renderContainer.droppable({

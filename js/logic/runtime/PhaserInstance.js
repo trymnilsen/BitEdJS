@@ -8,15 +8,19 @@ define([
   var PhaserInstance = {
 
     game : null,
-
-    attach: function(domID) {
+    grid : null,
+    w : 0,
+    h : 0,
+    attach: function(domID, w, h) {
       if(domID === '' || domID === undefined)
       {
         console.log('phaser attach id not defined');
         return;
       }
-
-      this.game = new Phaser.Game(600, 480, Phaser.AUTO, domID, 
+      this.w = w;
+      this.h = h;
+      console.log('setting size ' + w + '/'+ h);
+      this.game = new Phaser.Game(w, h, Phaser.AUTO, domID, 
           {
             preload: _.bind(this.preload,this),
             create: _.bind(this.create,this)
@@ -28,7 +32,7 @@ define([
         this.game.load.image('grid','imgs/editor/screen/grid.png');
     },
     create: function(){
-            var grid = this.game.add.tileSprite(0,0,600,480,'grid');
+            this.grid = this.game.add.tileSprite(0,0,this.w,this.h,'grid');
             var logo = this.game.add.sprite(this.game.world.centerX,this.game.world.centerY,'logo');
 
             logo.anchor.setTo(0.5, 0.5);
@@ -41,6 +45,23 @@ define([
     },
     resizeRender: function(w, h)
     {
+
+        console.log('---resizing');
+        this.game.width = w;
+        this.game.height = h;
+
+        this.game.canvas.width = w;
+        this.game.canvas.height = h;
+        this.game.world.setBounds(0,0, 2000, 2000);
+        this.game.scale.width = w;
+        this.game.scale.height = h;
+
+        this.game.renderer.resize(w,h);
+        this.game.scale.setSize();
+        this.game.camera.setSize(w,h);
+
+        this.grid.destroy();
+        this.grid = this.game.add.tileSprite(0,0,w,h,'grid');
         //this.game.render.resize(w,h);
         //this.game.scale.refresh();
     }

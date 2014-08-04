@@ -4,8 +4,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'models/editor/assets/EditorFileAssetModel',
-  'collections/editor/assets/EditorFileAssetsCollection',
+  'logic/editor/Editor',
+  'views/editor/sidebar/fileassetview/FileAssetItemView',
   'text!views/editor/sidebar/fileassetview/EditorFileAssetViewTemplate.html',
   //Non argument load globaly
   'bootstrap',
@@ -14,58 +14,56 @@ define([
     $,
     _, 
     Backbone, 
-    AssetModel,
-    AssetCollection,
-    fileAssetView
+    editor,
+    ItemView,
+    fileAssetViewTemplate
     ){
 
     var EditorFileAssetView = Backbone.View.extend({
         id: 'FileAssetViewContainer',
+        template: _.template('<span>files</span>'),
+        list : editor.assetPipeline.getList(),
 
-        render: function(){
-            var testModel = new AssetModel({fileName : 'tjoo'});
-            var testModel2 = new AssetModel({fileName : 'lolhei'});
+        initialize: function() {
+            var foo = fileAssetViewTemplate;
+            this.listenTo(this.list, 'add', this.addOne);
+            this.listenTo(this.list, 'reset', this.addAll);
+            this.listenTo(this.list, 'all', this.render);
 
-            //this.collection = filesCollection;
-            var data = {
-                files   : [],
-                _       : _
-            };
+            this.footer = this.$('footer');
+            this.main = $('#main');
 
-            var compiledTemplate = _.template(fileAssetView, data);
-            this.$el.append(compiledTemplate);
-            //loop through all our list elements now and enable the draggable
-            //functionality on them
-            //Store our this reference for use in drag events
-            var viewInstance = this;
-
-            this.$el.find('li').each(function() {
-                //Set as draggable
-                $(this).draggable(
-                { 
-                    helper: 'clone',
-                    /*Preferences*/
-                    revert          : true,
-                    /*helper        : 'clone',*/
-                    revertDuration  : 100,
-                    /*events*/
-                    start           : _.bind(viewInstance.showRemove,viewInstance),
-                    stop            : _.bind(viewInstance.hideRemove,viewInstance)
-                });
-            });
-            return this;
+            //Todos.fetch();
         },
 
-    showRemove: function(){
-        $('.remove-asset-option').removeClass('remove-asset-option-hidden');
-    },
-    hideRemove: function(){
-        console.log('fsdfsdafd');
-         $('.remove-asset-option').addClass('remove-asset-option-hidden');
-    }
+        // render: function() {
+        //     var done = list.done().length;
+        //     var remaining = list.remaining().length;
 
-  });
+        //     if (Todos.length) {
+        //         this.main.show();
+        //         this.footer.show();
+        //         this.footer.html(this.statsTemplate({done: done, remaining: remaining}));
+        //     } else {
+        //         this.main.hide();
+        //         this.footer.hide();
+        //     }
 
-  return EditorFileAssetView;
+        //     this.allCheckbox.checked = !remaining;
+        // },
+
+        addOne: function(todo) {
+            console.log('adding to view');
+            var view = new ItemView({model: todo});
+            this.$el.append(view.render().el);
+        },
+
+        addAll: function() {
+            this.list.each(this.addOne, this);
+        }
+
+    });
+
+    return EditorFileAssetView;
   
 });

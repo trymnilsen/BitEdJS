@@ -107,9 +107,12 @@ define([
                     //was one or more files added?
                     toastr.success('Added '+result.count+' '+puralFiles);
                     break;
-
+                case 'error':
+                    toastr.error(result.message,'Error Occured');
+                    break;
                 case 'info':
                     break;
+
                 default:
                     break;
             }

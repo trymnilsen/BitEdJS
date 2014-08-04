@@ -10,7 +10,7 @@ function (
     _,
     eventor,
     AssetCollection,
-    assetModel
+    AssetModel
     ) {
 
     function SpritePipeline()
@@ -32,6 +32,13 @@ function (
                     console.log('hello');        
                 }
             }
+            var model = new AssetModel({
+                fileName: fileObject.name,
+                size: fileObject.size,
+                lastModifiedDate: fileObject.lastModifiedDate
+            });
+            this.assetCollection.add(model);
+
         }
 
     }
