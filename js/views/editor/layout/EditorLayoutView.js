@@ -130,6 +130,7 @@ define([
             //livePaneResizing    : true,
 
         });
+        eventor.trigger('editor.layout.finished');
         console.log('time: ', performance.now());
         console.log('rendering finished');
     },
