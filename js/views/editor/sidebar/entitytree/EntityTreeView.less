@@ -10,6 +10,22 @@
     {
         width: 100%;
         height: calc(~"100% - 20px");
+        .jqtree-toggler
+        {
+            color: @font-color;
+        }
+        .fa-puzzle-piece
+        {
+            color : @editor-entity-color;
+        }
+        .fa-eye
+        {
+            color: @editor-success-color;
+        }
+        .fa-unlock-alt
+        {
+            color : @editor-inactive-gray;
+        }
     }
 
     .editor-entity-tree-controls-cells
@@ -35,7 +51,7 @@
             text-align: center;
         }
 
-        div 
+        &>div 
         {
             display: table-cell;
         }

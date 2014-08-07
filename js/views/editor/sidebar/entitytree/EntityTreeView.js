@@ -5,8 +5,9 @@ define([
   'underscore',
   'backbone',
   'text!views/editor/sidebar/entitytree/EntityTreeTemplate.html',
+  'text!views/editor/sidebar/entitytree/EntityTreeNodeTemplate.html',
   'jqtree'
-], function($, _, Backbone, entityTreeTemplate){
+], function($, _, Backbone, entityTreeTemplate, nodeItemTemplate){
 
     var EntityTree = Backbone.View.extend({
         id: 'editorEntityTreeView',
@@ -29,18 +30,22 @@ define([
                 }
             ];
 
-            var lol = $('.entityTreeList',this.$el);
-            lol.tree({
+            var entityTree = $('.entityTreeList',this.$el);
+            entityTree.tree({
                 data: data,
                 autoOpen: true,
                 dragAndDrop: true,
                 onCreateLi: function(node, $li) {
                     // Append a link to the jqtree-element div.
                     // The link has an url '#node-[id]' and a data property 'node-id'.
-                    $li.find('.jqtree-element').append(
-                        '<a href="#node-'+ node.id +'" class="edit" data-node-id="'+
-                        node.id +'">edit</a>'
-                    );
+                    var compiledTemplate = _.template(nodeItemTemplate,{name: node.name});
+                    $li.find('.jqtree-title').html(compiledTemplate)
+                        .find('.fa')
+                        .on('click',function(evt) {
+                            console.log('hmz',node,evt);
+                            //Dont select if pressed buttons
+                            evt.stopPropagation();
+                    });
                 }
             });
 
