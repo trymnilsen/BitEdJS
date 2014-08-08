@@ -11,10 +11,11 @@ define([
 ], function($, _, Backbone, entityTreeTemplate, nodeItemTemplate){
 
     var EntityTree = Backbone.View.extend({
+        jqTreeEl : null,
         id: 'editorEntityTreeView',
         render: function(){
             this.$el.html(entityTreeTemplate);
-
+            //Add entitytree
             var data = [
                 {
                     label: 'node1',
@@ -31,8 +32,8 @@ define([
                 }
             ];
 
-            var entityTree = $('.entityTreeList',this.$el);
-            entityTree.tree({
+            this.jqTreeEl = $('.entityTreeList',this.$el);
+            this.jqTreeEl.tree({
                 data: data,
                 autoOpen: true,
                 dragAndDrop: true,
@@ -49,8 +50,29 @@ define([
                     });
                 }
             });
+            this.jqTreeEl.on('tree.select',_.bind(this.entitySelected,this));
+            //Add listeners to the controls
+            $('.dropdown-menu li',this.$el)
+                        .on('click',_.bind(this.createEntity,this));
 
             return this;
+        },
+        createEntity: function(evt)
+        {
+            console.log('Clicked on:',evt);
+            var entityType = $(evt.currentTarget).data('entitytype');
+            console.log('type',entityType);
+            var name = Date.now();
+            this.jqTreeEl.tree(
+                'appendNode',
+                {
+                    label: name
+                }
+            );
+        },
+        entitySelected: function(node)
+        {
+            console.log('node selected',node);
         }
 
     });
