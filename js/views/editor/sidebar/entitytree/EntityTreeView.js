@@ -6,7 +6,8 @@ define([
   'backbone',
   'text!views/editor/sidebar/entitytree/EntityTreeTemplate.html',
   'text!views/editor/sidebar/entitytree/EntityTreeNodeTemplate.html',
-  'jqtree'
+  'jqtree',
+  'dropDownEnhanc'
 ], function($, _, Backbone, entityTreeTemplate, nodeItemTemplate){
 
     var EntityTree = Backbone.View.extend({

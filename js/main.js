@@ -16,14 +16,16 @@ require.config({
     'bootstrap'     : 'libs/bootstrap',
     'phaser'        : 'libs/phaser-io.min',
     'jqtree'        : 'libs/jqtree',
-    'toastr'        : 'libs/toastr'
+    'toastr'        : 'libs/toastr',
+    'dropDownEnhanc': 'libs/dropdowns-enhancement'
   },
 
   shim : {
     'bootstrap'     : ['jquery'],
     'jquery.layout' : ['jquery', 'jqueryui'],
     'jqtree'        : ['jquery'],
-    'toastr'        : ['jquery']
+    'toastr'        : ['jquery'],
+    'dropDownEnhanc': ['bootstrap']
   }
 
 });
