@@ -13,6 +13,7 @@ define([
   'views/editor/layout/EditorLayoutSidebarRightView',
   'views/editor/layout/panelcontainer/EditorPanelContainerView',
   'views/editor/sidebar/entitytree/EntityTreeView',
+  'views/editor/sidebar/properties/PropertiesView',
   'text!views/editor/layout/EditorBottomLayoutTemplate.html',
   'text!views/editor/layout/EditorRightLayoutTemplate.html',
   //non argument
@@ -30,6 +31,7 @@ define([
     EditorSidebarLayout,
     EditorPanelContainer,
     EditorEntityTree,
+    EditorProperties,
     EditorBottomLayoutTemplate,
     EditorRightLayoutTemplate
     ){
@@ -53,12 +55,13 @@ define([
         var containerPanelSN = new EditorPanelContainer();
         var containerPanelBR = new EditorPanelContainer();
         var entityTree = new EditorEntityTree();
+        var propertiesView = new EditorProperties();
         containerPanelEntity.headerText = 'Treeview';
         containerPanelSN.headerText = 'Assets';
         containerPanelSC.headerText = 'Properties';
         containerPanelBR.headerText = 'Toolbox';
 
-        containerPanelSC.panelContent = '<img src=\"dummies/properties.png\"></img>';
+        containerPanelSC.panelContent = propertiesView;
         containerPanelEntity.panelContent = entityTree;//entityTree.render().el;
         containerPanelSN.panelContent = assetView;
         //As the layout is appended here as well we find the west layout container and append it to
