@@ -12,7 +12,7 @@ function($,
  viewTemplate
  ){
     var propertiesView = Backbone.View.extend({
-        className: 'viewClassName',
+        id: 'editorPropertiesView',
         template: _.template(viewTemplate),
         render: function(){
             this.$el.html(this.template());
