@@ -4,11 +4,12 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'eventor',
   'text!views/editor/sidebar/entitytree/EntityTreeTemplate.html',
   'text!views/editor/sidebar/entitytree/EntityTreeNodeTemplate.html',
   'jqtree',
   'dropDownEnhanc'
-], function($, _, Backbone, entityTreeTemplate, nodeItemTemplate){
+], function($, _, Backbone, eventor, entityTreeTemplate, nodeItemTemplate){
 
     var EntityTree = Backbone.View.extend({
         jqTreeEl : null,
@@ -70,9 +71,10 @@ define([
                 }
             );
         },
-        entitySelected: function(node)
+        entitySelected: function(evt)
         {
-            console.log('node selected',node);
+            console.log('node selected',evt.node);
+            eventor.trigger('editor.entity.selected',evt.node);
         }
 
     });
