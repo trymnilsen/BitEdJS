@@ -17,24 +17,24 @@ require.config({
     'phaser'        : 'libs/phaser-io.min',
     'jqtree'        : 'libs/jqtree',
     'toastr'        : 'libs/toastr',
-    'dropDownEnhanc': 'libs/dropdowns-enhancement'
-  },
+    'dropDownEnhanc': 'libs/dropdowns-enhancement',
+},
 
-  shim : {
+shim : {
     'bootstrap'     : ['jquery'],
     'jquery.layout' : ['jquery', 'jqueryui'],
     'jqtree'        : ['jquery'],
     'toastr'        : ['jquery'],
-    'dropDownEnhanc': ['bootstrap']
-  }
+    'dropDownEnhanc': ['bootstrap'],
+}
 
 });
 
 require([
   // Load our app module and pass it to our definition function
   'app'
-], function(App){
+  ], function(App){
   // The "app" dependency is passed in as "App"
     // Again, the other dependencies passed in are not "AMD" therefore don't pass a parameter to this function
-  App.initialize();
+    App.initialize();
 });
