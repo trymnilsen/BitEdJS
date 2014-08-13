@@ -16,6 +16,6 @@ function (
     
     return {
         assetPipeline : editorGenericPipeline,
-
+        
     };
 });
