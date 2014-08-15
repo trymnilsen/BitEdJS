@@ -3,16 +3,18 @@
 define([
 'jquery',
 'underscore',
-'backbone'
+'backbone',
+'text!views/editor/sidebar/properties/components/PropertiesComponentItemTemplate.html'
 ], 
 function($,
 _, 
-Backbone
+Backbone,
+itemTemplate
 ){
     var propComponentItemView = Backbone.View.extend({
-        id: 'viewDomId',
-        className: 'viewClassName',
+        className: 'properties-component-portlet',
         render: function(){
+        	this.$el.html(itemTemplate);
             return this;
         },
     });
