@@ -5,15 +5,26 @@ define([
   'underscore',
   'backbone',
   'eventor',
+  'logic/editor/editor',
   'text!views/editor/sidebar/entitytree/EntityTreeTemplate.html',
   'text!views/editor/sidebar/entitytree/EntityTreeNodeTemplate.html',
   'jqtree',
   'dropDownEnhanc'
-], function($, _, Backbone, eventor, entityTreeTemplate, nodeItemTemplate){
+], function($, 
+_, 
+Backbone, 
+eventor, 
+editor,
+entityTreeTemplate, 
+nodeItemTemplate
+){
 
     var EntityTree = Backbone.View.extend({
         jqTreeEl : null,
         id: 'editorEntityTreeView',
+        initialize: function(){
+            eventor.on('editor.entity.add', _.bind(this.onEntityAdded,this));
+        },
         render: function(){
             this.$el.html(entityTreeTemplate);
             //Add entitytree
@@ -58,18 +69,23 @@ define([
 
             return this;
         },
+        onEntityAdded: function(node)
+        {
+            this.jqTreeEl.tree(
+                'appendNode',
+                {
+                    label: node.name
+                }
+            );
+        },
         createEntity: function(evt)
         {
             console.log('Clicked on:',evt);
             var entityType = $(evt.currentTarget).data('entitytype');
             console.log('type',entityType);
             var name = Date.now();
-            this.jqTreeEl.tree(
-                'appendNode',
-                {
-                    label: name
-                }
-            );
+            editor.sceneGraph.addNode(entityType.toLowerCase(),name);
+
         },
         entitySelected: function(evt)
         {
