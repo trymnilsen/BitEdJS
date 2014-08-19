@@ -31,9 +31,17 @@ modalTemplate
         },
         addTag: function(tag) {
             console.log('adding tag');
-                        /*var view = new ItemView();
-            view.tag = tag;
-            $('.properties-tag-icon',this.$el).after(view.render().el);*/
+            var view = new ItemView();
+            if(typeof tag === 'string')
+            {
+                view.tag = tag;
+            }
+            else
+            {
+                view.tag = 'new tag';
+            }
+
+            $('.properties-tag-icon',this.$el).after(view.render().el);
         }
     });
     return propTagView;   

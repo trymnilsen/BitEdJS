@@ -13,8 +13,9 @@ itemTemplate
 ){
     var propComponentItemView = Backbone.View.extend({
         className: 'properties-component-portlet',
+        template : _.template(itemTemplate),
         render: function(){
-        	this.$el.html(itemTemplate);
+        	this.$el.html(this.template({name: 'physics'}));
             return this;
         },
     });
