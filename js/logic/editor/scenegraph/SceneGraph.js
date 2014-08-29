@@ -68,6 +68,10 @@ eventor
                 console.log('NodeType '+nodeType+' not valid for: '+nodeName);
             }
         }
+        this.updateEntity = function(entityProtocol)
+        {
+
+        }
 
     }
 
