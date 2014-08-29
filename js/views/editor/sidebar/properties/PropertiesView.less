@@ -1,9 +1,10 @@
 #editorPropertiesView
 {
     height: 100%;
+    position: relative;
     .editor-properites-container
     {
-        height: calc(~"100% - 30px");
+        height: 100%;
         width: 100%;
         .editor-properties-general
         {
@@ -91,7 +92,15 @@
     }
     .editor-properties-add-remove
     {
-        height: 30px;
+        bottom: 0px;
+        width: 100%;
+        position: absolute;
+        height: 0px;
+        transition: height 0.5s 0.2s;
         background-color: @add-color;
+    }
+    .editor-properties-add-remove-active
+    {
+        height: 30px !important;
     }
 }

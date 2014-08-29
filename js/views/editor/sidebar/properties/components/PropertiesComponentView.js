@@ -3,15 +3,16 @@
 define([
 'jquery',
 'underscore',
-'backbone'
+'backbone',
+'views/editor/sidebar/properties/components/PropertiesComponentItemView'
 ], 
 function($,
 _, 
-Backbone
+Backbone,
+Itemview
 ){
     var propComponentsView = Backbone.View.extend({
-        id: 'viewDomId',
-        className: 'viewClassName',
+        className: 'properties-components-container',
         components: [],
         //Expected format of single component
         compDump: {
@@ -29,12 +30,16 @@ Backbone
         setComponents: function() {
         	//Clean up old
         	//
+        	this.render();
         },
 
         render: function(){
-        	// for (var i = 0; i < components.length; i++) {
-        	// 	components[i].
-        	// }
+            this.$el.html('');
+        	for (var i = 0; i < this.components.length; i++) {
+        		var itemView = new Itemview();
+        		this.$el.append(itemView.render().el);
+        		console.log('Added Component');
+        	}
             return this;
         },
 

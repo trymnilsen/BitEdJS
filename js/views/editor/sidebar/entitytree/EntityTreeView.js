@@ -28,21 +28,7 @@ nodeItemTemplate
         render: function(){
             this.$el.html(entityTreeTemplate);
             //Add entitytree
-            var data = [
-                {
-                    label: 'node1',
-                    children: [
-                        { label: 'child1' },
-                        { label: 'child2' }
-                    ]
-                },
-                {
-                    label: 'node2',
-                    children: [
-                        { label: 'child3' }
-                    ]
-                }
-            ];
+            var data = [];
 
             this.jqTreeEl = $('.entityTreeList',this.$el);
             this.jqTreeEl.tree({
@@ -74,7 +60,8 @@ nodeItemTemplate
             this.jqTreeEl.tree(
                 'appendNode',
                 {
-                    label: node.name
+                    label: node.name,
+                    sceneNode: node
                 }
             );
         },

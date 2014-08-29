@@ -15,12 +15,14 @@ eventor
         this.numOfEntitiesCreated = 0;
         //Functions for creating different nodes
         var NODE_TYPES = {
-            entity : function()
-            {
-
+            entity : function() {
+                return [
+                    {
+                        name: 'physics',
+                    }
+                ];
             },
-            light: function()
-            {
+            light: function() {
 
             }         
         };
@@ -39,6 +41,10 @@ eventor
                 }
 
             }
+        }
+        this.addComponent = function(node,componentID)
+        {
+            
         }
         this.addNode = function(nodeType, nodeName, path)
         {
