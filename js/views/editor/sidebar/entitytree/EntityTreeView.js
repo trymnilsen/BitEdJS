@@ -67,11 +67,12 @@ nodeItemTemplate
         },
         createEntity: function(evt)
         {
+            
             console.log('Clicked on:',evt);
             var entityType = $(evt.currentTarget).data('entitytype');
             console.log('type',entityType);
-            var name = Date.now();
-            editor.sceneGraph.addNode(entityType.toLowerCase(),name);
+            var entityName = Date.now();
+            eventor.trigger('editor.entity.requestAdd',entityType.toLowerCase(),entityName);
 
         },
         entitySelected: function(evt)

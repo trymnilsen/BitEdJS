@@ -38,6 +38,7 @@ define([
             logo.anchor.setTo(0.5, 0.5);
             logo.inputEnabled = true;
             logo.input.enableDrag(true);
+            logo.input.enableSnap(32,32,true,true);
     },
     testfunc: function()
     {
