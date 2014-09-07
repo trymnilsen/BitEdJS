@@ -13,7 +13,7 @@ eventor
     {
         this.GraphData = [];
         this.numOfEntitiesCreated = 0;
-        eventor.listenTo('editor.entity.requestAdd', _.bind(this.addNode,this));
+        //eventor.listenTo('editor.entity.requestAdd', _.bind(this.addNode,this));
         //Functions for creating different nodes
         var NODE_TYPES = {
             entity : function() {

@@ -1,0 +1,1522 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"prot",
+				"proto	Prototype"
+			],
+			[
+				"enti",
+				"entityName"
+			],
+			[
+				"Scene",
+				"SceneGraph"
+			],
+			[
+				"Sc",
+				"SceneGraph"
+			],
+			[
+				"scene",
+				"Scenegraph"
+			],
+			[
+				"node",
+				"nodeComponents"
+			],
+			[
+				"curr",
+				"currentPath"
+			],
+			[
+				"curren",
+				"currentDir"
+			],
+			[
+				"b",
+				"bw	backboneView"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"tal",
+				"table"
+			],
+			[
+				"table",
+				"table-row"
+			],
+			[
+				"prop",
+				"propertiesView"
+			],
+			[
+				"jq",
+				"jqTreeEl"
+			],
+			[
+				"entit",
+				"entityType"
+			],
+			[
+				"temp",
+				"templateData"
+			],
+			[
+				"fileasse",
+				"fileassetview"
+			],
+			[
+				"asset",
+				"assetCollection"
+			],
+			[
+				"Editor",
+				"EditorFileAssetViewTemplate"
+			],
+			[
+				"l",
+				"lastModifiedDate"
+			],
+			[
+				"alrea",
+				"alreadyAddedFile"
+			],
+			[
+				"edi",
+				"editorGenericPipeline"
+			],
+			[
+				"editor",
+				"editorData"
+			],
+			[
+				"fie",
+				"fileObject"
+			],
+			[
+				"Asset",
+				"AssetPipeline"
+			],
+			[
+				"en",
+				"extentions"
+			],
+			[
+				"pipe",
+				"pipeline"
+			],
+			[
+				"pip",
+				"pipeLines"
+			],
+			[
+				"file",
+				"fileObject"
+			],
+			[
+				"contain",
+				"containerPanelSN"
+			],
+			[
+				"panel",
+				"panelContent"
+			],
+			[
+				"contai",
+				"containerPanelSN"
+			],
+			[
+				"ed",
+				"editor"
+			],
+			[
+				"border-col",
+				"border-collapse"
+			],
+			[
+				"tabl",
+				"table-row"
+			],
+			[
+				"table-",
+				"table-row"
+			],
+			[
+				"dropZ",
+				"dropZoneVisual"
+			],
+			[
+				"Ove",
+				"OverlayView"
+			],
+			[
+				"setT",
+				"setTimeout"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"ren",
+				"renderContainerDropVisual"
+			],
+			[
+				"remo",
+				"removeClass"
+			],
+			[
+				"ove",
+				"overlayIconClass"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"text",
+				"textDiv"
+			],
+			[
+				"icon",
+				"iconDiv"
+			],
+			[
+				"attac",
+				"attachedNode"
+			],
+			[
+				"hide",
+				"hideDropVisuals"
+			],
+			[
+				"renderCo",
+				"renderContainerDropVisual"
+			],
+			[
+				"render",
+				"renderContainerDropVisual"
+			],
+			[
+				"rend",
+				"renderContainerDropVisual"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"scre",
+				"screenControls"
+			],
+			[
+				"con",
+				"controlsContainer"
+			],
+			[
+				"botto",
+				"bottomright"
+			],
+			[
+				"fullP",
+				"fullPixelH"
+			],
+			[
+				"wi",
+				"window"
+			],
+			[
+				"resi",
+				"resizeScreenView"
+			],
+			[
+				"lay",
+				"layout"
+			],
+			[
+				"scr",
+				"screenView"
+			],
+			[
+				"view",
+				"viewInstance"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"data",
+				"dataTransfer"
+			],
+			[
+				"test",
+				"testModel2"
+			],
+			[
+				"files",
+				"filesCollection"
+			],
+			[
+				"filea",
+				"fileassetview"
+			],
+			[
+				"g",
+				"rgb(r,g,b)"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"Edito",
+				"EditorFileAssetView"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"onDrop",
+				"onDropDropZone"
+			],
+			[
+				"onDragL",
+				"onDragLeaveDropZone"
+			],
+			[
+				"onDragEn",
+				"onDragEnterDropZone"
+			],
+			[
+				"onDragLe",
+				"onDragLeaveOverlay"
+			],
+			[
+				"close",
+				"closeCallback"
+			],
+			[
+				"over",
+				"overlayElement"
+			],
+			[
+				"eve",
+				"eventor"
+			],
+			[
+				"side",
+				"sidebar-border-color"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"sidebar",
+				"sidebar-width"
+			],
+			[
+				"mari",
+				"margin"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"jque",
+				"jquery"
+			],
+			[
+				"jqu",
+				"jqueryui"
+			],
+			[
+				"j",
+				"jquerylayout"
+			],
+			[
+				"jquery",
+				"jqueryui"
+			],
+			[
+				"Layu",
+				"LayoutView"
+			],
+			[
+				"jquer",
+				"jqueryui"
+			],
+			[
+				"bacgk",
+				"background-color"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"ma",
+				"margin-right"
+			],
+			[
+				"back",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "js/logic/editor/scenegraph/SceneGraph.js",
+			"settings":
+			{
+				"buffer_size": 2079,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/views/app/overlay/GeneralIconOverlayView.less",
+			"settings":
+			{
+				"buffer_size": 1174,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/logic/runtime/PhaserInstance.js",
+			"settings":
+			{
+				"buffer_size": 1897,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/logic/editor/runtimebridge/PhaserRuntimeBridge.js",
+			"settings":
+			{
+				"buffer_size": 317,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/views/editor/sidebar/entitytree/EntityTreeView.js",
+			"settings":
+			{
+				"buffer_size": 2678,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/router.js",
+			"settings":
+			{
+				"buffer_size": 1191,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/logic/editor/behaviours/BehaviourStore.js",
+			"settings":
+			{
+				"buffer_size": 330,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"js",
+				"JSHint"
+			],
+			[
+				"packa",
+				"Package Control: Disable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"IN",
+				"Package Control: Install Package"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"pakc",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"mijn",
+				"Minify Javascript"
+			],
+			[
+				"synjs",
+				"Set Syntax: JSON"
+			],
+			[
+				"diff",
+				"FileDiffs: Menu"
+			],
+			[
+				"jshi",
+				"JSHint: Set Plugin Options"
+			]
+		],
+		"width": 402.0
+	},
+	"console":
+	{
+		"height": 91.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/behaviours",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/runtimebridge",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/scenegraph",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/runtime",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app/overlay",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/entitytree"
+	],
+	"file_history":
+	[
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/test.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/templates/projects/projectsListTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/pager.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app/overlay/GeneralIconOverlayView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app/menu/AppMenuOverlayView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/scaffolding.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/document/screen/EditorScreenView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/pipeline/AssetPipeline.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/PropertiesViewTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/README.md",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/runtime/PhaserInstance.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagItemView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagItemTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/progress-bars.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/print.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/component-animations.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/code.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/carousel.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/index.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/FileAssetItemTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/bitEdStyle.css.php",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeView.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/phaser-io.min.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentItemView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagViewModal.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/main.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/models/editor/screen/EditorScreenInstanceModel.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/scenegraph/SceneGraph.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagViewTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/bootstrap-monkey-modal.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap.css",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/darkColors.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/type.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/appStyle.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/FileAssetItemView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/models/editor/assets/EditorFileAssetModel.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/collections/editor/assets/EditorFileAssetsCollection.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorDropAssetView.js",
+		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/User/backboneView.sublime-snippet",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/main.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorLayoutView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/text-overflow.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/opacity.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/dropdown-enhancement.css",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/dropdowns-enhancement.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/PropertiesTagItemTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/PropertiesTagItemView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeNodeTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/navbar/EditorNavbarViewTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/navbar/EditorNavbarView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/Editor.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/document/screen/EditorScreenControlsViewTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/.gitattributes",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorLayoutView.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorLayoutSidebarRightView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/jquery.layout-latest.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorRightLayoutTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/mod/js/libs/jquerylayout/jquery.layout-latest.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/document/screen/EditorScreenView.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/document/screen/EditorScreenControlsView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/collections/editor/screen/EditorScreenInstancesCollection.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/pipeline/pipelines/SpritePipeline.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/reset-filter.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/foo.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/dropdowns.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/table-row.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/text-emphasis.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/TabView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/toastr.css",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/app.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/toastr.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/variables.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/phaserio/phaser.min.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/labels.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/lessc.inc.php",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetControlsView.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetControlsTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/pipeline/pipeline/SpritePipeline.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/eventor.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/underscore-min.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/backbone-min.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/utilities.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/phaserio/index.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/badges.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorBottomLayoutTemplate.html",
+		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
+		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/panelcontainer/EditorPanelContainerView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/router.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetViewTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/document/gridEditor/GridEditorView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app/overlay/GeneralIconOverlayView.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/templates/home/homeTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/runtime/editablearea/RuntimeEditableAreaView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/panelcontainer/EditorPanelContainerTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/panelcontainer/EditorPanelContainerView.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetControlsView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetView.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app/menu/AppMenuView.less",
+		"/G/New folder/mbraak-jqTree-0.21.0-0-g3476954 (1)/mbraak-jqTree-3476954/src/drag_and_drop_handler.coffee",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/templates/contributors/contributorsTemplate.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/index - Copy.html",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/panels.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/rev1/css/appStyle.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/jqtree.css",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/jqtree.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/background-variant.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/jqtree.css",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app/menu/AppMenuButton.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/navbar.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/nav-vertical-align.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorDropAssetView.less",
+		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/foo/js/models/editor/assets/EditorFileAssetModel.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/glyphicons.less",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/screen/EditorScreenView.js",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/.gitignore",
+		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/screen/EditorScreenView.less"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 103.0,
+		"where_history":
+		[
+			"C:\\Users\\Skynet\\Documents\\GitHub\\BitEdJS"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"prop",
+			"',\n",
+			"8px",
+			"cell",
+			"        <i data-toggle=\"dropdown\" class=\"fa fa-plus editor-add-icon\"></i>\n        <ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"dLabel\">\n            <li>\n            dfsf\n            </li>\n        </ul>",
+			"convert",
+			"',",
+			"r",
+			"bind",
+			"view",
+			"png",
+			"containerPanelEntity",
+			"mainContent",
+			"main-content",
+			"DragElement",
+			"span",
+			"dragAndDrop",
+			"span",
+			"color",
+			";\n",
+			"baz",
+			"12em",
+			"fa3",
+			"fa4",
+			"fa5",
+			"editor-control-right-wrapper",
+			"Game",
+			"scroll",
+			"show",
+			";\n",
+			"@brand-success",
+			"btn-default-bg",
+			"brand-success",
+			"00bc8c",
+			"import",
+			"ctrl+shift",
+			"();\n",
+			"}\n",
+			"0px",
+			"amd",
+			"'",
+			"subsystemversion",
+			"subset",
+			"deftemplatesuffix: hires",
+			"pre",
+			"def",
+			"right"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"",
+			"left"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "js/logic/editor/scenegraph/SceneGraph.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2079,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1082,
+								1082
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 38.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/views/app/overlay/GeneralIconOverlayView.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								597,
+								597
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/logic/runtime/PhaserInstance.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1897,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								589,
+								589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/logic/editor/runtimebridge/PhaserRuntimeBridge.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 317,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/views/editor/sidebar/entitytree/EntityTreeView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1802,
+								1802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/router.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1191,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								549,
+								549
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\Users\\Skynet\\Documents\\GitHub\\BitEdJS\\js\\logic\\editor\\scenegraph",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/logic/editor/behaviours/BehaviourStore.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								330
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "bitedjs.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"treeview",
+				"js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.js"
+			],
+			[
+				"phaser",
+				"js\\logic\\runtime\\PhaserInstance.js"
+			],
+			[
+				"overlay",
+				"js\\views\\app\\overlay\\GeneralIconOverlayView.less"
+			],
+			[
+				"scne",
+				"js\\logic\\editor\\scenegraph\\SceneGraph.js"
+			],
+			[
+				"propertiesta",
+				"BitEdJS\\js\\views\\editor\\sidebar\\properties\\tag\\PropertiesTagView.js"
+			],
+			[
+				"propertiesvi",
+				"BitEdJS\\js\\views\\editor\\sidebar\\properties\\PropertiesView.js"
+			],
+			[
+				"propitem",
+				"BitEdJS\\js\\views\\editor\\sidebar\\properties\\components\\PropertiesComponentItemView.js"
+			],
+			[
+				"componentite",
+				"BitEdJS\\js\\views\\editor\\sidebar\\properties\\components\\PropertiesComponentItemTemplate.html"
+			],
+			[
+				"entity",
+				"BitEdJS\\js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.js"
+			],
+			[
+				"editor",
+				"BitEdJS\\js\\logic\\editor\\Editor.js"
+			],
+			[
+				"tree",
+				"BitEdJS\\js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.js"
+			],
+			[
+				"sprite",
+				"BitEdJS\\js\\logic\\editor\\pipeline\\pipelines\\SpritePipeline.js"
+			],
+			[
+				"pipe",
+				"BitEdJS\\js\\logic\\editor\\pipeline\\AssetPipeline.js"
+			],
+			[
+				"sce",
+				"BitEdJS\\js\\logic\\editor\\scenegraph\\SceneGraph.js"
+			],
+			[
+				"treev",
+				"BitEdJS\\js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.js"
+			],
+			[
+				"inde",
+				"BitEdJS\\index.html"
+			],
+			[
+				"index",
+				"BitEdJS\\index.html"
+			],
+			[
+				"bootstrap",
+				"BitEdJS\\css\\bootstrap.css"
+			],
+			[
+				"fileass",
+				"BitEdJS\\js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetView.js"
+			],
+			[
+				"fileitem",
+				"BitEdJS\\js\\views\\editor\\sidebar\\fileassetview\\FileAssetItemView.js"
+			],
+			[
+				"fileasse",
+				"BitEdJS\\js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetView.js"
+			],
+			[
+				"boot",
+				"BitEdJS\\css\\bootstrap.css"
+			],
+			[
+				"dark",
+				"BitEdJS\\css\\darkColors.less"
+			],
+			[
+				"layout",
+				"BitEdJS\\js\\views\\editor\\layout\\EditorLayoutView.js"
+			],
+			[
+				"overla",
+				"BitEdJS\\js\\views\\app\\menu\\AppMenuOverlayView.js"
+			],
+			[
+				"entityt",
+				"BitEdJS\\js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.js"
+			],
+			[
+				"darkc",
+				"BitEdJS\\css\\darkColors.less"
+			],
+			[
+				"entiless",
+				"BitEdJS\\js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.less"
+			],
+			[
+				"treetem",
+				"BitEdJS\\js\\views\\editor\\sidebar\\entitytree\\EntityTreeTemplate.html"
+			],
+			[
+				"treevi",
+				"BitEdJS\\js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.js"
+			],
+			[
+				"scree",
+				"BitEdJS\\js\\views\\editor\\document\\screen\\EditorScreenView.js"
+			],
+			[
+				"fileassmo",
+				"BitEdJS\\js\\models\\editor\\assets\\EditorFileAssetModel.js"
+			],
+			[
+				"drop",
+				"BitEdJS\\js\\views\\editor\\layout\\EditorDropAssetView.js"
+			],
+			[
+				"assetp",
+				"BitEdJS\\js\\logic\\editor\\pipeline\\AssetPipeline.js"
+			],
+			[
+				"editor.js",
+				"BitEdJS\\js\\logic\\editor\\Editor.js"
+			],
+			[
+				"view",
+				"BitEdJS\\js\\views\\TabView.js"
+			],
+			[
+				"phaserin",
+				"BitEdJS\\js\\logic\\runtime\\PhaserInstance.js"
+			],
+			[
+				"editorscreenvi",
+				"BitEdJS\\js\\views\\editor\\document\\screen\\EditorScreenView.js"
+			],
+			[
+				"assetcoll",
+				"BitEdJS\\js\\collections\\editor\\assets\\EditorFileAssetsCollection.js"
+			],
+			[
+				"editordrop",
+				"BitEdJS\\js\\views\\editor\\layout\\EditorDropAssetView.js"
+			],
+			[
+				"ma",
+				"js\\main.js"
+			],
+			[
+				"unders",
+				"js\\libs\\underscore-min.js"
+			],
+			[
+				"eventor",
+				"js\\eventor.js"
+			],
+			[
+				"backbo",
+				"js\\libs\\backbone-min.js"
+			],
+			[
+				"app",
+				"js\\app.js"
+			],
+			[
+				"main",
+				"js\\main.js"
+			],
+			[
+				"pipeline",
+				"js\\logic\\editor\\pipeline\\AssetPipeline.js"
+			],
+			[
+				"genera",
+				"js\\views\\app\\overlay\\GeneralIconOverlayView.js"
+			],
+			[
+				"fileassetv",
+				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetView.js"
+			],
+			[
+				"eve",
+				"js\\eventor.js"
+			],
+			[
+				"screen",
+				"js\\views\\editor\\document\\screen\\EditorScreenView.js"
+			],
+			[
+				"phaseri",
+				"js\\logic\\runtime\\PhaserInstance.js"
+			],
+			[
+				"router",
+				"js\\router.js"
+			],
+			[
+				"treeviewjs",
+				"js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.js"
+			],
+			[
+				"template",
+				"js\\views\\editor\\sidebar\\entitytree\\EntityTreeTemplate.html"
+			],
+			[
+				"treeviewtem",
+				"js\\views\\editor\\document\\screen\\EditorScreenControlsViewTemplate.html"
+			],
+			[
+				"entit",
+				"js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.js"
+			],
+			[
+				"fileasset",
+				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetView.js"
+			],
+			[
+				"container",
+				"js\\views\\editor\\layout\\panelcontainer\\EditorPanelContainerView.js"
+			],
+			[
+				"layoui",
+				"js\\views\\editor\\layout\\EditorLayoutView.js"
+			],
+			[
+				"filemodel",
+				"js\\models\\editor\\assets\\EditorFileAssetModel.js"
+			],
+			[
+				"screenvie",
+				"js\\views\\editor\\document\\screen\\EditorScreenView.js"
+			],
+			[
+				"contpanelle",
+				"js\\views\\editor\\layout\\panelcontainer\\EditorPanelContainerView.less"
+			],
+			[
+				"editorpane",
+				"js\\views\\editor\\layout\\panelcontainer\\EditorPanelContainerTemplate.html"
+			],
+			[
+				"conatiner",
+				"js\\views\\editor\\layout\\panelcontainer\\EditorPanelContainerView.js"
+			],
+			[
+				"layouit",
+				"js\\views\\editor\\layout\\EditorLayoutView.js"
+			],
+			[
+				"controlstem",
+				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetControlsTemplate.html"
+			],
+			[
+				"apps",
+				"css\\appStyle.less"
+			],
+			[
+				"appstyl",
+				"css\\appStyle.less"
+			],
+			[
+				"bottom",
+				"js\\views\\editor\\layout\\EditorBottomLayoutTemplate.html"
+			],
+			[
+				"editorri",
+				"js\\views\\editor\\layout\\EditorRightLayoutTemplate.html"
+			],
+			[
+				"jq",
+				"js\\libs\\jqtree.js"
+			],
+			[
+				"jqtr",
+				"css\\jqtree.css"
+			],
+			[
+				"fileassetco",
+				"js\\collections\\editor\\assets\\EditorFileAssetsCollection.js"
+			],
+			[
+				"appmen",
+				"js\\views\\app\\menu\\AppMenuView.less"
+			],
+			[
+				"fileassettem",
+				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetViewTemplate.html"
+			],
+			[
+				"navbar",
+				"js\\views\\editor\\navbar\\EditorNavbarView.js"
+			],
+			[
+				"editorfileassetvi",
+				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetView.js"
+			],
+			[
+				"screenv",
+				"js\\views\\editor\\document\\screen\\EditorScreenView.less"
+			],
+			[
+				"screenview",
+				"js\\views\\editor\\document\\screen\\EditorScreenView.js"
+			],
+			[
+				"editordro",
+				"js\\views\\editor\\layout\\EditorDropAssetView.js"
+			],
+			[
+				"gneral",
+				"js\\views\\app\\overlay\\GeneralIconOverlayView.js"
+			],
+			[
+				"screenless",
+				"js\\views\\editor\\document\\screen\\EditorScreenView.less"
+			],
+			[
+				"",
+				"js\\views\\editor\\screen\\EditorScreenView.less"
+			],
+			[
+				"over",
+				"js\\views\\app\\menu\\AppMenuOverlayView.js"
+			],
+			[
+				"appless",
+				"js\\views\\app\\menu\\AppMenuView.less"
+			],
+			[
+				"editorla",
+				"js\\views\\editor\\layout\\EditorLayoutView.js"
+			],
+			[
+				"appmenless",
+				"js\\views\\app\\menu\\AppMenuView.less"
+			],
+			[
+				"fileasseless",
+				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetView.less"
+			],
+			[
+				"projet",
+				"templates\\projects\\projectsListTemplate.html"
+			],
+			[
+				"projectview",
+				"js\\views\\projects\\ProjectsView.js"
+			],
+			[
+				"projecttli",
+				"js\\views\\projects\\ProjectsListView.js"
+			],
+			[
+				"editorfilea",
+				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetViewTemplate.html"
+			],
+			[
+				"projectmo",
+				"js\\models\\project\\ProjectModel.js"
+			],
+			[
+				"project",
+				"templates\\projects\\projectsListTemplate.html"
+			],
+			[
+				"prjectste",
+				"templates\\projects\\projectsTemplate.html"
+			],
+			[
+				"editorfile",
+				"js\\collections\\editor\\assets\\EditorFileAssetsCollection.js"
+			],
+			[
+				"editorasstem",
+				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetViewTemplate.html"
+			],
+			[
+				"projectslistview",
+				"js\\views\\projects\\ProjectsListView.js"
+			],
+			[
+				"projectsv",
+				"js\\views\\projects\\ProjectsView.js"
+			],
+			[
+				"appsty",
+				"css\\appStyle.less"
+			],
+			[
+				"less",
+				"css\\darkColors.less"
+			],
+			[
+				"appst",
+				"css\\appStyle.less"
+			],
+			[
+				"menu",
+				"js\\views\\app\\menu\\AppMenuView.js"
+			],
+			[
+				"droples",
+				"js\\views\\editor\\layout\\EditorDropAssetView.less"
+			],
+			[
+				"editordorop",
+				"js\\views\\editor\\layout\\EditorDropAssetView.js"
+			],
+			[
+				"test",
+				"test.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 321.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
