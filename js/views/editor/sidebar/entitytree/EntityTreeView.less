@@ -10,21 +10,59 @@
     {
         width: 100%;
         height: calc(~"100% - 20px");
-        .jqtree-toggler
-        {
-            color: @font-color;
+        position: relative;
+        i.promptBullet {
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            color: @add-color;
         }
-        .fa-puzzle-piece
+        .entityTreeListContainer
         {
-            color : @editor-entity-color;
+            width: 100%;
+            height: 100%;
+            .jqtree-toggler
+            {
+                color: @font-color;
+            }
+            .fa-puzzle-piece
+            {
+                color : @editor-entity-color;
+            }
+            .fa-eye
+            {
+                color: @editor-success-color;
+            }
+            .fa-unlock-alt
+            {
+                color : @editor-inactive-gray;
+            }
         }
-        .fa-eye
+
+        .entityTreeListEmptyPrompt
         {
-            color: @editor-success-color;
-        }
-        .fa-unlock-alt
-        {
-            color : @editor-inactive-gray;
+            /*border: 4px solid;*/
+            border-radius: 5px;
+            position: absolute;
+            bottom: 16px;
+            left: calc(~"50% - 150px / 2");
+            width: 150px;
+            background-color: @add-color;
+            padding: 6px;
+            text-align: center;
+            span {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                &:active,
+                &:hover {
+                  cursor: default;
+                }
+            }
         }
     }
 

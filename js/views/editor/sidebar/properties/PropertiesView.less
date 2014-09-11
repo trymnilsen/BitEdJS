@@ -88,6 +88,38 @@
         .editor-properties-components
         {
             height: 100%;
+            position: relative;
+
+            i {
+                position: absolute;
+                top: 2px;
+                width: 100%;
+                text-align: center;
+                color: @editor-success-color;
+            }
+            .editor-properties-components-empty-promt
+            {
+                position: absolute;
+                width: 150px;
+                background-color: @editor-success-color;
+                border-radius: 6px;
+                padding: 6px;
+                top: 10px;
+                left: calc(~"50% - 150px / 2");
+                text-align: center;
+                span {
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    &:active,
+                    &:hover {
+                      cursor: default;
+                    }
+                }
+            }
         }
     }
     .editor-properties-add-remove

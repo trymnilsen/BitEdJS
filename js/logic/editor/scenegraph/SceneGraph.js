@@ -13,7 +13,7 @@ eventor
     {
         this.GraphData = [];
         this.numOfEntitiesCreated = 0;
-        //eventor.listenTo('editor.entity.requestAdd', _.bind(this.addNode,this));
+        
         //Functions for creating different nodes
         var NODE_TYPES = {
             entity : function() {
@@ -69,6 +69,7 @@ eventor
                 console.log('NodeType '+nodeType+' not valid for: '+nodeName);
             }
         }
+        eventor.on('editor.entity.requestAdd', _.bind(this.addNode,this));
         this.updateEntity = function(entityProtocol)
         {
 

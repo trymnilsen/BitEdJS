@@ -7,7 +7,8 @@ define([
   'eventor',
   'views/editor/sidebar/properties/tag/PropertiesTagView',
   'views/editor/sidebar/properties/components/PropertiesComponentView',
-  'text!views/editor/sidebar/properties/PropertiesViewTemplate.html'
+  'text!views/editor/sidebar/properties/PropertiesViewTemplate.html',
+  'text!views/editor/sidebar/properties/PropertiesNoneSelectedTemplate.html'
 ], 
 function($,
  _, 
@@ -15,7 +16,8 @@ function($,
  eventor,
  TagView,
  ComponentView,
- viewTemplate
+ viewTemplate,
+ notificationTemplate
  ){
     var propertiesView = Backbone.View.extend({
         id: 'editorPropertiesView',
@@ -44,7 +46,8 @@ function($,
             this.tagView.tags = this.activeNode.sceneNode.tags;
             this.componentsView.components = this.activeNode.sceneNode.components;
             $('.properties-lower-tags',this.$el).html(this.tagView.render().el);
-            $('.editor-properties-components',this.$el).html(this.componentsView.render().el);
+            $('.editor-properties-components',this.$el).prepend(this.componentsView.render().el);
+            $('.emptyPromptContainer',this.$el).html(notificationTemplate);
             return this;
         },
         addComponent: function()
@@ -55,11 +58,15 @@ function($,
             console.log('changed to',node);
             this.activeNode = node;
             this.render();
-            if(node.name !== 'None selected')
+            if(node.name === 'None selected')
+            {
+                $('.emptyPromptContainer',this.$el).html(notificationTemplate);
+            }
+            else
             {
                 $('.editor-properties-add-remove',this.$el)
                             .toggleClass('editor-properties-add-remove-active');
-                
+                $('.emptyPromptContainer',this.$el).html('');
             }
         }
     });

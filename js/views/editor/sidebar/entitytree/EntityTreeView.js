@@ -5,7 +5,7 @@ define([
   'underscore',
   'backbone',
   'eventor',
-  'logic/editor/editor',
+  'logic/editor/Editor',
   'text!views/editor/sidebar/entitytree/EntityTreeTemplate.html',
   'text!views/editor/sidebar/entitytree/EntityTreeNodeTemplate.html',
   'jqtree',
@@ -30,7 +30,7 @@ nodeItemTemplate
             //Add entitytree
             var data = [];
 
-            this.jqTreeEl = $('.entityTreeList',this.$el);
+            this.jqTreeEl = $('.entityTreeListContainer',this.$el);
             this.jqTreeEl.tree({
                 data: data,
                 autoOpen: true,
