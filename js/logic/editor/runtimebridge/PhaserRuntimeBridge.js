@@ -18,6 +18,10 @@ eventor
         addEntity: function(entity)
         {
             
+        },
+        getEntityInfo: function(entity)
+        {
+
         }
     }
     return PhaserRuntimeBridge;
