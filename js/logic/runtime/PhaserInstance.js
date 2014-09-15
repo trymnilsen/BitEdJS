@@ -34,6 +34,7 @@ define([
     preload: function(){
         this.game.load.image('logo','phaserio/phaser.png');
         this.game.load.image('grid','imgs/editor/screen/grid.png');
+        this.game.load.image('entityTemplate','imgs/editor/screen/32entitybackground.png');
     },
     create: function(){
             this.grid = this.game.add.tileSprite(0,0,this.w,this.h,'grid');
