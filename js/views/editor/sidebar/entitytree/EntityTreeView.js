@@ -8,6 +8,7 @@ define([
   'logic/editor/Editor',
   'text!views/editor/sidebar/entitytree/EntityTreeTemplate.html',
   'text!views/editor/sidebar/entitytree/EntityTreeNodeTemplate.html',
+  'text!views/editor/sidebar/entitytree/EntityTreeNoneSelectedTemplate.html',
   'jqtree',
   'dropDownEnhanc'
 ], function($, 
@@ -16,7 +17,8 @@ Backbone,
 eventor, 
 editor,
 entityTreeTemplate, 
-nodeItemTemplate
+nodeItemTemplate,
+emptyPromptTemplate
 ){
 
     var EntityTree = Backbone.View.extend({
@@ -27,6 +29,8 @@ nodeItemTemplate
         },
         render: function(){
             this.$el.html(entityTreeTemplate);
+            //Add the prompt
+            $('.emptyPromptContainer',this.$el).html(emptyPromptTemplate);
             //Add entitytree
             var data = [];
 
@@ -57,6 +61,9 @@ nodeItemTemplate
         },
         onEntityAdded: function(node)
         {
+            //remove prompt
+            $('.emptyPromptContainer',this.$el).html('');
+            
             this.jqTreeEl.tree(
                 'appendNode',
                 {
@@ -67,7 +74,6 @@ nodeItemTemplate
         },
         createEntity: function(evt)
         {
-            
             console.log('Clicked on:',evt);
             var entityType = $(evt.currentTarget).data('entitytype');
             console.log('type',entityType);
