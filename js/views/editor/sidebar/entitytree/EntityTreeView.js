@@ -79,7 +79,6 @@ emptyPromptTemplate
             console.log('type',entityType);
             var entityName = Date.now();
             eventor.trigger('editor.entity.requestAdd',entityType.toLowerCase(),entityName);
-
         },
         entitySelected: function(evt)
         {

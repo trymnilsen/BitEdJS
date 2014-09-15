@@ -2,8 +2,9 @@
 
 define([
   'underscore',
+  'logic/editor/runtimebridge/PhaserRuntimeBridge',
   'phaser'
-], function(_){
+], function(_, RuntimeBridge){
 
   var PhaserInstance = {
 
@@ -11,6 +12,7 @@ define([
     grid : null,
     w : 0,
     h : 0,
+    phaserBridge: null,
     attach: function(domID, w, h) {
       if(domID === '' || domID === undefined)
       {
@@ -25,7 +27,9 @@ define([
             preload: _.bind(this.preload,this),
             create: _.bind(this.create,this)
           });
-
+      //Create a bridge instance enabling a decoupled communication between our
+      //editor and running game instance
+      this.phaserBridge = new RuntimeBridge(this.game);
     },
     preload: function(){
         this.game.load.image('logo','phaserio/phaser.png');
