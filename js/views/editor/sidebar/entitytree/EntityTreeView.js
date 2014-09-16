@@ -83,7 +83,7 @@ emptyPromptTemplate
         entitySelected: function(evt)
         {
             console.log('node selected',evt.node);
-            eventor.trigger('editor.entity.selected',evt.node);
+            eventor.trigger('editor.entity.selected',evt.node.sceneNode);
         }
 
     });

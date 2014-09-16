@@ -27,6 +27,7 @@ modalTemplate
             for (var i = 0; i < this.tags.length; i++) {
                 this.addTag(this.tags[i]);
             }
+            this.delegateEvents();
             return this;
         },
         addTag: function(tag) {

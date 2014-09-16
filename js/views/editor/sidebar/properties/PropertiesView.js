@@ -25,11 +25,8 @@ function($,
         tagView: {},
         componentsView: {},
         activeNode: {
-            name: 'None selected',
-            sceneNode: {
-                tags : [],
-                components : []
-            }
+            tags : [],
+            components : []
         },
         events: {
             'click .editor-properties-add-remove' : 'addComponent'
@@ -43,8 +40,8 @@ function($,
         render: function(){
             this.$el.html(this.template(this.activeNode));
             console.log('re-rendering');
-            this.tagView.tags = this.activeNode.sceneNode.tags;
-            this.componentsView.components = this.activeNode.sceneNode.components;
+            this.tagView.tags = this.activeNode.tags;
+            this.componentsView.components = this.activeNode.components;
             $('.properties-lower-tags',this.$el).html(this.tagView.render().el);
             $('.editor-properties-components',this.$el).prepend(this.componentsView.render().el);
             $('.emptyPromptContainer',this.$el).html(notificationTemplate);
