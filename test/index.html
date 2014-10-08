@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html{
+    /* This image will be displayed fullscreen */
+    background:url('img/backslate.jpg') no-repeat center center;
+
+    /* Ensure the html element always takes up the full height of the browser window */
+    min-height:100%;
+
+    /* The Magic */
+    background-size:cover;
+}
+
+body{
+    /* Workaround for some mobile browsers */
+    min-height:100%;
+}
+  .textbox { 
+    border: 1px solid #c4c4c4; 
+    height: 35px; 
+    width: 275px; 
+    font-size: 18px; 
+    padding: 4px 4px 4px 4px; 
+} 
+ 
+.textbox:focus { 
+    outline: none; 
+    border: 1px solid #7bc1f7; 
+} 
+</style>
+  <meta charset="utf-8">
+  <title>TestApp</title>
+</head>
+<body>
+<div>
+<input class="textbox"type="text"> 
+<br><br> 
+<input class="textbox"type="text"> 
+</div>
+</body>
+</html>
+
+
