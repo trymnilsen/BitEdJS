@@ -2,17 +2,20 @@
 
 .editor-navbar
 {
-	ul
+	background-color: @editor-dark-color;
+	//Select only the ul that are first level children 
+	&>ul
 	{
 		margin: 0;
 		padding: 6px;
 		list-style: none;
+		display: inline-block;
 		background-color: @editor-dark-color;
 		li
 		{
-				display: inline;
-				margin: 0px 20px;
-				cursor: pointer;
+			display: inline;
+			margin: 0px 20px;
+			cursor: pointer;
 			
 			&:hover
 			{

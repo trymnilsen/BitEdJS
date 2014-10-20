@@ -92,6 +92,7 @@ define([
                 size        : 72,
                 resizable   : false,
                 closable    : false,
+                //showOverflowOnHover: true
             },
             east: {
                 childOptions : {
