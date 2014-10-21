@@ -9,6 +9,7 @@
         .editor-properties-general
         {
             overflow: hidden;
+            height: 65px;
             .properties-upper-input
             {
                 width: 100%;
@@ -33,7 +34,7 @@
                 .properties-name-field
                 {
                     position: absolute;
-                    left: 104px;
+                    left: 70px;
                     right: 8px;
                     top: 8px;
                     vertical-align: top;
@@ -59,7 +60,7 @@
                         display: inline-block;
                         .properties-tag-list-offset
                         {
-                            width: 90px;
+                            width: 68px;
                             height: 15px;
                             float: left;
                         }
@@ -79,6 +80,10 @@
                         {
                             background-color: @add-color !important;
                             cursor: pointer;
+                        }
+                        .properties-add-tag-disabled
+                        {
+                            background-color: @disabled-input-color !important;
                         }
                     }
                 }

@@ -89,7 +89,7 @@ define([
                 fxName              : 'none',
             },
             north: {
-                size        : 72,
+                size        : 29,
                 resizable   : false,
                 closable    : false,
                 //showOverflowOnHover: true

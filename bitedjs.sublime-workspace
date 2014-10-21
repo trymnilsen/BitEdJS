@@ -411,8 +411,24 @@
 			"file": "js/logic/editor/scenegraph/SceneGraph.js",
 			"settings":
 			{
-				"buffer_size": 2079,
-				"line_ending": "Windows"
+				"buffer_size": 2080,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/views/editor/sidebar/properties/PropertiesViewTemplate.html",
+			"settings":
+			{
+				"buffer_size": 704,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/views/editor/sidebar/properties/PropertiesView.less",
+			"settings":
+			{
+				"buffer_size": 4067,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -427,24 +443,24 @@
 			"file": "js/logic/runtime/PhaserInstance.js",
 			"settings":
 			{
-				"buffer_size": 1897,
-				"line_ending": "Windows"
+				"buffer_size": 2256,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "js/logic/editor/runtimebridge/PhaserRuntimeBridge.js",
 			"settings":
 			{
-				"buffer_size": 317,
-				"line_ending": "Windows"
+				"buffer_size": 2079,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "js/views/editor/sidebar/entitytree/EntityTreeView.js",
 			"settings":
 			{
-				"buffer_size": 2678,
-				"line_ending": "Windows"
+				"buffer_size": 2985,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -474,9 +490,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 222.0,
 		"selected_items":
 		[
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"js",
 				"JSHint"
@@ -484,10 +508,6 @@
 			[
 				"packa",
 				"Package Control: Disable Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"insta",
@@ -534,13 +554,14 @@
 				"JSHint: Set Plugin Options"
 			]
 		],
-		"width": 402.0
+		"width": 449.0
 	},
 	"console":
 	{
-		"height": 91.0,
+		"height": 164.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -554,23 +575,17 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/behaviours",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/runtimebridge",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/scenegraph",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/runtime",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app/overlay",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/entitytree"
+		"/home/skynet/code/BitEdJS"
 	],
 	"file_history":
 	[
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentItemTemplate.html",
+		"/home/skynet/code/BitEdJS/css/bootstrap/mixins/vendor-prefixes.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.js",
+		"/home/skynet/code/BitEdJS/css/bootstrap/progress-bars.less",
+		"/home/skynet/code/BitEdJS/css/bootstrap/pager.less",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/test.html",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/templates/projects/projectsListTemplate.html",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/pager.less",
@@ -691,18 +706,11 @@
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/navbar.less",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/nav-vertical-align.less",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorDropAssetView.less",
-		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
-		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/foo/js/models/editor/assets/EditorFileAssetModel.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/glyphicons.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/screen/EditorScreenView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/.gitignore",
-		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/screen/EditorScreenView.less"
+		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -774,7 +782,7 @@
 			"\"",
 			"left"
 		],
-		"reverse": false,
+		"reverse": true,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -783,7 +791,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -792,30 +800,91 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2079,
+						"buffer_size": 2080,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1082,
-								1082
+								426,
+								426
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 38.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/views/editor/sidebar/properties/PropertiesViewTemplate.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 704,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								460,
+								460
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/views/editor/sidebar/properties/PropertiesView.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4067,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								385,
+								385
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 3,
 					"file": "js/views/app/overlay/GeneralIconOverlayView.less",
 					"semi_transient": false,
 					"settings":
@@ -833,63 +902,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/LESS/LESS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/logic/runtime/PhaserInstance.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1897,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								589,
-								589
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "js/logic/editor/runtimebridge/PhaserRuntimeBridge.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 317,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								258,
-								258
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -900,27 +915,29 @@
 				},
 				{
 					"buffer": 4,
-					"file": "js/views/editor/sidebar/entitytree/EntityTreeView.js",
+					"file": "js/logic/runtime/PhaserInstance.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2678,
+						"buffer_size": 2256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1802,
-								1802
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 285.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -928,6 +945,66 @@
 				},
 				{
 					"buffer": 5,
+					"file": "js/logic/editor/runtimebridge/PhaserRuntimeBridge.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2079,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/views/editor/sidebar/entitytree/EntityTreeView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2985,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"file": "js/router.js",
 					"semi_transient": true,
 					"settings":
@@ -945,17 +1022,19 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"semi_transient": false,
 					"settings":
 					{
@@ -979,11 +1058,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "js/logic/editor/behaviours/BehaviourStore.js",
 					"semi_transient": false,
 					"settings":
@@ -1001,13 +1080,15 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -1015,7 +1096,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -1051,7 +1132,7 @@
 	"project": "bitedjs.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1059,6 +1140,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"propertiesvil",
+				"js/views/editor/sidebar/properties/PropertiesView.less"
+			],
+			[
+				"propertiesview",
+				"js/views/editor/sidebar/properties/PropertiesViewTemplate.html"
+			],
 			[
 				"treeview",
 				"js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.js"
@@ -1514,7 +1603,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 321.0,
+	"side_bar_width": 257.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

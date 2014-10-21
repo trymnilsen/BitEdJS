@@ -3,12 +3,14 @@
 define([  
     'logic/editor/pipeline/AssetPipeline',
     'logic/editor/pipeline/pipelines/SpritePipeline',
-    'logic/editor/scenegraph/SceneGraph'
+    'logic/editor/scenegraph/SceneGraph',
+    'logic/editor/EditorConstants'
 ],
 function (
     AssetPipeline,
     SpritePipeline,
-    SceneGraph
+    SceneGraph,
+    EditorConstants
 ) {
     var editorGenericPipeline = new AssetPipeline();
     //Specialized pipelines
@@ -19,6 +21,7 @@ function (
 
     return {
         assetPipeline : editorGenericPipeline,
-        sceneGraph : editorSceneGraph
+        sceneGraph : editorSceneGraph,
+        constants: EditorConstants
     };
 });
