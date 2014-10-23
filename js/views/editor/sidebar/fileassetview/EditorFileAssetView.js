@@ -23,7 +23,7 @@ define([
 
         render: function() {
             var assetList = new AssetList();
-            this.$el.append(assetList.el);
+            this.$el.append(assetList.render().el);
             return this;
         }
     });

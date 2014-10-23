@@ -22,7 +22,6 @@ define([
     var EditorFileAssetList = Backbone.View.extend({
         id: 'FileAssetViewList',
         tagName: 'ul',
-        template: _.template(fileAssetViewTemplate),
         list : editor.assetPipeline.getList(),
 
         initialize: function() {
@@ -34,11 +33,10 @@ define([
             this.footer = this.$('footer');
             this.main = $('#main');
         },
-/*
+
         render: function() {
-            this.$el.html(this.template());
             return this;
-        },*/
+        },
 
         addOne: function(todo) {
             console.log('adding to view');

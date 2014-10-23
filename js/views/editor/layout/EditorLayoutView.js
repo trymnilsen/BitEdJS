@@ -78,7 +78,7 @@ define([
         //$('#mainLayoutWestPane').append(containerPanelEntity.render().el);
         
         //Render
-        assetView.render();
+        //assetView.render();
         dragAndDropAssetField.render();
         appMenu.render();
         screenView.render();

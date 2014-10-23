@@ -68,17 +68,40 @@
         }*/
     }
 
-    .FileAssetViewContainer ul
+    ul
     {
         margin: 0;
         padding: 0;
-        
+        list-style: none;
         li 
         {
+            div
+            {
+                position: relative;
+                i
+                {
+                    background-color: @editor-medium-dark-color;
+                    padding-right: 8px;
+                    padding-left: 7px;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+                    text-align: center;
+                }
+
+                .file-asset-item-name
+                {
+                    position: absolute;
+                    left: 32px;
+                    right: 0;
+                    overflow: hidden;
+                    white-space: nowrap; 
+                    text-overflow:ellipsis
+                }
+            }
             display: block;
             &:hover
             {
-                background-color: red;
+                background-color: @editor-medium-dark-color;
             }
         }
     }
