@@ -2,16 +2,23 @@
 
 define([
 'underscore',
-'eventor'
+'logic/editor/components/ComponentBank'
 ], 
 function (
 _,
-eventor
+componentBank
 ) {
-
-    function ComponentStore()
+    function ComponentResolver()
     {
 
     }
-    return ComponentStore;
+    ComponentResolver.prototype =
+    {
+    	constructor: ComponentResolver,
+    	getAllComponents: function()
+    	{
+    		return componentBank;
+    	}
+    }
+    return ComponentResolver;
 });
