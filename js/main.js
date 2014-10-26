@@ -18,6 +18,7 @@ require.config({
     'jqtree'        : 'libs/jqtree',
     'toastr'        : 'libs/toastr',
     'dropDownEnhanc': 'libs/dropdowns-enhancement',
+    'bootstrapSweetAlert':'../bower_components/bootstrap-sweetalert/lib/sweet-alert.min'
 },
 
 shim : {
@@ -26,6 +27,7 @@ shim : {
     'jqtree'        : ['jquery'],
     'toastr'        : ['jquery'],
     'dropDownEnhanc': ['bootstrap'],
+    'bootstrapSweetAlert' : ['bootstrap']
 }
 
 });

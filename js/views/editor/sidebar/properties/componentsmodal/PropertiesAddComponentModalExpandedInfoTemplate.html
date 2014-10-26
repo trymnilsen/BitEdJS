@@ -1,0 +1,28 @@
+<div class="component-modal-info-heading">
+	<img class="component-modal-info-icon"></img>
+	<div class="component-modal-info-title">
+		<span>
+		<%= title %>
+		</span>
+	</div>
+</div>
+<div class="component-modal-info-description">
+	<span>
+		<%= description %>
+	</span>
+</div>
+<div class="component-modal-info-params">
+  <% _.each(parameter, function(param){ %>
+	<div class="component-modal-info-param-field">
+		<span class="component-modal-info-param-name">
+		<%= param.get("name") %>
+		</span>
+		<span class="component-modal-info-param-type">
+		<%= param.get("type") %>
+		</span>
+		<span class="component-modal-info-param-desc">
+		<%= param.get("desc") %>
+		</span>
+	</div>
+  <% }); %>
+</div>

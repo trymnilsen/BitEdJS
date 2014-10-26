@@ -22,6 +22,9 @@ modalTemplate
         },
         tags : ['foo','bar'],
         render: function(){
+            //We append our modal to the body instead of adding it just below
+            //so we avoid having it nested under and getting cut of by overflow
+            //etc by the layout system
             $('body').append(modalTemplate);
             this.$el.html(propTemplate);
             for (var i = 0; i < this.tags.length; i++) {

@@ -1,10 +1,10 @@
-/*Css imports are handled from the root 
-while as less are handled relative from this (css) directory*/
-@import "css/bootstrap.css";
-@import "css/font-awesome.min.css";
-@import "css/jqtree.css";
-@import "css/toastr.css";
-@import "css/dropdown-enhancement.css";
+//General
+@import "bootstrap.css";
+@import "font-awesome.min.css";
+@import "jqtree.css";
+@import "toastr.css";
+@import "dropdown-enhancement.css";
+@import "../bower_components/bootstrap-sweetalert/lib/sweet-alert.css";
 @import "appStyle.less";
 /* ---- APP STYLES ---- */
 @import "../js/views/app/menu/AppMenuView.less";
@@ -15,12 +15,11 @@ while as less are handled relative from this (css) directory*/
 /*Layout Styles*/
 @import "../js/views/editor/layout/EditorDropAssetView.less";
 @import "../js/views/editor/layout/EditorLayoutView.less";
-@import "../js/views/editor/layout/EditorDropAssetView.less";
 /*File asset Styles*/
 @import "../js/views/editor/sidebar/fileassetview/EditorFileAssetControlsView.less";
 @import "../js/views/editor/sidebar/fileassetview/EditorFileAssetView.less";
 /*Entity Tree*/
-@import "../js/views/editor/sidebar/entitytree/EntityTreeView";
+@import "../js/views/editor/sidebar/entitytree/EntityTreeView.less";
 /*Screen editor Styles*/
 @import "../js/views/editor/document/screen/EditorScreenView.less";
 /*Properties editor styles*/

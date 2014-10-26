@@ -1,0 +1,838 @@
+@import "bootstrap.css";
+@import "font-awesome.min.css";
+@import "jqtree.css";
+@import "toastr.css";
+@import "dropdown-enhancement.css";
+@import "../bower_components/bootstrap-sweetalert/lib/sweet-alert.css";
+/* Editor palette */
+/* button styles*/
+/*General colors*/
+body,
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #27282b;
+  color: white;
+}
+body .modal-content,
+html .modal-content {
+  /*Modal content should not be white, but light black*/
+  color: #1c1c1e;
+}
+.full-space-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.table-row {
+  display: table-row;
+}
+.table-cell {
+  display: table-cell;
+}
+.relative-wrapper {
+  position: relative;
+}
+#container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  -webkit-transition: left 0.4s ease-in-out;
+  -moz-transition: left 0.4s ease-in-out;
+  -ms-transition: left 0.4s ease-in-out;
+  -o-transition: left 0.4s ease-in-out;
+  transition: left 0.4s ease-in-out;
+}
+#mainContent {
+  width: 100%;
+  height: calc(100% - 20px);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+}
+#statusbarWrapper {
+  width: 100%;
+  height: 20px;
+  background-color: #1c1c1e;
+}
+#editorWrapper {
+  height: 100%;
+  width: 100%;
+}
+.editor-label-small {
+  color: #ffffff;
+  font-size: 12px;
+  margin: 2px 5px;
+  font-weight: 100;
+  font-family: sans-serif;
+}
+.ui-layout-toggler {
+  background-color: #303030;
+}
+/*
+ *  RESIZER-BARS
+ */
+.ui-layout-resizer {
+  /* all 'resizer-bars' */
+  background: #1c1c1e;
+  border: 1px solid #BBB;
+  border-width: 0;
+}
+.ui-layout-resizer-drag {
+  /* REAL resizer while resize in progress */
+}
+.ui-layout-resizer-hover {
+  /* affects both open and closed states */
+}
+/* NOTE: It looks best when 'hover' and 'dragging' are set to the same color,
+        otherwise color shifts while dragging when bar can't keep up with mouse */
+.ui-layout-resizer-open-hover,
+.ui-layout-resizer-dragging {
+  /* resizer beging 'dragging' */
+  background: #777982;
+}
+.ui-layout-resizer-dragging {
+  /* CLONED resizer being dragged */
+  border: 1px solid #BBB;
+}
+.ui-layout-resizer-north-dragging,
+.ui-layout-resizer-south-dragging {
+  border-width: 1px 0;
+}
+.ui-layout-resizer-west-dragging,
+.ui-layout-resizer-east-dragging {
+  border-width: 0 1px;
+}
+/* NOTE: Add a 'dragging-limit' color to provide visual feedback when resizer hits min/max size limits */
+.ui-layout-resizer-dragging-limit {
+  /* CLONED resizer at min or max size-limit */
+  background: #E1A4A4;
+  /* red */
+}
+.ui-layout-resizer-closed-hover {
+  /* hover-color to 'slide open' */
+  background: #EBD5AA;
+}
+.ui-layout-resizer-sliding {
+  /* resizer when pane is 'slid open' */
+  opacity: .10;
+  /* show only a slight shadow */
+  filter: alpha(opacity=10);
+}
+.ui-layout-resizer-sliding-hover {
+  /* sliding resizer - hover */
+  opacity: 1.00;
+  /* on-hover, show the resizer-bar normally */
+  filter: alpha(opacity=100);
+}
+/* sliding resizer - add 'outside-border' to resizer on-hover 
+         * this sample illustrates how to target specific panes and states */
+.ui-layout-resizer-north-sliding-hover {
+  border-bottom-width: 1px;
+}
+.ui-layout-resizer-south-sliding-hover {
+  border-top-width: 1px;
+}
+.ui-layout-resizer-west-sliding-hover {
+  border-right-width: 1px;
+}
+.ui-layout-resizer-east-sliding-hover {
+  border-left-width: 1px;
+}
+/* ---- APP STYLES ---- */
+.userSelectNone {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Editor palette */
+/* button styles*/
+/*General colors*/
+/*@sidebar-background-color : rgb(40, 45, 60);*/
+/*@sidebar-border-color : rgb(10, 11, 15);*/
+/*@sidebar-hover-color : rgb(63, 66, 103);*/
+/*@sidebar-width : 240px;*/
+.overlay-visible {
+  display: inline !important;
+}
+.open-sidebar {
+  left: 240px !important;
+}
+#appMenuOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0px;
+  z-index: 10;
+  background-color: white;
+  opacity: 0;
+}
+#sidebar {
+  position: absolute;
+  left: -240px;
+  background-color: #282d3c;
+  width: 240px;
+  height: 100%;
+  box-sizing: border-box;
+}
+#sidebar #menuContainer {
+  height: 100%;
+  min-height: 350px;
+  position: relative;
+}
+#sidebar #menuOptionsTop {
+  width: 100%;
+  position: absolute;
+}
+#sidebar #menuOptionsBottom {
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+}
+#sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#sidebar ul li {
+  margin: 0;
+}
+#sidebar ul li a {
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 100;
+  font-family: sans-serif;
+  color: white;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #0a0b0f;
+}
+#sidebar ul li a:hover {
+  background-color: red;
+}
+.general-overlay-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: inline;
+  background-color: #191919;
+  opacity: 0.5;
+  top: 0;
+}
+.general-overlay-wrapper #general-overlay-icon {
+  position: absolute;
+  display: inline;
+  width: 145px;
+  height: 172px;
+  left: calc(50% - 145px/2);
+  top: calc(50% - 172px/2);
+  transform: scale(1);
+  font-size: 130px;
+  text-align: center;
+}
+.general-overlay-wrapper #general-overlay-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0px;
+  top: calc(50% + 172px/2);
+}
+.general-overlay-transition {
+  transition: all 0.2s ease-in-out 0.1s;
+}
+.general-overlay-wrapper-hidden {
+  display: none;
+  opacity: 0;
+}
+.general-overlay-icon-hidden {
+  transform: scale(1.3) !important;
+  opacity: 0;
+}
+.general-overlay-text-hidden {
+  opacity: 0 !important;
+  top: calc(50% + 172px) !important;
+}
+.general-overlay-wrapper-fadeout {
+  opacity: 0;
+}
+.general-overlay-icon-fadeout {
+  opacity: 0;
+}
+.general-overlay-text-fadeout {
+  opacity: 0 !important;
+}
+.app-menu-button-wrapper {
+  float: left;
+  width: 29px;
+  height: 29px;
+  background-color: #e17913;
+  padding: 1px 1px;
+  cursor: pointer;
+}
+.app-menu-button-line {
+  display: block;
+  width: 18px;
+  height: 3px;
+  margin: 4px;
+  background-color: white;
+}
+/* ---- ~ APP STYLES ---- */
+/* ---- EDITOR STYLES ---- */
+/*Layout Styles*/
+#editorFileDropOverlay {
+  display: block;
+  left: 0px;
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+#editorFileDropZone {
+  background-color: #e0e9f1;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  position: relative;
+  text-align: center;
+  z-index: 150;
+  box-sizing: border-box;
+}
+.ui-layout-pane {
+  background-color: #3b3c40;
+}
+.ui-layout-north {
+  z-index: 50 !important;
+  overflow: visible !important;
+}
+/*File asset Styles*/
+.editor-panel-controls {
+  height: 20px;
+  width: 100%;
+  display: table-row;
+}
+.editor-panel-controls .editor-panel-controls-cells {
+  width: 100%;
+  display: table;
+  border-top: solid #1c1c1e 1px;
+  padding: 0px 5px;
+}
+.editor-panel-controls .editor-panel-controls-cells .editor-fileAsset-controls-left {
+  width: 32px;
+}
+.editor-panel-controls .editor-panel-controls-cells .editor-fileAsset-controls-right {
+  width: 48px;
+}
+.editor-panel-controls .editor-panel-controls-cells .editor-add-icon {
+  width: 100%;
+  color: #079622;
+  text-align: center;
+}
+.editor-panel-controls .editor-panel-controls-cells div {
+  display: table-cell;
+}
+#FileAssetViewContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+#FileAssetViewContainer #EditorSearchForAssetText {
+  overflow: auto;
+}
+#FileAssetViewContainer #EditorAssetOptionsButtonsWrapper {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  /*div 
+        {
+            position: relative;
+            p 
+            {
+                padding: 2px 10px;
+                color:white;
+                position: absolute;
+                left: 0px;
+                &:hover
+                {
+                    background-color: @anchor-button-hover-background-color;
+                }  
+            }
+        }*/
+}
+#FileAssetViewContainer #EditorAssetOptionsButtonsWrapper div {
+  height: 30px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+#FileAssetViewContainer #EditorAssetOptionsButtonsWrapper div p {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: 0px;
+  text-align: center;
+}
+#FileAssetViewContainer #EditorAssetOptionsButtonsWrapper div p:hover {
+  background-color: #282828;
+}
+#FileAssetViewContainer #EditorAssetOptionsButtonsWrapper div p.remove-asset-option {
+  background-color: red !important;
+  overflow: hidden;
+  -webkit-transition: height 0.2s ease-in-out;
+  -moz-transition: height 0.2s ease-in-out;
+  -ms-transition: height 0.2s ease-in-out;
+  -o-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+}
+#FileAssetViewContainer #EditorAssetOptionsButtonsWrapper div p.remove-asset-option-hidden {
+  height: 0px !important;
+}
+#FileAssetViewContainer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#FileAssetViewContainer ul li {
+  display: block;
+}
+#FileAssetViewContainer ul li div {
+  position: relative;
+}
+@-webkit-keyframes scrolling-asset-load-bar {
+  0% {
+    left: calc(0% - 40px);
+  }
+  100% {
+    left: calc(100% - 32px);
+  }
+}
+@-moz-keyframes scrolling-asset-load-bar {
+  0% {
+    left: calc(0% - 40px);
+  }
+  100% {
+    left: calc(100% - 32px);
+  }
+}
+@-ms-keyframes scrolling-asset-load-bar {
+  0% {
+    left: calc(0% - 40px);
+  }
+  100% {
+    left: calc(100% - 32px);
+  }
+}
+@-o-keyframes scrolling-asset-load-bar {
+  0% {
+    left: calc(0% - 40px);
+  }
+  100% {
+    left: calc(100% - 32px);
+  }
+}
+@keyframes scrolling-asset-load-bar {
+  0% {
+    left: calc(0% - 40px);
+  }
+  100% {
+    left: calc(100% - 32px);
+  }
+}
+#FileAssetViewContainer ul li div i {
+  background-color: #303030;
+  padding-right: 8px;
+  padding-left: 7px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: center;
+}
+#FileAssetViewContainer ul li div .file-asset-item-name {
+  position: absolute;
+  left: 32px;
+  padding-top: 2px;
+  right: 52px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#FileAssetViewContainer ul li div .file-asset-load-procentage {
+  position: absolute;
+  background-color: #079622;
+  top: 0px;
+  right: 0px;
+  width: 32px;
+  height: 20px;
+  padding-left: 4px;
+  padding-top: 2px;
+}
+#FileAssetViewContainer ul li div .file-asset-load-bar {
+  position: absolute;
+  left: 28px;
+  width: 40px;
+  bottom: 0px;
+  height: 2px;
+  background: #079622;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-animation: scrolling-asset-load-bar 5s infinite;
+  -moz-animation: scrolling-asset-load-bar 5s infinite;
+  -ms-animation: scrolling-asset-load-bar 5s infinite;
+  animation: scrolling-asset-load-bar 5s infinite;
+}
+#FileAssetViewContainer ul li div .fa-times {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  top: 0px;
+  opacity: 0;
+  right: 32px;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  -moz-transition: opacity 0.15s ease-in-out;
+  -ms-transition: opacity 0.15s ease-in-out;
+  -o-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+}
+#FileAssetViewContainer ul li div .fa-times:hover {
+  opacity: 1;
+  background-color: #e6170d;
+}
+#FileAssetViewContainer ul li div .file-asset-extra-options {
+  display: inline;
+}
+#FileAssetViewContainer ul li:hover {
+  background-color: #303030;
+}
+/*Entity Tree*/
+#editorEntityTreeView {
+  height: 100%;
+  width: 100%;
+}
+#editorEntityTreeView .entityTreeList {
+  width: 100%;
+  height: calc(100% - 20px);
+  position: relative;
+}
+#editorEntityTreeView .entityTreeList i.promptBullet {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  color: #079622;
+}
+#editorEntityTreeView .entityTreeList .entityTreeListContainer {
+  width: 100%;
+  height: 100%;
+}
+#editorEntityTreeView .entityTreeList .entityTreeListContainer .jqtree-toggler {
+  color: #ffffff;
+}
+#editorEntityTreeView .entityTreeList .entityTreeListContainer .fa-puzzle-piece {
+  color: #36b89e;
+}
+#editorEntityTreeView .entityTreeList .entityTreeListContainer .fa-eye {
+  color: #0db1c9;
+}
+#editorEntityTreeView .entityTreeList .entityTreeListContainer .fa-unlock-alt {
+  color: #707278;
+}
+#editorEntityTreeView .entityTreeList .entityTreeListEmptyPrompt {
+  /*border: 4px solid;*/
+  border-radius: 5px;
+  position: absolute;
+  bottom: 16px;
+  left: calc(50% - 150px / 2);
+  width: 150px;
+  background-color: #079622;
+  padding: 6px;
+  text-align: center;
+}
+#editorEntityTreeView .entityTreeList .entityTreeListEmptyPrompt span {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#editorEntityTreeView .entityTreeList .entityTreeListEmptyPrompt span:active,
+#editorEntityTreeView .entityTreeList .entityTreeListEmptyPrompt span:hover {
+  cursor: default;
+}
+#editorEntityTreeView .editor-entity-tree-controls-cells {
+  height: 20px;
+  width: 100%;
+  display: table;
+  border-top: solid #1c1c1e 1px;
+  padding: 0px 5px;
+}
+#editorEntityTreeView .editor-entity-tree-controls-cells .editor-entity-tree-controls-left {
+  width: 32px;
+}
+#editorEntityTreeView .editor-entity-tree-controls-cells .editor-entity-tree-controls-right {
+  width: 48px;
+}
+#editorEntityTreeView .editor-entity-tree-controls-cells .editor-add-icon {
+  width: 100%;
+  color: #079622;
+  text-align: center;
+  cursor: pointer;
+}
+#editorEntityTreeView .editor-entity-tree-controls-cells .dropdown-menu li {
+  color: #1c1c1e;
+  cursor: pointer;
+  text-align: center;
+}
+#editorEntityTreeView .editor-entity-tree-controls-cells .dropdown-menu li:hover {
+  background-color: #dcdcdc;
+}
+#editorEntityTreeView .editor-entity-tree-controls-cells .entity-tree-add-group {
+  position: relative;
+}
+#editorEntityTreeView .editor-entity-tree-controls-cells > div {
+  display: table-cell;
+}
+/*Screen editor Styles*/
+#editorScreenViewDiv {
+  width: 100%;
+  height: calc(100% - 20px);
+}
+.editor-document-controls {
+  height: 20px;
+  background-color: #1c1c1e;
+}
+.editor-document-controls div.editor-control-right-wrapper {
+  float: right;
+}
+.editor-document-controls div.editor-control-left-wrapper {
+  float: left;
+  padding: 3px;
+}
+.editor-document-controls div.editor-control-left-wrapper span {
+  margin-left: 10px;
+}
+.editor-document-controls div.editor-control-button-wrapper {
+  display: inline;
+}
+/*Properties editor styles*/
+#editorPropertiesView {
+  height: 100%;
+  position: relative;
+}
+#editorPropertiesView .editor-properites-container {
+  height: 100%;
+  width: 100%;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general {
+  overflow: hidden;
+  height: 65px;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-upper-input {
+  width: 100%;
+  height: 35px;
+  position: relative;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-upper-input i {
+  position: absolute;
+  width: 54px;
+  height: 52px;
+  font-size: 50px;
+  margin: 6px;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-upper-input span {
+  position: absolute;
+  left: 58px;
+  top: 14px;
+  width: 60px;
+  vertical-align: top;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-upper-input .properties-name-field {
+  position: absolute;
+  left: 70px;
+  right: 8px;
+  top: 8px;
+  vertical-align: top;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-upper-input .properties-name-field input {
+  width: 100%;
+  color: #1c1c1e;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-lower-tags ul {
+  padding: 0px;
+  margin: 0px;
+  float: left;
+  width: 100%;
+  list-style-type: none;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-lower-tags ul li {
+  float: left;
+  display: inline-block;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-lower-tags ul li .properties-tag-list-offset {
+  width: 68px;
+  height: 15px;
+  float: left;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-lower-tags ul li .property-tag-float {
+  float: left;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-lower-tags ul li .tag-view {
+  display: inline-block;
+  background-color: #0db1c9;
+  padding: 2px 8px;
+  margin: 2px;
+  border-radius: 3px;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-lower-tags ul li .properties-add-tag {
+  background-color: #079622 !important;
+  cursor: pointer;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-general .properties-lower-tags ul li .properties-add-tag-disabled {
+  background-color: #c8c8c8 !important;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-components {
+  height: 100%;
+  position: relative;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-components i {
+  position: absolute;
+  top: 2px;
+  width: 100%;
+  text-align: center;
+  color: #0db1c9;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-components .editor-properties-components-empty-promt {
+  position: absolute;
+  width: 150px;
+  background-color: #0db1c9;
+  border-radius: 6px;
+  padding: 6px;
+  top: 10px;
+  left: calc(50% - 150px / 2);
+  text-align: center;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-components .editor-properties-components-empty-promt span {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#editorPropertiesView .editor-properites-container .editor-properties-components .editor-properties-components-empty-promt span:active,
+#editorPropertiesView .editor-properites-container .editor-properties-components .editor-properties-components-empty-promt span:hover {
+  cursor: default;
+}
+#editorPropertiesView .editor-properties-add-remove {
+  bottom: 0px;
+  width: 100%;
+  position: absolute;
+  height: 0px;
+  text-align: center;
+  padding-top: 4px;
+  background-color: #079622;
+  -webkit-transition: height 0.5s 0.2s;
+  -moz-transition: height 0.5s 0.2s;
+  -ms-transition: height 0.5s 0.2s;
+  -o-transition: height 0.5s 0.2s;
+  transition: height 0.5s 0.2s;
+}
+#editorPropertiesView .editor-properties-add-remove-active {
+  height: 30px !important;
+}
+.properties-components-container {
+  border-top: 1px solid #1c1c1e;
+}
+.properties-components-container .properties-component-portlet {
+  color: white;
+}
+.properties-components-container .properties-component-portlet-header {
+  padding: 0.2em 0.3em;
+  border-bottom: 1px solid #1c1c1e;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.properties-components-container .properties-component-portlet-header .collapse-icon {
+  width: 20px;
+}
+.properties-components-container .properties-component-portlet-content {
+  padding: 0.4em;
+  background-color: #1c1c1e;
+}
+.properties-components-container .portlet-placeholder {
+  border: 6px dotted black;
+  margin: 0.5em;
+  height: 50px;
+}
+/*Navigation Styles */
+.editor-navbar {
+  background-color: #1c1c1e;
+}
+.editor-navbar > ul {
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  display: inline-block;
+  background-color: #1c1c1e;
+}
+.editor-navbar > ul li {
+  display: inline;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+.editor-navbar > ul li:hover {
+  background-color: #08080a;
+}
+/**User view styles */
+.app-navbar-user {
+  display: inline;
+  position: relative;
+  float: right;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 16px;
+  padding-right: 32px;
+  background-color: #303030;
+}
+.app-navbar-user .user-button {
+  display: inline;
+}
+.app-navbar-user .user-button i {
+  margin-right: 8px;
+}
+.app-navbar-user .dropdown-menu span {
+  padding-left: 16px;
+  color: #1c1c1e;
+}
+/* Generic Styles */
+.editor-panel-container .editor-panel-container-header {
+  height: 20px;
+  width: 100%;
+  background-color: #1c1c1e;
+}
+.editor-panel-container .editor-panel-container-header span {
+  padding: 0px 8px;
+}
+.editor-panel-container .editor-panel-container-content {
+  height: calc(100% - 20px);
+  width: 100%;
+}
+/* ---- ~ EDITOR STYLES ---- */

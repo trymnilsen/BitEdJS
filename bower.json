@@ -1,0 +1,13 @@
+{
+  "name": "BitEdJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/trymnilsen/BitEdJS",
+  "authors": [
+    "Trym Nilsen <trym.nilsen@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sweetalert": "~0.4.2"
+  }
+}

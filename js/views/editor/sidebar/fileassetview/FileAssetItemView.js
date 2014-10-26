@@ -4,7 +4,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!views/editor/sidebar/fileassetview/FileAssetItemTemplate.html'
+  'text!views/editor/sidebar/fileassetview/FileAssetItemTemplate.html',
+  'bootstrapSweetAlert'
 ], function($, _, Backbone, ItemTemplate){
 
     var FileItemView = Backbone.View.extend({
@@ -13,13 +14,9 @@ define([
         className: 'file-asset-item-wrapper',
         template: _.template(ItemTemplate),
      
-        // events: {
-        //     'click .toggle'   : 'toggleDone',
-        //     'dblclick .view'  : 'edit',
-        //     'click a.destroy' : 'clear',
-        //     'keypress .edit'  : 'updateOnEnter',
-        //     'blur .edit'      : 'close' 
-        // },
+        events: {
+            'click .fa-times'   : 'promptDelete'
+        },
 
         initialize: function() {
             this.listenTo(this.model, 'change', this.render);
@@ -31,7 +28,38 @@ define([
             this.$el.html(this.template(templateData));
             return this;
         },
-
+        promptDelete: function()
+        {
+            console.log('Delete asset selected');
+            swal({
+                title: "Are you sure?",
+                text: "You will not be able to recover this asset file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: 'btn-danger',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: "No, cancel plx!",
+                closeOnConfirm: false
+            },_.bind(this.deletePromtResponse,this));
+            console.log('After selected');
+            //
+        },
+        deletePromtResponse: function(isConfirm)
+        {
+            if (isConfirm)
+            {
+                this.remove();
+                swal("Deleted!", "Your asset file has been deleted!", "success");
+            } 
+            else 
+            {
+                swal("Cancelled", "Your asset file has not been deleted :)", "error");
+            }
+        },
+        remove: function()
+        {
+            this.$el.trigger('remove');
+        },
         clear: function() {
             this.model.destroy();
         }

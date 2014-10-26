@@ -8,6 +8,7 @@ define([
   'logic/editor/Editor',
   'views/editor/sidebar/properties/tag/PropertiesTagView',
   'views/editor/sidebar/properties/components/PropertiesComponentView',
+  'views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalView',
   'text!views/editor/sidebar/properties/PropertiesViewTemplate.html',
   'text!views/editor/sidebar/properties/PropertiesNoneSelectedTemplate.html'
 ], 
@@ -18,6 +19,7 @@ function($,
  editor,
  TagView,
  ComponentView,
+ ComponentModal,
  viewTemplate,
  notificationTemplate
  ){
@@ -27,6 +29,7 @@ function($,
         template: _.template(viewTemplate),
         tagView: {},
         componentsView: {},
+        addComponentView: {},
         activeNode: {
             tags : [],
             components : [],
@@ -40,12 +43,15 @@ function($,
         {
             this.tagView = new TagView();
             this.componentsView = new ComponentView();
+            this.addComponentView = new ComponentModal();
             eventor.on('editor.entity.selected',_.bind(this.onSelectedEntityChanged,this));
         },
         render: function(){
+            $('body').append(this.addComponentView.render().$el);
             this.$el.html(this.template(this.activeNode));
             console.log('re-rendering');
             //Give the current settings to our subviews
+            //TODO SetSubviewsData method?
             this.tagView.tags = this.activeNode.tags;
             this.componentsView.components = this.activeNode.components;
             //Render and append them
@@ -53,6 +59,7 @@ function($,
             $('.editor-properties-components',this.$el).prepend(this.componentsView.render().el);
             $('.emptyPromptContainer',this.$el).html(notificationTemplate);
             //Only show the empty promp if we dont have any selected ones
+            //TODO makes this less ugly
             if(this.activeNode.name === this.viewConstants.noItemSelectedString)
             {
                 $('.emptyPromptContainer',this.$el).show();
@@ -60,6 +67,7 @@ function($,
             else
             {
                 $('.emptyPromptContainer',this.$el).hide();
+                $('.editor-properties-add-remove',this.$el).addClass('editor-properties-add-remove-active');
             }
             //Set the appropriate icon
             //We dont know what icon class is already set. We could parse it

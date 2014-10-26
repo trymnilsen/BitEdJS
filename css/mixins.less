@@ -7,3 +7,24 @@
 	-ms-user-select: none;
 	user-select: none;
 }
+.keyframes(@name, @frames) {
+    @-webkit-keyframes @name { @frames(); }
+    @-moz-keyframes @name { @frames(); }
+    @-ms-keyframes @name { @frames(); }
+    @-o-keyframes @name { @frames(); }
+    @keyframes @name { @frames(); }
+}
+.animation (@animation) {
+	-webkit-animation: @animation;
+	-moz-animation:    @animation;
+	-ms-animation:     @animation;
+	animation: @animation;
+}
+.transition(@transition)
+{
+	-webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}

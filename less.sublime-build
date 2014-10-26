@@ -1,0 +1,3 @@
+{
+	"shell_cmd": "cd $project_path && lessc $project_path/css/main.less > $project_path/css/style.css"
+}

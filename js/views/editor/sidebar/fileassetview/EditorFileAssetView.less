@@ -1,4 +1,5 @@
-@import "../../../../css/darkColors.less";
+@import "css/darkColors.less";
+@import "css/mixins.less";
 
 #FileAssetViewContainer
 {
@@ -77,6 +78,19 @@
         {
             div
             {
+                @loadProcentageWidth : 32px;
+
+                .keyframes(scrolling-asset-load-bar, {
+                    0%
+                    {
+                        left: calc(~"0% - 40px");
+                    }
+                    100%
+                    {
+                        left: calc(100% ~"-" @loadProcentageWidth);
+                    }
+                });
+
                 position: relative;
                 i
                 {
@@ -92,11 +106,57 @@
                 {
                     position: absolute;
                     left: 32px;
-                    right: 0;
+                    padding-top: 2px;
+                    right: @loadProcentageWidth + 20px;
                     overflow: hidden;
                     white-space: nowrap; 
                     text-overflow:ellipsis
                 }
+                .file-asset-load-procentage
+                {
+                    position: absolute;
+                    background-color: @add-color;
+                    top: 0px;
+                    right: 0px;
+                    width: @loadProcentageWidth;
+                    height: 20px;
+                    padding-left: 4px;
+                    padding-top: 2px;
+                }
+                .file-asset-load-bar
+                {
+                    position: absolute;
+                    left: 28px;
+                    width: 40px;
+                    bottom: 0px;
+                    height: 2px;
+                    background: @add-color;
+                    -webkit-transform: translate3d(0, 0, 0);
+                    -webkit-backface-visibility: hidden;
+                    -webkit-perspective: 1000;
+                    .animation(scrolling-asset-load-bar 5s infinite);
+                }
+                .fa-times
+                {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    padding: 4px;
+                    top: 0px;
+                    opacity: 0;
+                    right: @loadProcentageWidth;
+                    .transition(opacity .15s ease-in-out);
+                    &:hover
+                    {
+                        opacity: 1;
+                        background-color: @remove-color;
+                    }
+                }
+                .file-asset-extra-options
+                {
+                    display: inline;
+                }
+
             }
             display: block;
             &:hover

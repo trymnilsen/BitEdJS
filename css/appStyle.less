@@ -6,6 +6,11 @@ body, html {
     overflow        : hidden;
     background-color: @appBackground-color;
     color           : white;
+    .modal-content
+    {
+        /*Modal content should not be white, but light black*/
+        color       : @editor-dark-color;
+    }
 }
 .full-space-wrapper
 {
