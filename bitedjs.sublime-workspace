@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"compone",
+				"componentsResolver"
+			],
+			[
+				"pa",
+				"param"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"Com",
+				"ComponentModal"
+			],
+			[
+				"addC",
+				"addComponentView"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"new",
+				"newClassName"
+			],
+			[
+				"con",
+				"constants"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
 				"prot",
 				"proto	Prototype"
 			],
@@ -42,10 +94,6 @@
 			[
 				"inl",
 				"inline-block"
-			],
-			[
-				"list",
-				"list-style-type"
 			],
 			[
 				"tal",
@@ -192,10 +240,6 @@
 				"addClass"
 			],
 			[
-				"text",
-				"textDiv"
-			],
-			[
 				"icon",
 				"iconDiv"
 			],
@@ -226,10 +270,6 @@
 			[
 				"scre",
 				"screenControls"
-			],
-			[
-				"con",
-				"controlsContainer"
 			],
 			[
 				"botto",
@@ -332,18 +372,6 @@
 				"border-bottom"
 			],
 			[
-				"padd",
-				"padding"
-			],
-			[
-				"mar",
-				"margin"
-			],
-			[
-				"pad",
-				"padding"
-			],
-			[
 				"margin",
 				"margin"
 			],
@@ -408,6 +436,96 @@
 	"buffers":
 	[
 		{
+			"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalTemplate.html",
+			"settings":
+			{
+				"buffer_size": 869,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 3385,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/appStyle.less",
+			"settings":
+			{
+				"buffer_size": 3730,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/darkColors.less",
+			"settings":
+			{
+				"buffer_size": 1120,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/views/editor/sidebar/properties/PropertiesView.less",
+			"settings":
+			{
+				"buffer_size": 4332,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalView.js",
+			"settings":
+			{
+				"buffer_size": 1081,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalExpandedInfo.js",
+			"settings":
+			{
+				"buffer_size": 427,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentList.js",
+			"settings":
+			{
+				"buffer_size": 804,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nTheme - Spacegray:\n-----------------\n\n  Thanks for installing Spacegray!\n  \n  \n  How to activate\n  ===============\n  \n  Activate the UI theme and color scheme by modifying your user preferences file, which you can find using the menu item `Sublime Text -> Preferences -> Settings - User` (⌘+, on Mac).\n  \n  Spacegray comes in different flavors, based on Base16 color schemes. You can choose whichever flavor you like, but don't forget to change *both* color scheme and UI theme so they match.\n  \n  *Note: Don't forget to restart Sublime Text after activating the theme.*\n  \n  \n  Spacegray\n  ---------\n  \n  Default flavor based on Base16 Ocean Dark color scheme.\n  \n  *Example settings*\n  \n      {\n        \"theme\": \"Spacegray.sublime-theme\",\n        \"color_scheme\": \"Packages/Theme - Spacegray/base16-ocean.dark.tmTheme\"\n      }\n  \n  \n  Spacegray Light\n  ---------------\n  \n  Light variation based on Base16 Ocean Light color scheme.\n  \n  *Example settings*\n  \n      {\n        \"theme\": \"Spacegray Light.sublime-theme\",\n        \"color_scheme\": \"Packages/Theme - Spacegray/base16-ocean.light.tmTheme\"\n      }\n  \n  \n  Spacegray Eighties\n  ------------------\n  \n  A variation based on Base16 Eighties Dark color scheme.\n  \n  *Example settings*\n  \n      {\n        \"theme\": \"Spacegray Eighties.sublime-theme\",\n        \"color_scheme\": \"Packages/Theme - Spacegray/base16-eighties.dark.tmTheme\"\n      }\n  \n  \n  *Note: Don't forget to restart Sublime Text after activating the theme.*\n  \n",
+			"settings":
+			{
+				"buffer_size": 1528,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		},
+		{
+			"file": "/home/skynet/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 229,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/views/editor/sidebar/properties/PropertiesView.js",
+			"settings":
+			{
+				"buffer_size": 3743,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "js/logic/editor/scenegraph/SceneGraph.js",
 			"settings":
 			{
@@ -416,34 +534,90 @@
 			}
 		},
 		{
+			"file": "js/logic/editor/components/ComponentResolver.js",
+			"settings":
+			{
+				"buffer_size": 352,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/logic/editor/components/ComponentBank.js",
+			"settings":
+			{
+				"buffer_size": 1368,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/logic/editor/components/Component.js",
+			"settings":
+			{
+				"buffer_size": 1067,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/logic/editor/EditorConstants.js",
+			"settings":
+			{
+				"buffer_size": 288,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "js/views/editor/sidebar/properties/PropertiesViewTemplate.html",
 			"settings":
 			{
-				"buffer_size": 704,
+				"buffer_size": 785,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/views/editor/sidebar/properties/PropertiesView.less",
+			"file": "js/views/editor/sidebar/properties/tag/PropertiesTagViewModal.html",
 			"settings":
 			{
-				"buffer_size": 4067,
+				"buffer_size": 834,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/views/app/overlay/GeneralIconOverlayView.less",
+			"file": "js/views/editor/sidebar/properties/tag/PropertiesTagViewTemplate.html",
 			"settings":
 			{
-				"buffer_size": 1174,
-				"line_ending": "Windows"
+				"buffer_size": 228,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/logic/runtime/PhaserInstance.js",
+			"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalExpandedInfoTemplate.html",
 			"settings":
 			{
-				"buffer_size": 2256,
+				"buffer_size": 690,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/main.less",
+			"settings":
+			{
+				"buffer_size": 1482,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentListItemTemplate.html",
+			"settings":
+			{
+				"buffer_size": 105,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/views/editor/sidebar/fileassetview/FileAssetItemView.js",
+			"settings":
+			{
+				"buffer_size": 1986,
 				"line_ending": "Unix"
 			}
 		},
@@ -454,52 +628,25 @@
 				"buffer_size": 2079,
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "js/views/editor/sidebar/entitytree/EntityTreeView.js",
-			"settings":
-			{
-				"buffer_size": 2985,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/router.js",
-			"settings":
-			{
-				"buffer_size": 1191,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/logic/editor/behaviours/BehaviourStore.js",
-			"settings":
-			{
-				"buffer_size": 330,
-				"line_ending": "Windows"
-			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/User/less-build.sublime-build",
 	"command_palette":
 	{
-		"height": 222.0,
+		"height": 62.0,
 		"selected_items":
 		[
 			[
-				"list",
-				"Package Control: List Packages"
-			],
-			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
 			],
 			[
 				"js",
@@ -554,7 +701,7 @@
 				"JSHint: Set Plugin Options"
 			]
 		],
-		"width": 449.0
+		"width": 453.0
 	},
 	"console":
 	{
@@ -575,17 +722,137 @@
 	},
 	"expanded_folders":
 	[
-		"/home/skynet/code/BitEdJS"
+		"/home/skynet/code/BitEdJS",
+		"/home/skynet/code/BitEdJS/js",
+		"/home/skynet/code/BitEdJS/js/logic",
+		"/home/skynet/code/BitEdJS/js/logic/editor",
+		"/home/skynet/code/BitEdJS/js/logic/editor/components",
+		"/home/skynet/code/BitEdJS/js/views",
+		"/home/skynet/code/BitEdJS/js/views/editor",
+		"/home/skynet/code/BitEdJS/js/views/editor/document",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/componentsmodal",
+		"/home/skynet/code/BitEdJS/js/views/sidebar",
+		"/home/skynet/code/BitEdJS/templates",
+		"/home/skynet/code/BitEdJS/templates/contributors",
+		"/home/skynet/code/BitEdJS/templates/projects"
 	],
 	"file_history":
 	[
-		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.js",
-		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentItemTemplate.html",
-		"/home/skynet/code/BitEdJS/css/bootstrap/mixins/vendor-prefixes.less",
+		"/home/skynet/code/BitEdJS/js/logic/editor/pipeline/AssetPipeline.js",
+		"/home/skynet/code/BitEdJS/bower_components/bootstrap-sweetalert/assets/docs.css",
+		"/home/skynet/code/BitEdJS/templates/sidebar/sidebarTemplate.html",
+		"/home/skynet/code/BitEdJS/js/logic/editor/pipeline/pipelines/SpritePipeline.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/fileassetview/FileAssetItemTemplate.html",
+		"/home/skynet/code/BitEdJS/css/darkColors.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagItemView.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagView.js",
+		"/home/skynet/code/BitEdJS/js/main.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesAddComponentModal.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesAddComponentModalView.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentList.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalExpandedInfoTemplate.html",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalExpandedInfo.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesAddComponentModalTemplate.html",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/fileassetview/FileAssetItemView.js",
+		"/home/skynet/code/BitEdJS/css/mixins.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetView.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagItemTemplate.html",
+		"/home/skynet/code/BitEdJS/test.html",
+		"/home/skynet/code/BitEdJS/css/bootstrap/mixins/nav-divider.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/layout/panelcontainer/EditorPanelContainerView.less",
+		"/home/skynet/code/BitEdJS/less.sublime-build",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/PropertiesViewTemplate.html",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagViewTemplate.html",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagViewModal.html",
+		"/home/skynet/code/BitEdJS/css/style.css",
+		"/home/skynet/code/BitEdJS/index.html",
+		"/home/skynet/code/BitEdJS/bitedjs.sublime-project",
+		"/home/skynet/code/BitEdJS/js/libs/bootstrap-monkey-modal.js",
+		"/home/skynet/code/BitEdJS/css/bootstrap/modals.less",
+		"/home/skynet/code/BitEdJS/js/views/app/menu/AppMenuOverlayView.js",
+		"/home/skynet/code/BitEdJS/mod/js/app.js",
 		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.less",
 		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.js",
-		"/home/skynet/code/BitEdJS/css/bootstrap/progress-bars.less",
+		"/home/skynet/code/BitEdJS/README.md",
+		"/home/skynet/code/BitEdJS/js/router.js",
+		"/home/skynet/.config/sublime-text-3/Packages/SublimeOnSaveBuild/SublimeOnSaveBuild.sublime-settings",
+		"/home/skynet/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/skynet/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/skynet/code/BitEdJS/css/main.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/layout/panelcontainer/EditorPanelContainerTemplate.html",
+		"/home/skynet/code/BitEdJS/css/bootstrap/panels.less",
 		"/home/skynet/code/BitEdJS/css/bootstrap/pager.less",
+		"/home/skynet/code/BitEdJS/js/views/app/user/navbar/AppUserNavbarView.less",
+		"/home/skynet/code/BitEdJS/js/views/app/user/navbar/AppUserNavbarView.js",
+		"/home/skynet/code/BitEdJS/js/views/app/menu/AppMenuButton.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/navbar/EditorNavbarView.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/navbar/EditorNavbarView.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetView.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/layout/EditorLayoutView.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/document/gridEditor/GridUtilitiesView.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeView.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/document/screen/EditorScreenView.less",
+		"/home/skynet/code/BitEdJS/js/collections/editor/screen/EditorScreenInstancesCollection.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeTemplate.html",
+		"/home/skynet/code/BitEdJS/js/views/editor/navbar/EditorNavbarViewTemplate.html",
+		"/home/skynet/code/BitEdJS/js/views/editor/layout/EditorLayoutView.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetControlsView.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetControlsTemplate.html",
+		"/home/skynet/code/BitEdJS/js/models/editor/assets/EditorFileAssetModel.js",
+		"/home/skynet/code/BitEdJS/js/collections/editor/assets/EditorFileAssetsCollection.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/document/gridEditor/GridEditorAreaView.js",
+		"/home/skynet/code/BitEdJS/.gitattributes",
+		"/home/skynet/code/BitEdJS/js/views/editor/layout/EditorDropAssetView.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/layout/EditorDropAssetView.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/document/EditorDocumentWrapperView.js",
+		"/home/skynet/code/BitEdJS/js/eventor.js",
+		"/home/skynet/code/BitEdJS/js/views/app/menu/AppMenuButton.less",
+		"/home/skynet/code/BitEdJS/js/views/app/menu/AppMenuView.less",
+		"/home/skynet/code/BitEdJS/js/views/app/overlay/GeneralIconOverlayView.less",
+		"/home/skynet/code/BitEdJS/js/views/app/overlay/GeneralIconOverlayView.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/document/gridEditor/GridEditorView.js",
+		"/home/skynet/code/BitEdJS/css/bootstrap/glyphicons.less",
+		"/home/skynet/code/BitEdJS/js/views/app/menu/AppMenuView.js",
+		"/home/skynet/code/BitEdJS/bitEdStyle.css.php",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetList.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetListTemplate.html",
+		"/home/skynet/code/BitEdJS/lessc.inc.php",
+		"/home/skynet/code/BitEdJS/test.less",
+		"/home/skynet/code/BitEdJS/css/bootstrap/mixins/opacity.less",
+		"/home/skynet/code/BitEdJS/phaserio/phaser.min.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/layout/EditorRightLayoutTemplate.html",
+		"/home/skynet/code/BitEdJS/css/appStyle.less",
+		"/home/skynet/code/BitEdJS/js/logic/editor/scenegraph/SceneGraph.js",
+		"/home/skynet/code/BitEdJS/js/libs/dropdowns-enhancement.js",
+		"/home/skynet/code/BitEdJS/css/bootstrap/dropdowns.less",
+		"/home/skynet/code/BitEdJS/css/dropdown-enhancement.css",
+		"/home/skynet/code/BitEdJS/css/bootstrap/mixins/size.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetControlsView.js",
+		"/home/skynet/code/BitEdJS/js/logic/editor/Editor.js",
+		"/home/skynet/code/BitEdJS/js/logic/editor/EditorConstants.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/document/screen/EditorScreenControlsViewTemplate.html",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetViewTemplate.html",
+		"/home/skynet/code/BitEdJS/css/bootstrap/mixins/reset-filter.less",
+		"/home/skynet/code/BitEdJS/foo.html",
+		"/home/skynet/code/BitEdJS/js/views/editor/document/screen/EditorScreenControlsView.js",
+		"/home/skynet/code/BitEdJS/css/bootstrap/scaffolding.less",
+		"/home/skynet/code/BitEdJS/js/app.js",
+		"/home/skynet/code/BitEdJS/css/bootstrap/labels.less",
+		"/home/skynet/code/BitEdJS/mod/css/style.css",
+		"/home/skynet/code/BitEdJS/js/logic/runtime/PhaserInstance.js",
+		"/home/skynet/code/BitEdJS/js/logic/editor/runtimebridge/PhaserRuntimeBridge.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeView.js",
+		"/home/skynet/code/BitEdJS/js/logic/editor/behaviours/BehaviourStore.js",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/PropertiesNoneSelectedTemplate.html",
+		"/home/skynet/code/BitEdJS/css/bootstrap/tables.less",
+		"/home/skynet/code/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentItemTemplate.html",
+		"/home/skynet/code/BitEdJS/css/bootstrap/mixins/vendor-prefixes.less",
+		"/home/skynet/code/BitEdJS/css/bootstrap/progress-bars.less",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/test.html",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/templates/projects/projectsListTemplate.html",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/pager.less",
@@ -601,112 +868,7 @@
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagItemView.js",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagItemTemplate.html",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/progress-bars.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/print.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/component-animations.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/code.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/carousel.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/index.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/FileAssetItemTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/bitEdStyle.css.php",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeView.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/phaser-io.min.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentItemView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagViewModal.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/main.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/models/editor/screen/EditorScreenInstanceModel.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/scenegraph/SceneGraph.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagViewTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/bootstrap-monkey-modal.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap.css",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/darkColors.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/type.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/appStyle.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/FileAssetItemView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/models/editor/assets/EditorFileAssetModel.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/collections/editor/assets/EditorFileAssetsCollection.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorDropAssetView.js",
-		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/User/backboneView.sublime-snippet",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/main.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorLayoutView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/text-overflow.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/opacity.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/dropdown-enhancement.css",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/dropdowns-enhancement.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/PropertiesTagItemTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/PropertiesTagItemView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeNodeTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/navbar/EditorNavbarViewTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/navbar/EditorNavbarView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/Editor.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/document/screen/EditorScreenControlsViewTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/.gitattributes",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorLayoutView.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorLayoutSidebarRightView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/jquery.layout-latest.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorRightLayoutTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/mod/js/libs/jquerylayout/jquery.layout-latest.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/document/screen/EditorScreenView.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/document/screen/EditorScreenControlsView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/collections/editor/screen/EditorScreenInstancesCollection.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/pipeline/pipelines/SpritePipeline.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/reset-filter.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/foo.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/dropdowns.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/table-row.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/text-emphasis.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/TabView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/toastr.css",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/app.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/toastr.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/variables.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/phaserio/phaser.min.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/labels.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/lessc.inc.php",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetControlsView.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetControlsTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/pipeline/pipeline/SpritePipeline.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/eventor.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/underscore-min.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/backbone-min.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/utilities.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/phaserio/index.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/badges.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorBottomLayoutTemplate.html",
-		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
-		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/panelcontainer/EditorPanelContainerView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/router.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetViewTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/document/gridEditor/GridEditorView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app/overlay/GeneralIconOverlayView.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/templates/home/homeTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/runtime/editablearea/RuntimeEditableAreaView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/panelcontainer/EditorPanelContainerTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/panelcontainer/EditorPanelContainerView.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetControlsView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetView.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app/menu/AppMenuView.less",
-		"/G/New folder/mbraak-jqTree-0.21.0-0-g3476954 (1)/mbraak-jqTree-3476954/src/drag_and_drop_handler.coffee",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/templates/contributors/contributorsTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/index - Copy.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/panels.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/rev1/css/appStyle.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/jqtree.css",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/jqtree.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/background-variant.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/jqtree.css",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/app/menu/AppMenuButton.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/navbar.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/mixins/nav-vertical-align.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorDropAssetView.less",
-		"/C/Users/Skynet/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings"
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/print.less"
 	],
 	"find":
 	{
@@ -717,6 +879,7 @@
 		"height": 103.0,
 		"where_history":
 		[
+			"/home/skynet/code/BitEdJS/js",
 			"C:\\Users\\Skynet\\Documents\\GitHub\\BitEdJS"
 		]
 	},
@@ -725,6 +888,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ItemTemplate",
+			"ComponentStore",
+			"                    -",
+			"addToEditor",
+			"adding file via",
+			"color",
 			"prop",
 			"',\n",
 			"8px",
@@ -782,8 +951,8 @@
 			"\"",
 			"left"
 		],
-		"reverse": true,
-		"show_context": true,
+		"reverse": false,
+		"show_context": false,
 		"use_buffer2": true,
 		"whole_word": false,
 		"wrap": true
@@ -791,24 +960,172 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 9,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "js/logic/editor/scenegraph/SceneGraph.js",
+					"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalTemplate.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2080,
+						"buffer_size": 869,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								426,
-								426
+								490,
+								490
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3385,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								629,
+								629
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/appStyle.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3730,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/darkColors.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								155,
+								155
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/views/editor/sidebar/properties/PropertiesView.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4332,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4036,
+								4036
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1166.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1032,
+								1032
 							]
 						],
 						"settings":
@@ -818,33 +1135,93 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 38.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "js/views/editor/sidebar/properties/PropertiesViewTemplate.html",
+					"buffer": 6,
+					"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalExpandedInfo.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 704,
+						"buffer_size": 427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								460,
-								460
+								292,
+								292
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 804,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								668,
+								668
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -854,27 +1231,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "js/views/editor/sidebar/properties/PropertiesView.less",
+					"buffer": 9,
+					"file": "/home/skynet/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4067,
+						"buffer_size": 229,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								385,
-								385
+								220,
+								220
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -884,25 +1260,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "js/views/app/overlay/GeneralIconOverlayView.less",
+					"buffer": 10,
+					"file": "js/views/editor/sidebar/properties/PropertiesView.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1174,
+						"buffer_size": 3743,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								597,
-								597
+								2433,
+								2433
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -914,20 +1290,140 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "js/logic/runtime/PhaserInstance.js",
+					"buffer": 11,
+					"file": "js/logic/editor/scenegraph/SceneGraph.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2256,
+						"buffer_size": 2080,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								407,
+								407
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "js/logic/editor/components/ComponentResolver.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 352,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "js/logic/editor/components/ComponentBank.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1356,
+								1356
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 256.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "js/logic/editor/components/Component.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1067,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 78.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "js/logic/editor/EditorConstants.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
 							]
 						],
 						"settings":
@@ -940,11 +1436,224 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 16,
+					"file": "js/views/editor/sidebar/properties/PropertiesViewTemplate.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 785,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								785,
+								785
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "js/views/editor/sidebar/properties/tag/PropertiesTagViewModal.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								698,
+								698
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "js/views/editor/sidebar/properties/tag/PropertiesTagViewTemplate.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 228,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4,
+								4
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalExpandedInfoTemplate.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								672,
+								672
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 20,
+					"file": "css/main.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1482,
+								1482
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 79.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentListItemTemplate.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								105
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "js/views/editor/sidebar/fileassetview/FileAssetItemView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1986,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								345,
+								345
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
 					"file": "js/logic/editor/runtimebridge/PhaserRuntimeBridge.js",
 					"semi_transient": false,
 					"settings":
@@ -956,8 +1665,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								561,
+								561
 							]
 						],
 						"settings":
@@ -970,125 +1679,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "js/views/editor/sidebar/entitytree/EntityTreeView.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2985,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 285.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "js/router.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1191,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								549,
-								549
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"default_dir": "C:\\Users\\Skynet\\Documents\\GitHub\\BitEdJS\\js\\logic\\editor\\scenegraph",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "js/logic/editor/behaviours/BehaviourStore.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 330,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								330
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
+					"stack_index": 22,
 					"type": "text"
 				}
 			]
@@ -1096,7 +1687,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -1111,11 +1702,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.576158940397,
 			1.0
 		],
 		"rows":
@@ -1125,9 +1723,13 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 110.0
+	},
 	"output.find_results":
 	{
-		"height": 0.0
+		"height": 110.0
 	},
 	"project": "bitedjs.sublime-project",
 	"replace":
@@ -1140,6 +1742,210 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"sceneg",
+				"js/logic/editor/scenegraph/SceneGraph.js"
+			],
+			[
+				"dark",
+				"css/darkColors.less"
+			],
+			[
+				"styl",
+				"css/appStyle.less"
+			],
+			[
+				"tagitem",
+				"js/views/editor/sidebar/properties/tag/PropertiesTagItemView.js"
+			],
+			[
+				"tagview",
+				"js/views/editor/sidebar/properties/tag/PropertiesTagView.js"
+			],
+			[
+				"fileasset",
+				"js/views/editor/sidebar/fileassetview/FileAssetItemView.js"
+			],
+			[
+				"mixi",
+				"css/mixins.less"
+			],
+			[
+				"modal",
+				"js/views/editor/sidebar/properties/tag/PropertiesTagViewModal.html"
+			],
+			[
+				"tagtemp",
+				"js/views/editor/sidebar/properties/tag/PropertiesTagViewTemplate.html"
+			],
+			[
+				"propertiest",
+				"js/views/editor/sidebar/properties/PropertiesViewTemplate.html"
+			],
+			[
+				"dakr",
+				"css/darkColors.less"
+			],
+			[
+				"mix",
+				"css/mixins.less"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"panelconless",
+				"js/views/editor/layout/panelcontainer/EditorPanelContainerView.less"
+			],
+			[
+				"appusnavless",
+				"js/views/app/user/navbar/AppUserNavbarView.less"
+			],
+			[
+				"edinavless",
+				"js/views/editor/navbar/EditorNavbarView.less"
+			],
+			[
+				"propertiescompo",
+				"js/views/editor/sidebar/properties/components/PropertiesComponentView.less"
+			],
+			[
+				"propertiev",
+				"js/views/editor/sidebar/properties/PropertiesView.less"
+			],
+			[
+				"editorscreenless",
+				"js/views/editor/document/screen/EditorScreenView.less"
+			],
+			[
+				"entityl",
+				"js/views/editor/sidebar/entitytree/EntityTreeView.less"
+			],
+			[
+				"editorfileassetvless",
+				"js/views/editor/sidebar/fileassetview/EditorFileAssetView.less"
+			],
+			[
+				"editorassetconless",
+				"js/views/editor/sidebar/fileassetview/EditorFileAssetControlsView.less"
+			],
+			[
+				"",
+				".gitattributes"
+			],
+			[
+				"editorlayout",
+				"js/views/editor/layout/EditorLayoutView.less"
+			],
+			[
+				"editordropasles",
+				"js/views/editor/layout/EditorDropAssetView.less"
+			],
+			[
+				"appmenuless",
+				"js/views/app/menu/AppMenuButton.less"
+			],
+			[
+				"appmnenu",
+				"js/views/app/menu/AppMenuButton.js"
+			],
+			[
+				"general",
+				"js/views/app/overlay/GeneralIconOverlayView.less"
+			],
+			[
+				"appmenuview",
+				"js/views/app/menu/AppMenuView.less"
+			],
+			[
+				"bites",
+				"bitEdStyle.css.php"
+			],
+			[
+				"php",
+				"lessc.inc.php"
+			],
+			[
+				"layout",
+				"js/views/editor/layout/EditorLayoutView.js"
+			],
+			[
+				"lay",
+				"js/views/editor/layout/EditorLayoutView.js"
+			],
+			[
+				"assetp",
+				"js/logic/editor/pipeline/AssetPipeline.js"
+			],
+			[
+				"spritep",
+				"js/logic/editor/pipeline/pipelines/SpritePipeline.js"
+			],
+			[
+				"drop",
+				"js/views/editor/layout/EditorDropAssetView.js"
+			],
+			[
+				"editorfileassettem",
+				"js/views/editor/sidebar/fileassetview/EditorFileAssetViewTemplate.html"
+			],
+			[
+				"editorfileassetview",
+				"js/views/editor/sidebar/fileassetview/EditorFileAssetView.js"
+			],
+			[
+				"editorfile",
+				"js/views/editor/sidebar/fileassetview/EditorFileAssetView.js"
+			],
+			[
+				"fileassetless",
+				"js/views/editor/sidebar/fileassetview/EditorFileAssetView.less"
+			],
+			[
+				"fileasse",
+				"js/views/editor/sidebar/fileassetview/FileAssetItemView.js"
+			],
+			[
+				"fileasseti",
+				"js/views/editor/sidebar/fileassetview/FileAssetItemTemplate.html"
+			],
+			[
+				"assetitem",
+				"js/views/editor/sidebar/fileassetview/EditorFileAssetViewTemplate.html"
+			],
+			[
+				"propertiestem",
+				"js/views/editor/sidebar/properties/PropertiesViewTemplate.html"
+			],
+			[
+				"scenegr",
+				"js/logic/editor/scenegraph/SceneGraph.js"
+			],
+			[
+				"scrennco",
+				"js/views/editor/document/screen/EditorScreenControlsViewTemplate.html"
+			],
+			[
+				"screenco",
+				"js/views/editor/document/screen/EditorScreenControlsViewTemplate.html"
+			],
+			[
+				"appbutto",
+				"js/views/app/menu/AppMenuButton.less"
+			],
+			[
+				"properti",
+				"js/views/editor/sidebar/properties/PropertiesView.js"
+			],
+			[
+				"darkco",
+				"css/darkColors.less"
+			],
+			[
+				"propertieless",
+				"js/views/editor/sidebar/properties/PropertiesView.less"
+			],
 			[
 				"propertiesvil",
 				"js/views/editor/sidebar/properties/PropertiesView.less"
@@ -1213,10 +2019,6 @@
 				"BitEdJS\\index.html"
 			],
 			[
-				"index",
-				"BitEdJS\\index.html"
-			],
-			[
 				"bootstrap",
 				"BitEdJS\\css\\bootstrap.css"
 			],
@@ -1229,20 +2031,8 @@
 				"BitEdJS\\js\\views\\editor\\sidebar\\fileassetview\\FileAssetItemView.js"
 			],
 			[
-				"fileasse",
-				"BitEdJS\\js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetView.js"
-			],
-			[
 				"boot",
 				"BitEdJS\\css\\bootstrap.css"
-			],
-			[
-				"dark",
-				"BitEdJS\\css\\darkColors.less"
-			],
-			[
-				"layout",
-				"BitEdJS\\js\\views\\editor\\layout\\EditorLayoutView.js"
 			],
 			[
 				"overla",
@@ -1275,14 +2065,6 @@
 			[
 				"fileassmo",
 				"BitEdJS\\js\\models\\editor\\assets\\EditorFileAssetModel.js"
-			],
-			[
-				"drop",
-				"BitEdJS\\js\\views\\editor\\layout\\EditorDropAssetView.js"
-			],
-			[
-				"assetp",
-				"BitEdJS\\js\\logic\\editor\\pipeline\\AssetPipeline.js"
 			],
 			[
 				"editor.js",
@@ -1375,10 +2157,6 @@
 			[
 				"entit",
 				"js\\views\\editor\\sidebar\\entitytree\\EntityTreeView.js"
-			],
-			[
-				"fileasset",
-				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetView.js"
 			],
 			[
 				"container",
@@ -1475,106 +2253,6 @@
 			[
 				"gneral",
 				"js\\views\\app\\overlay\\GeneralIconOverlayView.js"
-			],
-			[
-				"screenless",
-				"js\\views\\editor\\document\\screen\\EditorScreenView.less"
-			],
-			[
-				"",
-				"js\\views\\editor\\screen\\EditorScreenView.less"
-			],
-			[
-				"over",
-				"js\\views\\app\\menu\\AppMenuOverlayView.js"
-			],
-			[
-				"appless",
-				"js\\views\\app\\menu\\AppMenuView.less"
-			],
-			[
-				"editorla",
-				"js\\views\\editor\\layout\\EditorLayoutView.js"
-			],
-			[
-				"appmenless",
-				"js\\views\\app\\menu\\AppMenuView.less"
-			],
-			[
-				"fileasseless",
-				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetView.less"
-			],
-			[
-				"projet",
-				"templates\\projects\\projectsListTemplate.html"
-			],
-			[
-				"projectview",
-				"js\\views\\projects\\ProjectsView.js"
-			],
-			[
-				"projecttli",
-				"js\\views\\projects\\ProjectsListView.js"
-			],
-			[
-				"editorfilea",
-				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetViewTemplate.html"
-			],
-			[
-				"projectmo",
-				"js\\models\\project\\ProjectModel.js"
-			],
-			[
-				"project",
-				"templates\\projects\\projectsListTemplate.html"
-			],
-			[
-				"prjectste",
-				"templates\\projects\\projectsTemplate.html"
-			],
-			[
-				"editorfile",
-				"js\\collections\\editor\\assets\\EditorFileAssetsCollection.js"
-			],
-			[
-				"editorasstem",
-				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetViewTemplate.html"
-			],
-			[
-				"projectslistview",
-				"js\\views\\projects\\ProjectsListView.js"
-			],
-			[
-				"projectsv",
-				"js\\views\\projects\\ProjectsView.js"
-			],
-			[
-				"appsty",
-				"css\\appStyle.less"
-			],
-			[
-				"less",
-				"css\\darkColors.less"
-			],
-			[
-				"appst",
-				"css\\appStyle.less"
-			],
-			[
-				"menu",
-				"js\\views\\app\\menu\\AppMenuView.js"
-			],
-			[
-				"droples",
-				"js\\views\\editor\\layout\\EditorDropAssetView.less"
-			],
-			[
-				"editordorop",
-				"js\\views\\editor\\layout\\EditorDropAssetView.js"
-			],
-			[
-				"test",
-				"test.html"
 			]
 		],
 		"width": 0.0
@@ -1603,7 +2281,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 257.0,
+	"side_bar_width": 443.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

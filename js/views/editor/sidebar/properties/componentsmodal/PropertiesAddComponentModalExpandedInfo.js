@@ -14,8 +14,9 @@ function($,
     var tagItemView = Backbone.View.extend({
 
         className: 'component-modal-info-container',
-
+        template: _.template(infoTemplate),
         render: function(){
+           // this.$el.html(this.template());
             return this;
         }
     });

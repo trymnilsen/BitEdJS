@@ -1,0 +1,23 @@
+@import "css/darkColors.less";
+@import "css/mixins.less";
+
+.properties-add-modal .modal-content
+{
+	ul
+	{
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+		li {
+			height: 20px;
+			&:hover
+			{
+				background-color: @light-gray-color;
+			}
+		}
+		li.selected-new-component
+		{
+			background-color: @editor-entity-color;
+		}
+	}
+}

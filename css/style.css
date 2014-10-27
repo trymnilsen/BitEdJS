@@ -782,6 +782,20 @@ html .modal-content {
   margin: 0.5em;
   height: 50px;
 }
+.properties-add-modal .modal-content ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.properties-add-modal .modal-content ul li {
+  height: 20px;
+}
+.properties-add-modal .modal-content ul li:hover {
+  background-color: #dcdcdc;
+}
+.properties-add-modal .modal-content ul li.selected-new-component {
+  background-color: #36b89e;
+}
 /*Navigation Styles */
 .editor-navbar {
   background-color: #1c1c1e;

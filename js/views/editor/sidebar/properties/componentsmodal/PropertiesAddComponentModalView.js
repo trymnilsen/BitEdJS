@@ -20,6 +20,7 @@ function($,
         template: _.template(modalTemplate),
         expandedInfoView: {},
         listView : {},
+        className: 'properties-add-modal',
 
         initialize: function()
         {
