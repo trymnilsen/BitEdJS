@@ -2,8 +2,8 @@ define([
     'logic/editor/components/Component'
 ], function(Component){
     //Return our array of available components
-    return [
-        new Component('Render Sprite','Rendering',[
+    return {
+        'Rendering/Render Sprite':new Component('Render Sprite','Rendering',[
             {
                 name:'Asset',
                 type: 'Asset',
@@ -21,7 +21,7 @@ define([
                                +'position or absolutely in the world'
             }
         ]),
-        new Component('Collision', 'Physics', [
+        'Physics/Collision':new Component('Collision', 'Physics', [
             {
                 name:'Clip',
                 type: 'Boolean',
@@ -38,6 +38,6 @@ define([
                 description: 'The size of the collision mask'
             }
         ]),
-        new Component('Gravity', 'Physics', [])
-    ];
+        'Physics/Gravity':new Component('Gravity', 'Physics', [])
+    };
 });
