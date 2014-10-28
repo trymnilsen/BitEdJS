@@ -796,6 +796,9 @@ html .modal-content {
 .properties-add-modal .modal-content ul li.selected-new-component {
   background-color: #36b89e;
 }
+.properties-add-modal .modal-content ul li.selected-new-component:hover {
+  background-color: #36b89e;
+}
 /*Navigation Styles */
 .editor-navbar {
   background-color: #1c1c1e;

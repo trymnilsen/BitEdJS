@@ -4,24 +4,28 @@ define([
     'logic/editor/pipeline/AssetPipeline',
     'logic/editor/pipeline/pipelines/SpritePipeline',
     'logic/editor/scenegraph/SceneGraph',
-    'logic/editor/EditorConstants'
+    'logic/editor/EditorConstants',
+    'collections/editor/component/EditorComponentCollection'
 ],
 function (
     AssetPipeline,
     SpritePipeline,
     SceneGraph,
-    EditorConstants
+    EditorConstants,
+    ComponentsCollection
 ) {
-    var editorGenericPipeline = new AssetPipeline();
+    var editorGenericPipeline   = new AssetPipeline();
     //Specialized pipelines
-    var spritePipeline = new SpritePipeline();
+    var spritePipeline          = new SpritePipeline();
     editorGenericPipeline.addPipeLine(spritePipeline);
     //Scenegraph
-    var editorSceneGraph = new SceneGraph();
-
+    var editorSceneGraph        = new SceneGraph();
+    //Components
+    var availableComponents     = new ComponentsCollection();
     return {
-        assetPipeline : editorGenericPipeline,
-        sceneGraph : editorSceneGraph,
-        constants: EditorConstants
+        assetPipeline   : editorGenericPipeline,
+        sceneGraph      : editorSceneGraph,
+        constants       : EditorConstants,
+        components      : availableComponents
     };
 });

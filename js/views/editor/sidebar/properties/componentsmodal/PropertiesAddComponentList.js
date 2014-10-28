@@ -5,14 +5,14 @@ define([
   'underscore',
   'backbone',
   'eventor',
-  'logic/editor/components/ComponentResolver',
+  'logic/editor/Editor',
   'text!views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentListItemTemplate.html'
 ], 
 function($,
  _, 
  Backbone,
  eventor,
- ComponentsResolver,
+ editor,
  itemTemplate
  ){
     var tagItemView = Backbone.View.extend({
@@ -31,10 +31,10 @@ function($,
             //remove any eventlisteners already there
             this.undelegateEvents();
             //Append a template with out components data
-            var componentsResolver = new ComponentsResolver();
             var templateData = this.template(
             {
-                 components: componentsResolver.getAllComponents()
+                 components: editor.components.models,
+                 _: _
             });
             this.$el.html(templateData);
             //now that our data is there try to attach the eventhandlers
@@ -59,7 +59,7 @@ function($,
             var currentSelected = $('.selected-new-component',this.$el).first();
             currentSelected.removeClass('selected-new-component');
             $(node).addClass('selected-new-component');
-            eventor.trigger('editor.component.showinfo',no);
+            eventor.trigger('editor.component.showinfo',node);
         },
         getSelected: function()
         {

@@ -1,3 +1,3 @@
  <% _.each(components, function(component){ %>
-    <li data-component="<%= component.id %>" class="component-list-item"><%= component.name %></li>
+    <li data-component="<%= component.get('id') %>" class="component-list-item"><%= component.get('name') %></li>
 <% }); %>
