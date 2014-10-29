@@ -2,27 +2,27 @@
 	<img class="component-modal-info-icon"></img>
 	<div class="component-modal-info-title">
 		<span>
-		<!--<%= title %>-->
+		<%= get('name') %>
 		</span>
 	</div>
 </div>
 <div class="component-modal-info-description">
 	<span>
-		<!--<%= description %>-->
+		<%= get('description') %>
 	</span>
 </div>
 <div class="component-modal-info-params">
-  <!--<% _.each(parameter, function(param){ %>-->
+  <% _.each(get('parameters'), function(param){ %>
 	<div class="component-modal-info-param-field">
 		<span class="component-modal-info-param-name">
-		<!--<%= param.get("name") %>-->
+		<%= param.name %>
 		</span>
 		<span class="component-modal-info-param-type">
-		<!--<%= param.get("type") %>-->
+		<%= param.type %>
 		</span>
 		<span class="component-modal-info-param-desc">
-		<!--<%= param.get("desc") %>-->
+		<%= param.description %>
 		</span>
 	</div>
-  <!--<% }); %>-->
+  <% }); %>
 </div>

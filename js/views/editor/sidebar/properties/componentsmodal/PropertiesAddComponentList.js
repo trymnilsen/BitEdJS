@@ -59,11 +59,14 @@ function($,
             var currentSelected = $('.selected-new-component',this.$el).first();
             currentSelected.removeClass('selected-new-component');
             $(node).addClass('selected-new-component');
-            eventor.trigger('editor.component.showinfo',node);
+            //Get the correct component
+            var componentId             = this.getSelected();
+            var selectedComponentModel  = editor.components.get(componentId);
+            eventor.trigger('editor.component.showinfo',selectedComponentModel);
         },
         getSelected: function()
         {
-            return $('selected-new-component',this.$el).data('component');
+            return $('.selected-new-component',this.$el).data('component');
         }
     });
     return tagItemView;   

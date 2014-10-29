@@ -11,8 +11,9 @@ define([
         initialize: function(){
 
             var renderSprite = new Component({
-                name:'Render Sprite',
-                category: 'Rendring'
+                name        : 'Render Sprite',
+                category    : 'Rendring',
+                description : 'Rendering an asset as a sprite'
             });
             renderSprite.addParameter('Asset', 
                 'Asset', 
@@ -25,8 +26,9 @@ define([
                 'Should the sprite be positioned relative to our position or absolutely in the world');
 
             var collision = new Component({
-                name:'Collision',
-                category: 'Physics'
+                name        : 'Collision',
+                category    : 'Physics',
+                description : 'Define a collision type, size and shape'
             });
             collision.addParameter('Clip', 
                   'Boolean', 
@@ -39,9 +41,9 @@ define([
                   'The size of the collision mask');
 
             var gravity = new Component({
-                name: 'Gravity',
-                category: 'Physics',
-                description: 'The gravity affects the blah blah blah'
+                name        : 'Gravity',
+                category    : 'Physics',
+                description : 'The gravity affects the blah blah blah'
             });
 
             this.set([

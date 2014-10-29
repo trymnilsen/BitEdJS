@@ -16,7 +16,7 @@ define([
         },  
 
         initialize: function(options) {
-            this.set('id', options.name+'/'+options.category);
+            this.set('id', options.category+'/'+options.name);
             console.log('initalize', options);
         },
         addParameter: function(name, type, description)
