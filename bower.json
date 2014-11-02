@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sweetalert": "~0.4.2"
+    "bootstrap-sweetalert": "~0.4.2",
+    "backbone-nested-model": "~2.0.1"
   }
 }

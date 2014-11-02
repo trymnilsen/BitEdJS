@@ -5,7 +5,7 @@ define([
     'logic/editor/pipeline/pipelines/SpritePipeline',
     'logic/editor/scenegraph/SceneGraph',
     'logic/editor/EditorConstants',
-    'collections/editor/component/EditorComponentCollection'
+    'collections/editor/component/EditorAvailableComponentsCollection'
 ],
 function (
     AssetPipeline,

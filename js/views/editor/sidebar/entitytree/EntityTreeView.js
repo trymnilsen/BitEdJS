@@ -59,7 +59,7 @@ emptyPromptTemplate
 
             return this;
         },
-        onEntityAdded: function(node)
+        onEntityAdded: function(entity)
         {
             //remove prompt
             $('.emptyPromptContainer',this.$el).html('');
@@ -67,8 +67,8 @@ emptyPromptTemplate
             this.jqTreeEl.tree(
                 'appendNode',
                 {
-                    label: node.name,
-                    sceneNode: node
+                    label: entity.get('name'),
+                    sceneNode: entity
                 }
             );
         },

@@ -53,20 +53,32 @@ function($,
             console.log(event);
             this.setSelected(event.currentTarget);
         },
+        /**
+         * Callback for the clicked on a component, gets the component with
+         * propper id and triggers an event for it
+         * @param {DOMnode} node dom node that should be selected
+         */
         setSelected: function(node)
         {
             //Unset the old one
             var currentSelected = $('.selected-new-component',this.$el).first();
             currentSelected.removeClass('selected-new-component');
             $(node).addClass('selected-new-component');
-            //Get the correct component
-            var componentId             = this.getSelected();
-            var selectedComponentModel  = editor.components.get(componentId);
-            eventor.trigger('editor.component.showinfo',selectedComponentModel);
+            //Send event of the selected
+            eventor.trigger('editor.component.showinfo',this.getSelected());
+        },
+        /**
+         * Resets the selected to the first in collection
+         */
+        resetSelection: function()
+        {
+            this.setSelected($('li',this.$el).first());
         },
         getSelected: function()
         {
-            return $('.selected-new-component',this.$el).data('component');
+            //Get the correct component
+            var componentId = $('.selected-new-component',this.$el).data('component');
+            return editor.components.get(componentId);
         }
     });
     return tagItemView;   

@@ -3,6 +3,7 @@
 define([
   'underscore',
   'backbone',
+  'backboneNestedModel'
 ], function(_, Backbone) {
 
   var EditorComponent = Backbone.Model.extend({
@@ -12,11 +13,12 @@ define([
           category    : 'misc',
           id          : 'no/id',
           description : 'No description',
-          parameters  : []
+          parameters  : [],
         },  
 
         initialize: function(options) {
             this.set('id', options.category+'/'+options.name);
+            this.set('parameters', []); //Set the parameters reference
             console.log('initalize', options);
         },
         addParameter: function(name, type, description)

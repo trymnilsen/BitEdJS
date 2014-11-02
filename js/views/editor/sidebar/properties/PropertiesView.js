@@ -9,6 +9,7 @@ define([
   'views/editor/sidebar/properties/tag/PropertiesTagView',
   'views/editor/sidebar/properties/components/PropertiesComponentView',
   'views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalView',
+  'models/editor/entity/EditorEntityModel',
   'text!views/editor/sidebar/properties/PropertiesViewTemplate.html',
   'text!views/editor/sidebar/properties/PropertiesNoneSelectedTemplate.html'
 ], 
@@ -20,6 +21,7 @@ function($,
  TagView,
  ComponentView,
  ComponentModal,
+ EntityModel,
  viewTemplate,
  notificationTemplate
  ){
@@ -30,36 +32,67 @@ function($,
         tagView: {},
         componentsView: {},
         addComponentView: {},
-        activeNode: {
-            tags : [],
-            components : [],
-            type: '',
-            name: editor.constants.propertiesView.noItemSelectedString
-        },
-        events: {
-            'click .editor-properties-add-remove' : 'addComponent'
-        },
+        activeNode: null,
         initialize: function()
         {
             this.tagView = new TagView();
             this.componentsView = new ComponentView();
+            //Create the add component modal
             this.addComponentView = new ComponentModal();
+            this.appendComponentModal();
+            this.activeNode = new EntityModel({name: this.viewConstants.noItemSelectedString});
+            //Bind up events
             eventor.on('editor.entity.selected',_.bind(this.onSelectedEntityChanged,this));
+            eventor.on('editor.entity.component.add',_.bind(this.addComponent,this));
         },
         render: function(){
-            $('body').append(this.addComponentView.render().$el);
+            //Do rest
             this.$el.html(this.template(this.activeNode));
-            console.log('re-rendering');
+            console.log('re-rendering properties VIEW');
             //Give the current settings to our subviews
             //TODO SetSubviewsData method?
-            this.tagView.tags = this.activeNode.tags;
-            this.componentsView.components = this.activeNode.components;
+            this.tagView.tags = this.activeNode.get('tags');
+            this.componentsView.components = this.activeNode.get('components');
             //Render and append them
             $('.properties-lower-tags',this.$el).html(this.tagView.render().el);
             $('.editor-properties-components',this.$el).prepend(this.componentsView.render().el);
             $('.emptyPromptContainer',this.$el).html(notificationTemplate);
-            //Only show the empty promp if we dont have any selected ones
-            //TODO makes this less ugly
+            //Check what is currently selected
+            if(this.activeNode.get('name') === this.viewConstants.noItemSelectedString)
+            {
+                this.renderOnNoneSelected();
+            }
+            else
+            {
+                this.renderOnEntitySelected();
+            }
+            //Update icon
+            this.updateEntityicon();
+            return this;
+        },
+
+        /**
+         * Wrapper method for all actions on render of the properties view when
+         * an entity IS selected
+         */
+        renderOnEntitySelected: function()
+        {
+            $('.emptyPromptContainer',this.$el).hide();
+            $('.editor-properties-add-remove',this.$el).addClass('editor-properties-add-remove-active');
+        },
+        /**
+         * Wrapper method for all actions on render of the properties view when
+         * no entity is selected
+         */
+        renderOnNoneSelected: function()
+        {
+            $('.emptyPromptContainer',this.$el).show();
+        },
+        /**
+         * checks if we have a selected entity and removes the "empty promt"
+         */
+        checkEmptyPrompt: function()
+        {
             if(this.activeNode.name === this.viewConstants.noItemSelectedString)
             {
                 $('.emptyPromptContainer',this.$el).show();
@@ -69,31 +102,48 @@ function($,
                 $('.emptyPromptContainer',this.$el).hide();
                 $('.editor-properties-add-remove',this.$el).addClass('editor-properties-add-remove-active');
             }
-            //Set the appropriate icon
-            //We dont know what icon class is already set. We could parse it
-            //but we also know what other classes are supposed to be there 
-            //asside from the icon class, so why not just clear it and set our
-            //wanted icon class
+        },
+        /**
+         * updates the icon to the one that defined for what is currently selected
+         */
+        updateEntityicon: function()
+        {
             var newClassName = 'fa fa-fx ';
-            if(this.activeNode.type in this.viewConstants.itemIcons)
+            if(this.activeNode.get('type') in this.viewConstants.itemIcons)
             {
-                newClassName+=this.viewConstants.itemIcons[this.activeNode.type];
+                newClassName+=this.viewConstants.itemIcons[this.activeNode.get('type')];
             }
             else
             {
                 newClassName+='fa-question-circle';
             }
             newClassName+=' property-selected-icon';
-            $('.property-selected-icon',this.$el).attr("class", newClassName);
-            return this;
+            $('.property-selected-icon',this.$el).attr('class', newClassName);
         },
-        addComponent: function()
+        /**
+         * Append add component modal
+         */
+        appendComponentModal: function()
         {
-            console.log('add components');
+            $('body').append(this.addComponentView.render().$el);
+        },
+        /**
+         * Callback method for add component event adds to model, which in turn adds to view
+         */
+        addComponent: function(component)
+        {
+            //Double check that we have an active component to add on
+            if(this.activeNode.get('name') !== this.viewConstants.noItemSelectedString)
+            {
+                //TODO make new one/clone
+                this.activeNode.get('components').add(component);
+            }
+
         },
         onSelectedEntityChanged: function(node){
             console.log('changed to',node);
             this.activeNode = node;
+            //Re-render our view
             this.render();
         }
     });

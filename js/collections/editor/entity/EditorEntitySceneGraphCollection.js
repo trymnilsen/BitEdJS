@@ -3,10 +3,10 @@
 define([
   'underscore',
   'backbone',
-  'models/editor/component/EditorComponent'
-], function(_, Backbone, Component){
+  'models/editor/entity/EditorEntityModel'
+], function(_, Backbone, Entity){
     var EditorComponentCollection = Backbone.Collection.extend({
-        model: Component
+        model: Entity
 
     });
  

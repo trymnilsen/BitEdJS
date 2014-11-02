@@ -2,80 +2,37 @@
 
 define([
 'underscore',
-'eventor'
+'eventor',
+'collections/editor/entity/EditorEntitySceneGraphCollection',
+'models/editor/entity/EditorEntityModel'
 ], 
 function (
 _,
-eventor
+eventor,
+SceneGraphStorage,
+EntityModel
 ) {
+
 
     function SceneGraph()
     {
-        this.GraphData = [];
-        this.numOfEntitiesCreated = 0;
-        
-        //Functions for creating different nodes
-        var NODE_TYPES = {
-            entity : function() {
-                return [
-                    {
-                        name: 'physics',
-                    }
-                ];
-            },
-            light: function() {
-
-            }         
-        };
-        var parsePath = function(path)
-        {
-            var paths = path.split('/').reverse();
-            var currentPath = this.GraphData;
-            while(paths.length>0)
-            {
-                var lookupName = paths.pop();
-                for (var i = 0; i < currentPath.length; i++) {
-                    if(currentPath[i].name===lookupName)
-                    {
-                        currentPath = currentPath[i].children;
-                    }
-                }
-
-            }
-        }
-        this.addComponent = function(node,componentID)
-        {
-            
-        }
-        this.addNode = function(nodeType, nodeName, path)
-        {
-            if(nodeType in NODE_TYPES)
-            {
-                //Create a node based on the correct type
-                var nodeComponents = NODE_TYPES[nodeType]();
-                var newNode = {
-                    id : this.numOfEntitiesCreated++,
-                    path : nodeName,
-                    name : nodeName,
-                    type : nodeType,
-                    tags : [],
-                    components : nodeComponents
-                }
-                this.GraphData.push(newNode);
-                eventor.trigger('editor.entity.add',newNode);
-            }
-            else
-            {
-                console.log('NodeType '+nodeType+' not valid for: '+nodeName);
-            }
-        }
+        this._storage = new SceneGraphStorage();
         eventor.on('editor.entity.requestAdd', _.bind(this.addNode,this));
-        this.updateEntity = function(entityProtocol)
-        {
-
-        }
-
     }
+    SceneGraph.prototype = {
+        constructor: SceneGraph,
 
+        addNode: function(nodeType, nodeName, path)
+        {
+            var newNode = new EntityModel({
+                path : path,
+                name : nodeName,
+                type : nodeType
+            });
+            this._storage.add(newNode);
+            console.log('adding entity');
+            eventor.trigger('editor.entity.add',newNode);
+        }
+    }
     return SceneGraph;
 });
