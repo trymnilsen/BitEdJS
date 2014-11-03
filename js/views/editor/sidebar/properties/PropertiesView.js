@@ -45,6 +45,7 @@ function($,
             eventor.on('editor.entity.selected',_.bind(this.onSelectedEntityChanged,this));
             eventor.on('editor.entity.component.add',_.bind(this.addComponent,this));
         },
+
         render: function(){
             //Do rest
             this.$el.html(this.template(this.activeNode));

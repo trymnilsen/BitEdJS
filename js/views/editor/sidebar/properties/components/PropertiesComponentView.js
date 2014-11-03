@@ -13,8 +13,8 @@ Itemview
 ){
     var propComponentsView = Backbone.View.extend({
         className: 'properties-components-container',
-        components: [],
         //Expected format of single component
+        components: [],
         compDump: {
         	number: 1,
         	name: 'Physics',
@@ -34,6 +34,10 @@ Itemview
         },
 
         render: function(){
+            this.listenTo(this.components, 'add', this.addOne);
+            this.listenTo(this.components, 'reset', this.addAll);
+            this.listenTo(this.components, 'all', this.render);
+
             this.$el.html('');
         	for (var i = 0; i < this.components.length; i++) {
         		var itemView = new Itemview();
@@ -42,6 +46,12 @@ Itemview
         	}
             return this;
         },
+        addOne: function(newOne){
+            console.log('ADDING COMPONENT IN VIEW : ',newOne);
+        },
+        addAll: function(allNew){
+            console.log('ADDING ALL IN VIEW: ',allNew);
+        }
 
     });
     return propComponentsView;   
