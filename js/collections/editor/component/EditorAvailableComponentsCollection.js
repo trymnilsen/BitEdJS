@@ -10,8 +10,8 @@ define([
         model: Component,
       
         initialize: function(){
-
-            this.set(Factory.getAllAvailable());
+            var componentFactory = new Factory();         
+            this.set(componentFactory.getAllAvailable());
         }
 
     });
