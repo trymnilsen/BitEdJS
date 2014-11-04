@@ -14,29 +14,28 @@ Itemview
     var propComponentsView = Backbone.View.extend({
         className: 'properties-components-container',
         //Expected format of single component
+        /**
+         * Components storage for this view
+         * @type {EditorComponent}
+         */
         components: [],
-        compDump: {
-        	number: 1,
-        	name: 'Physics',
-        	sortable: 'true',
-        	properties: [
-        		{
-        			name : 'Movement',
-        			type : 'bool',
-        			value : true
-        		}
-        	],
-        },
-        setComponents: function() {
-        	//Clean up old
-        	//
+        /**
+         * Set the components for this view, replacing any old currently in view
+         * @param {Collection} components the new component list to show and 
+         * also listen for newly added components on
+         */
+        setComponents: function(components) {
+            this.stopListening();
+            this.components = components;
+            //Listen for new events
+            //this.listenTo(this.components, 'add', this.addOne);
+            //this.listenTo(this.components, 'reset', this.addAll);
+            //this.listenTo(this.components, 'all', this.addOne);
+
         	this.render();
         },
 
         render: function(){
-            this.listenTo(this.components, 'add', this.addOne);
-            this.listenTo(this.components, 'reset', this.addAll);
-            this.listenTo(this.components, 'all', this.render);
 
             this.$el.html('');
         	for (var i = 0; i < this.components.length; i++) {
@@ -46,8 +45,8 @@ Itemview
         	}
             return this;
         },
-        addOne: function(newOne){
-            console.log('ADDING COMPONENT IN VIEW : ',newOne);
+        addOne: function(test, foo, bar){
+            console.log('ADDING COMPONENT IN VIEW : ', test, foo, bar);
         },
         addAll: function(allNew){
             console.log('ADDING ALL IN VIEW: ',allNew);

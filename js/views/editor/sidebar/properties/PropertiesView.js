@@ -10,6 +10,7 @@ define([
   'views/editor/sidebar/properties/components/PropertiesComponentView',
   'views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalView',
   'models/editor/entity/EditorEntityModel',
+  'models/editor/component/EditorComponent',
   'text!views/editor/sidebar/properties/PropertiesViewTemplate.html',
   'text!views/editor/sidebar/properties/PropertiesNoneSelectedTemplate.html'
 ], 
@@ -22,6 +23,7 @@ function($,
  ComponentView,
  ComponentModal,
  EntityModel,
+ Component,
  viewTemplate,
  notificationTemplate
  ){
@@ -53,7 +55,7 @@ function($,
             //Give the current settings to our subviews
             //TODO SetSubviewsData method?
             this.tagView.tags = this.activeNode.get('tags');
-            this.componentsView.components = this.activeNode.get('components');
+            this.componentsView.setComponents(this.activeNode.get('components'));
             //Render and append them
             $('.properties-lower-tags',this.$el).html(this.tagView.render().el);
             $('.editor-properties-components',this.$el).prepend(this.componentsView.render().el);
@@ -136,8 +138,22 @@ function($,
             //Double check that we have an active component to add on
             if(this.activeNode.get('name') !== this.viewConstants.noItemSelectedString)
             {
+            var renderSprite = new Component({
+                name        : 'Render Sprite',
+                category    : 'Rendring',
+                description : 'Rendering an asset as a sprite'
+            });
+            renderSprite.addParameter('Asset', 
+                'Asset', 
+                'The asset that should be used as a Sprite');
+            renderSprite.addParameter('Position', 
+                'Coordinate', 
+                'Position of the sprite');
+            renderSprite.addParameter('Relative Position', 
+                'Boolean', 
+                'Should the sprite be positioned relative to our position or absolutely in the world');
                 //TODO make new one/clone
-                this.activeNode.get('components').add(component);
+                this.activeNode.get('components').add(renderSprite);
             }
 
         },

@@ -18,15 +18,19 @@ define([
 
         initialize: function(options) {
             this.set('id', options.category+'/'+options.name);
-            this.set('parameters', []); //Set the parameters reference
+            this.set('parameters', []); //Clear the parameter reference
+            //For each parameter add it
+            for (var i = 0; i < options.parameters.length; i++) {
+              this.addParameter(options.parameters[i]);
+            }
             console.log('initalize', options);
         },
-        addParameter: function(name, type, description)
+        addParameter: function(param)
         {
           this.get('parameters').push({
-            'name'        : name,
-            'type'        : type,
-            'description' : description
+            'name'        : param.name,
+            'type'        : param.type,
+            'description' : param.description
           });
         }
 
