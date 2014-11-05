@@ -23,13 +23,13 @@ function (
         }
         this.pushFile = function(fileObject)
         {
-            console.log('adding file via SpritePipeline: ',fileObject);
+            console.log('On::PushFileToSpritePipeline {file} ',fileObject);
             var alreadyAddedFile = getLoadedFile(fileObject);
             if(alreadyAddedFile !== null)
             {
                 if(fileObject.lastModifiedDate>alreadyAddedFile.lastModifiedDate)
                 {
-                    console.log('hello');        
+                    console.log('Something happended here?');        
                 }
             }
             var model = new AssetModel({

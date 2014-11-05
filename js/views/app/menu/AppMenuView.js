@@ -28,7 +28,6 @@ define([
     },
     closeMenu: function()
     {
-        console.log('hiding!');
         jQuery('#container').removeClass('open-sidebar');
     },
     openMenu: function(evt)
@@ -36,8 +35,6 @@ define([
         //Open the menu
         jQuery('#container').addClass('open-sidebar');
         this.overlayElement.showOverlay();
-        console.log('Loooool');
-        console.log(evt);
     }
 
   });

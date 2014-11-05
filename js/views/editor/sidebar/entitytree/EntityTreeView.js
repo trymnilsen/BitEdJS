@@ -46,7 +46,6 @@ emptyPromptTemplate
                     $li.find('.jqtree-title').html(compiledTemplate)
                         .find('.fa')
                         .on('click',function(evt) {
-                            console.log('hmz',node,evt);
                             //Dont select if pressed buttons
                             evt.stopPropagation();
                     });
@@ -74,15 +73,14 @@ emptyPromptTemplate
         },
         createEntity: function(evt)
         {
-            console.log('Clicked on:',evt);
             var entityType = $(evt.currentTarget).data('entitytype');
-            console.log('type',entityType);
+            console.log('On::CreateEntity {event/type}', evt, entityType);
             var entityName = Date.now();
             eventor.trigger('editor.entity.requestAdd',entityType.toLowerCase(),entityName);
         },
         entitySelected: function(evt)
         {
-            console.log('node selected',evt.node);
+            console.log('On::SelectedEntityInTreeview',evt.node);
             eventor.trigger('editor.entity.selected',evt.node.sceneNode);
         }
 

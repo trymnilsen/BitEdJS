@@ -33,7 +33,6 @@ function($,
         },
         componentSelected: function(component)
         {
-            console.log('selected one', component);
             this.render(component);
         }
     });

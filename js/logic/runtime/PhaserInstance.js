@@ -16,12 +16,12 @@ define([
     attach: function(domID, w, h) {
       if(domID === '' || domID === undefined)
       {
-        console.log('phaser attach id not defined');
+        console.warn('Phaser attach-id was not defined!');
         return;
       }
       this.w = w;
       this.h = h;
-      console.log('setting size ' + w + '/'+ h);
+      console.log('Initialize::SetPhaserEditorInstanceSize {Width/Height} ' + w + '/'+ h);
       this.game = new Phaser.Game(w, h, Phaser.AUTO, domID, 
           {
             preload: _.bind(this.preload,this),
@@ -45,14 +45,10 @@ define([
             logo.input.enableDrag(true);
             logo.input.enableSnap(32,32,true,true);
     },
-    testfunc: function()
-    {
-        console.log('helloooo click on img');
-    },
     resizeRender: function(w, h)
     {
 
-        console.log('---resizing');
+        console.log('On::ResizePhaserInstance {width/height}',w,h);
         this.game.width = w;
         this.game.height = h;
 

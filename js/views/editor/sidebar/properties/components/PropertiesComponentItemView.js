@@ -17,8 +17,8 @@ itemTemplate
         events : {
         	'click .properties-component-portlet-header' : 'toggleHeader'
         },
-        render: function(){
-        	this.$el.html(this.template({name: 'physics'}));
+        render: function(component){
+        	this.$el.html(this.template(component));
             return this;
         },
         toggleHeader: function(){

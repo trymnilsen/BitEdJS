@@ -30,7 +30,7 @@ eventor
         addNewEntity: function(entity)
         {
             //Creating entity in scene :)
-            console.log('Creating entity in scene', entity);
+            console.log('On::AddNewEntityInBridge {entity}', entity);
 
             var newEntity = this.gameRef.add.sprite(this.gameRef.world.centerX,this.gameRef.world.centerY,'entityTemplate');
             //Set Anchor
@@ -43,14 +43,12 @@ eventor
             //Enable selection by clicking
             newEntity.events.onInputDown.add(this.clickedOnEntity, this);
             newEntity.EditorId = entity;//TODO: Make id based
-            console.log('phaser id: ',newEntity);
-
         },
         clickedOnEntity: function(event)
         {
             //Find the right entity and dispatch and event for this
             //It should be stored on the phaserObject
-            console.log('click Event',event);
+            console.log('On::ClickOnSpriteInPhaserScene {event}',event);
             eventor.trigger('editor.entity.selected',event.EditorId);
         },
         getEntityInfo: function(entity)

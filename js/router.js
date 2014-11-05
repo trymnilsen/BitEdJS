@@ -28,7 +28,6 @@ define([
     var app_router = new AppRouter;
     
     app_router.on('route:showEditor',function(){
-        console.log('hit editor');
         var editorLayout = new EditorLayoutView();
         editorLayout.render();
     });

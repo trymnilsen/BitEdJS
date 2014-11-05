@@ -39,7 +39,6 @@ define([
         },
 
         addOne: function(todo) {
-            console.log('adding to view');
             var view = new ItemView({model: todo});
             this.$el.append(view.render().el);
         },

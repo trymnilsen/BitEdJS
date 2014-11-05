@@ -71,17 +71,15 @@ define([
         this.windowInitialized = true;
         this.dropOverlay.show();
         this.dropZone.showOverlay();
-        console.log('Over window');
     },
     onDragLeaveWindow: function(){
         if (this.overlayInitialized || this.dropZoneInitialized) {
             return;
         }
 
-            console.log('leaving window');
-            this.windowInitialized = false;
-            this.dropOverlay.hide();
-            this.dropZone.hideOverlay();
+        this.windowInitialized = false;
+        this.dropOverlay.hide();
+        this.dropZone.hideOverlay();
 
     },
     onDropWindow: function(evt){
@@ -135,7 +133,6 @@ define([
     onDropDropZone: function(evt)
     {
         evt.preventDefault();
-        console.log(evt.originalEvent.dataTransfer);
         eventor.trigger('editor.assets.dropRequest',evt.originalEvent.dataTransfer.files);
 
         this.dropZoneInitialized = false;

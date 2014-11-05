@@ -24,32 +24,35 @@ Itemview
          * @param {Collection} components the new component list to show and 
          * also listen for newly added components on
          */
-        setComponents: function(components) {
+        setViewComponents: function(components) {
             this.stopListening();
             this.components = components;
             //Listen for new events
-            //this.listenTo(this.components, 'add', this.addOne);
-            //this.listenTo(this.components, 'reset', this.addAll);
+            this.listenTo(this.components, 'add', this.addOne);
+            this.listenTo(this.components, 'reset', this.render);
             //this.listenTo(this.components, 'all', this.addOne);
 
         	this.render();
         },
 
         render: function(){
-
+            
             this.$el.html('');
         	for (var i = 0; i < this.components.length; i++) {
+                var comp = this.components.at(i);
         		var itemView = new Itemview();
-        		this.$el.append(itemView.render().el);
-        		console.log('Added Component');
+        		this.$el.append(itemView.render(comp).el);
         	}
             return this;
+            
         },
-        addOne: function(test, foo, bar){
-            console.log('ADDING COMPONENT IN VIEW : ', test, foo, bar);
+        addOne: function(model, collection, options){
+            console.log('On::AddOneComponent', model, collection, options);
+            var itemView = new Itemview();
+            this.$el.append(itemView.render(model).el);
         },
-        addAll: function(allNew){
-            console.log('ADDING ALL IN VIEW: ',allNew);
+        addAll: function(){
+            console.log('On:AddAll', arguments);
         }
 
     });

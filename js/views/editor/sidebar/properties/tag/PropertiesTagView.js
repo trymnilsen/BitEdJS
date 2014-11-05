@@ -34,7 +34,7 @@ modalTemplate
             return this;
         },
         addTag: function(tag) {
-            console.log('adding tag');
+
             var view = new ItemView();
             if(typeof tag === 'string')
             {

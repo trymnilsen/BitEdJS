@@ -73,7 +73,7 @@ define([
     //Callback for the layout resize event
     resizeScreenView: function(evt)
     {
-        console.log(evt);
+        console.log('On::ResizeEditorScreen',evt);
         //Calculates the size of our containers as we do not want to use css to make
         //sure our containers are correct size since this makes the render size 
         //different from the element size

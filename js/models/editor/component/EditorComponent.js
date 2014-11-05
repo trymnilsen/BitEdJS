@@ -11,19 +11,19 @@ define([
         defaults : {
           name        : 'unknown',
           category    : 'misc',
-          id          : 'no/id',
+          componentId : 'no/id',
           description : 'No description',
           parameters  : [],
         },  
 
         initialize: function(options) {
-            this.set('id', options.category+'/'+options.name);
+            this.set('componentId', options.category+'/'+options.name);
             this.set('parameters', []); //Clear the parameter reference
             //For each parameter add it
             for (var i = 0; i < options.parameters.length; i++) {
               this.addParameter(options.parameters[i]);
             }
-            console.log('initalize', options);
+            console.log('Initialize::CreatedComponent {options}', options);
         },
         addParameter: function(param)
         {

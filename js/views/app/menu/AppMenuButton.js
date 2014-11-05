@@ -26,7 +26,6 @@ define([
         },
         buttonClicked: function()
         {
-            console.log('sdfdsfsfsdfsfsd hello');
             eventor.trigger('app.menu.open');
         }
     });

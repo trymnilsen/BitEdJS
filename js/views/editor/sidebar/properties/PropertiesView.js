@@ -11,6 +11,7 @@ define([
   'views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalView',
   'models/editor/entity/EditorEntityModel',
   'models/editor/component/EditorComponent',
+  'models/editor/component/EditorComponentFactory',
   'text!views/editor/sidebar/properties/PropertiesViewTemplate.html',
   'text!views/editor/sidebar/properties/PropertiesNoneSelectedTemplate.html'
 ], 
@@ -24,6 +25,7 @@ function($,
  ComponentModal,
  EntityModel,
  Component,
+ ComponentFactory,
  viewTemplate,
  notificationTemplate
  ){
@@ -51,11 +53,11 @@ function($,
         render: function(){
             //Do rest
             this.$el.html(this.template(this.activeNode));
-            console.log('re-rendering properties VIEW');
+            console.log('On::RenderPropertiesView');
             //Give the current settings to our subviews
             //TODO SetSubviewsData method?
             this.tagView.tags = this.activeNode.get('tags');
-            this.componentsView.setComponents(this.activeNode.get('components'));
+            this.componentsView.setViewComponents(this.activeNode.get('components'));
             //Render and append them
             $('.properties-lower-tags',this.$el).html(this.tagView.render().el);
             $('.editor-properties-components',this.$el).prepend(this.componentsView.render().el);
@@ -138,27 +140,16 @@ function($,
             //Double check that we have an active component to add on
             if(this.activeNode.get('name') !== this.viewConstants.noItemSelectedString)
             {
-            var renderSprite = new Component({
-                name        : 'Render Sprite',
-                category    : 'Rendring',
-                description : 'Rendering an asset as a sprite'
-            });
-            renderSprite.addParameter('Asset', 
-                'Asset', 
-                'The asset that should be used as a Sprite');
-            renderSprite.addParameter('Position', 
-                'Coordinate', 
-                'Position of the sprite');
-            renderSprite.addParameter('Relative Position', 
-                'Boolean', 
-                'Should the sprite be positioned relative to our position or absolutely in the world');
+                var factory = new ComponentFactory();
+                var newComponent = factory.createComponent(component.get('componentId'));
                 //TODO make new one/clone
-                this.activeNode.get('components').add(renderSprite);
+                console.log('On::Adding Component {arg/newcomp}', component, newComponent);
+                this.activeNode.get('components').add(newComponent);
             }
 
         },
         onSelectedEntityChanged: function(node){
-            console.log('changed to',node);
+            console.log('On::SelectedEntityChanged',node);
             this.activeNode = node;
             //Re-render our view
             this.render();

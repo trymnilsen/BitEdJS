@@ -24,7 +24,7 @@ function (
         constructor: EditorComponentFactory,
         createComponent: function(componentId)
         {
-            return new BaseComponent(EditorComponentFactory.componentData[componentId]);
+            return new BaseComponent(EditorComponentFactory.COMPONENT_DATA[componentId]);
         },
         getAllAvailable: function()
         {

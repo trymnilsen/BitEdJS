@@ -17,7 +17,6 @@ define([
 
     //Functions
     render: function(){
-        console.log('got here');
         //Create overlay element
         this.$el.attr('id','appMenuOverlay');
         //Append
@@ -31,7 +30,6 @@ define([
     //Event handlers
     handleClickOverlay: function()
     {
-        console.log('Overlay was clicked');
         this.$el.removeClass('overlay-visible');
         this.closeCallback();
     }

@@ -83,7 +83,7 @@ define([
         appMenu.render();
         screenView.render();
         //Run Layout
-        console.log('time: ', performance.now());
+        console.log('Time::BeforeLayoutSetup {miliseconds}', performance.now());
         this.layoutObject = jQuery('#mainContent').layout({
             defaults: { 
                 fxName              : 'none',
@@ -135,8 +135,8 @@ define([
 
         });
         eventor.trigger('editor.layout.finished');
-        console.log('time: ', performance.now());
-        console.log('rendering finished');
+        console.log('Time::AfterLayoutSetup {miliseconds} ', performance.now());
+
     },
     onLayoutResize: function(target)
     {

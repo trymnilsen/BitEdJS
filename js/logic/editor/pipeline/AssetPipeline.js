@@ -35,7 +35,7 @@ function (
             //No pipe found
             if(pipe===null)
             {
-                console.log('no valid pipeline for <' + ext + '> file: '+fileObject.name);
+                console.warn('No valid pipeline for <' + ext + '> file: '+fileObject.name);
                 return {
                     status: 'error',
                     message : 'no valid pipeline for <' + ext + '> file: '+fileObject.name+'\n'

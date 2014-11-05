@@ -30,7 +30,6 @@ define([
         },
         promptDelete: function()
         {
-            console.log('Delete asset selected');
             swal({
                 title: "Are you sure?",
                 text: "You will not be able to recover this asset file!",
@@ -41,7 +40,6 @@ define([
                 cancelButtonText: "No, cancel plx!",
                 closeOnConfirm: false
             },_.bind(this.deletePromtResponse,this));
-            console.log('After selected');
             //
         },
         deletePromtResponse: function(isConfirm)

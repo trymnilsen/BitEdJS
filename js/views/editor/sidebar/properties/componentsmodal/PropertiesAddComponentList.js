@@ -50,7 +50,7 @@ function($,
          */
         selectComponent: function(event)
         {
-            console.log(event);
+            console.log('On::ClickedONComponentInModal', event);
             this.setSelected(event.currentTarget);
         },
         /**
@@ -77,8 +77,8 @@ function($,
         getSelected: function()
         {
             //Get the correct component
-            var componentId = $('.selected-new-component',this.$el).data('component');
-            return editor.components.get(componentId);
+            var id = $('.selected-new-component',this.$el).data('component');
+            return editor.components.findWhere({componentId: id});
         }
     });
     return tagItemView;   

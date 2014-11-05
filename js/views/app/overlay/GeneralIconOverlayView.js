@@ -40,10 +40,6 @@ define([
             this.$el.append(this.textDiv);
             this.iconDiv.append(icon);
         },
-        lol: function()
-        {
-            console.log('fus ro daaah');
-        },
         // attach: function()
         // {
         // },

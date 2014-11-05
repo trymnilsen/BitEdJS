@@ -51,7 +51,6 @@ function($,
         },
         modalClose: function(event)
         {
-            console.log('Closing',event);
             eventor.trigger('editor.entity.component.add',this.listView.getSelected());
         }
 
