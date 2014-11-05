@@ -28,7 +28,13 @@ function (
         },
         getAllAvailable: function()
         {
-
+            var all = [];
+            for (var key in EditorComponentFactory.COMPONENT_DATA)
+            {
+                all.push(this.createComponent(key));
+            }
+            return all;
+            
         },
         registerComponents: function()
         {
