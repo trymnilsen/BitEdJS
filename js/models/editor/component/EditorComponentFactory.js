@@ -3,7 +3,9 @@
 define([
     'models/editor/component/EditorComponent',
     //Component Definitions loaded 
-    'models/editor/component/data/rendering/RenderSpriteComponent'
+    'models/editor/component/data/rendering/RenderSpriteComponent',
+    'models/editor/component/data/editor/EntityIconComponent'
+
 ], 
 function (
     BaseComponent
@@ -24,7 +26,14 @@ function (
         constructor: EditorComponentFactory,
         createComponent: function(componentId)
         {
-            return new BaseComponent(EditorComponentFactory.COMPONENT_DATA[componentId]);
+            if(componentId in EditorComponentFactory.COMPONENT_DATA)
+            {
+                return new BaseComponent(EditorComponentFactory.COMPONENT_DATA[componentId]);
+            }
+            else
+            {
+                console.warn('Tried creating non existing component: ', componentId);
+            }
         },
         getAllAvailable: function()
         {

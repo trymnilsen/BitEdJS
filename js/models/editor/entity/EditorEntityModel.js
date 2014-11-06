@@ -5,11 +5,13 @@ define([
   'backbone',
   'collections/editor/component/EditorComponentCollection',
   'collections/editor/entity/EditorEntityTagsCollection',
+  'models/editor/component/EditorComponentFactory'
 
 ], function(_, 
 Backbone,
 ComponentCollection,
-TagsCollection) {
+TagsCollection,
+ComponentFactory) {
 
     var EditorEntity = Backbone.Model.extend({
 
@@ -24,6 +26,10 @@ TagsCollection) {
 
         initialize: function(options) {
             this.set('components', new ComponentCollection());
+            //Append the editor icon
+            var factory = new ComponentFactory();
+            this.get('components').add(
+                factory.createComponent('Editor/Entity Icon'));
             //this.set('tags', new TagsCollection()); //Set the parameters reference
             console.log('Initialize::CreatedEntity {options}', options);
         }
