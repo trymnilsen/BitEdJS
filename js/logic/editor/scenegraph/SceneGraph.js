@@ -4,13 +4,15 @@ define([
 'underscore',
 'eventor',
 'collections/editor/entity/EditorEntitySceneGraphCollection',
-'models/editor/entity/EditorEntityModel'
+'models/editor/entity/EditorEntityModel',
+'models/editor/entity/EditorEntityModelFactory'
 ], 
 function (
 _,
 eventor,
 SceneGraphStorage,
-EntityModel
+EntityModel,
+EntityFactory
 ) {
 
 
@@ -24,7 +26,8 @@ EntityModel
 
         addNode: function(nodeType, nodeName, path)
         {
-            var newNode = new EntityModel({
+            var factory = new EntityFactory();
+            var newNode = factory.createEntity({
                 path : path,
                 name : nodeName,
                 type : nodeType

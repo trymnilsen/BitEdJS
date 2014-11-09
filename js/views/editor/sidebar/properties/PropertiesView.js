@@ -10,6 +10,7 @@ define([
   'views/editor/sidebar/properties/components/PropertiesComponentView',
   'views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalView',
   'models/editor/entity/EditorEntityModel',
+  'models/editor/entity/EditorEntityModelFactory',
   'models/editor/component/EditorComponent',
   'models/editor/component/EditorComponentFactory',
   'text!views/editor/sidebar/properties/PropertiesViewTemplate.html',
@@ -24,6 +25,7 @@ function($,
  ComponentView,
  ComponentModal,
  EntityModel,
+ EntityFactory,
  Component,
  ComponentFactory,
  viewTemplate,
@@ -44,7 +46,9 @@ function($,
             //Create the add component modal
             this.addComponentView = new ComponentModal();
             this.appendComponentModal();
-            this.activeNode = new EntityModel({name: this.viewConstants.noItemSelectedString});
+            //Create default node
+            var entityFactory = new EntityFactory();
+            this.activeNode = entityFactory.createDummy();
             //Bind up events
             eventor.on('editor.entity.selected',_.bind(this.onSelectedEntityChanged,this));
             eventor.on('editor.entity.component.add',_.bind(this.addComponent,this));

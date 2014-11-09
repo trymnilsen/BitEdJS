@@ -7,6 +7,7 @@ define([], function() {
           category    : 'Editor',
           description : 'Shows',
           parameters  : [],
-          mandatory   : true
+          isMandatory   : true,
+          isDefault   : true
         };
 });

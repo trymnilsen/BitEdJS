@@ -1,6 +1,8 @@
 'use strict';
 
 define([
+    'underscore',
+    'backbone',
     'models/editor/component/EditorComponent',
     //Component Definitions loaded 
     'models/editor/component/data/rendering/RenderSpriteComponent',
@@ -8,28 +10,33 @@ define([
 
 ], 
 function (
+    _,
+    Backbone,
     BaseComponent
 ) {
 
     function EditorComponentFactory()
     {
-        var comps = arguments;
         this.registerComponents();
-        var lol = 0;
     }
 
     EditorComponentFactory.LOADEDCOMPONENTS = arguments;
-    EditorComponentFactory.COMPONENT_DATA = {};
-
+    EditorComponentFactory.COMPONENT_DATA = new Backbone.Collection();
 
     EditorComponentFactory.prototype = {
         constructor: EditorComponentFactory,
+
         createComponent: function(componentId)
         {
-            if(componentId in EditorComponentFactory.COMPONENT_DATA)
+
+            //Retrieves data for the components or undefined if no results
+            var data = _.findWhere(EditorComponentFactory.COMPONENT_DATA,{
+                                                        componentId: componentId
+                        });
+            //Check if a match was found for the component id
+            if(data !== undefined)
             {
-                var componentData = EditorComponentFactory.COMPONENT_DATA[componentId];
-                var newComponent = new BaseComponent(componentData);
+                var newComponent = new BaseComponent(data);
                 return newComponent;
             }
             else
@@ -37,30 +44,79 @@ function (
                 console.warn('Tried creating non existing component: ', componentId);
             }
         },
+        createComponentsWhere: function(condition)
+        {
+            var newComponents = [];
+            var conditionResults = [];
+            //No condition was given, return all
+            if(condition === null)
+            {
+                conditionResults = EditorComponentFactory.COMPONENT_DATA;
+            }
+            else
+            {
+                conditionResults = _.findWhere(
+                            EditorComponentFactory.COMPONENT_DATA,
+                            condition
+                        );
+            }
+
+            if(conditionResults !== undefined)
+            {
+                conditionResults.each(function(element,foo,bar){
+                        newComponents.push(this.createComponent(element.get('componentId')));
+                }, this);
+            }
+
+            return newComponents;
+        },
         getAllAvailable: function()
         {
-            var all = [];
-            for (var key in EditorComponentFactory.COMPONENT_DATA)
-            {
-                all.push(this.createComponent(key));
-            }
-            return all;
-            
+            return this.createComponentsWhere(null);   
         },
         registerComponents: function()
         {
             var lc = EditorComponentFactory.LOADEDCOMPONENTS;
-            //The Components start from the second argument, not the first.
-            //The first arguement is the EditorComponent argument
-            for (var i = 1; i < lc.length; i++) {
-                var componentData = lc[i];
-                var generatedId = this.generatedComponentId(componentData);
-                EditorComponentFactory.COMPONENT_DATA[generatedId] = componentData;
+            for (var i = 0; i < lc.length; i++) {
+                var componentData       = lc[i];
+
+                //Check if its valid
+                if(!this.componentDataIsValid(componentData))
+                {
+                    continue;
+                }
+
+                var generatedId         = this.generatedComponentId(componentData);
+                var componentDataWithId = _.extend(componentData, 
+                                                    {componentId: generatedId});
+
+                EditorComponentFactory.COMPONENT_DATA.add(componentDataWithId);
             }
         },
         generatedComponentId: function(data)
         {
-            return data.category+"/"+data.name;
+            return data.category+'/'+data.name;
+        },
+        /**
+         * Validates if the supplied data is valid for use as component data
+         * @param  {POD object} data the data meant as the component data
+         * @return {boolean} true if valid
+         */
+        componentDataIsValid: function(data)
+        {
+            if(!('name' in data))
+            {
+                return false;
+            }
+            if(!('category' in data))
+            {
+                return false;
+            }
+            if(!('description' in data))
+            {
+                return false;
+            }
+            return true;
         }
     }
     return EditorComponentFactory;

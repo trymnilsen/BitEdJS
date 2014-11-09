@@ -3,8 +3,9 @@
 define([
   'underscore',
   'backbone',
+  'logic/editor/Editor',
   'models/editor/entity/EditorEntityModel'
-], function(_, Backbone, Entity){
+], function(_, Backbone, editor, Entity){
     var EditorComponentCollection = Backbone.Collection.extend({
         model: Entity
 

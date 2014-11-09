@@ -45,7 +45,7 @@ define([
              * Decides if the component should be executed or taken into account
              * @type {Boolean}
              */
-            active             : true,
+            isActive             : true,
             /**
              * makes the component mandatory(i.e not removable) once it has 
              * been added. As the entity has no logic itself this is useful
@@ -53,7 +53,13 @@ define([
              * entity properties
              * @type {Boolean}
              */
-            mandatory         : false
+            isMandatory         : false,
+            /**
+             * Marks wether or not the component is default. If this is set to
+             * true the component is appended to the 
+             * @type {Boolean}
+             */
+            isDefault           : false
         },  
 
         initialize: function(options) {
