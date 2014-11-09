@@ -491,6 +491,7 @@ html .modal-content {
   -moz-animation: scrolling-asset-load-bar 5s infinite;
   -ms-animation: scrolling-asset-load-bar 5s infinite;
   animation: scrolling-asset-load-bar 5s infinite;
+  animation-timing-function: linear;
 }
 #FileAssetViewContainer ul li div .fa-times {
   position: absolute;

@@ -40,7 +40,20 @@ define([
              * Any resources refenced by this component is named here
              * @type {Array}
              */
-            componentResources : []
+            componentResources : [],
+            /**
+             * Decides if the component should be executed or taken into account
+             * @type {Boolean}
+             */
+            active             : true,
+            /**
+             * makes the component mandatory(i.e not removable) once it has 
+             * been added. As the entity has no logic itself this is useful
+             * for indicating core entity logic like transformation and 
+             * entity properties
+             * @type {Boolean}
+             */
+            mandatory         : false
         },  
 
         initialize: function(options) {
