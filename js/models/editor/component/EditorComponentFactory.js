@@ -28,7 +28,9 @@ function (
         {
             if(componentId in EditorComponentFactory.COMPONENT_DATA)
             {
-                return new BaseComponent(EditorComponentFactory.COMPONENT_DATA[componentId]);
+                var componentData = EditorComponentFactory.COMPONENT_DATA[componentId];
+                var newComponent = new BaseComponent(componentData);
+                return newComponent;
             }
             else
             {

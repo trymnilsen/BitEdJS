@@ -24,6 +24,7 @@ TagsCollection) {
 
         initialize: function(options) {
             this.set('components', new ComponentCollection());
+
             //this.set('tags', new TagsCollection()); //Set the parameters reference
             console.log('Initialize::CreatedEntity {options}', options);
         }
