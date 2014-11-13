@@ -12,11 +12,12 @@ define([
     headerText : 'No Header Set',
     className  : 'full-space-wrapper',
     panelContent : 'empty',
+    template   : _.template(PanelContainerTemplate),
     render: function(){
     	var data = {
     		headerText : this.headerText,
     	};
-    	var compiledTemplate = _.template(PanelContainerTemplate,data);
+    	var compiledTemplate = this.template(data);
     	this.$el.html(compiledTemplate);
         if(typeof this.panelContent !== 'string')
         {

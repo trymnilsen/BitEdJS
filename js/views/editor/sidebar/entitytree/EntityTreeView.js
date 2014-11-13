@@ -42,8 +42,8 @@ emptyPromptTemplate
                 onCreateLi: function(node, $li) {
                     // Append a link to the jqtree-element div.
                     // The link has an url '#node-[id]' and a data property 'node-id'.
-                    var compiledTemplate = _.template(nodeItemTemplate,{name: node.name});
-                    $li.find('.jqtree-title').html(compiledTemplate)
+                    var compiledTemplate = _.template(nodeItemTemplate);
+                    $li.find('.jqtree-title').html(compiledTemplate({name: node.name}))
                         .find('.fa')
                         .on('click',function(evt) {
                             //Dont select if pressed buttons
@@ -63,10 +63,12 @@ emptyPromptTemplate
             //remove prompt
             $('.emptyPromptContainer',this.$el).html('');
             
+            var labelName = entity.get('name');
+
             this.jqTreeEl.tree(
                 'appendNode',
                 {
-                    label: entity.get('name'),
+                    label: labelName,
                     sceneNode: entity
                 }
             );

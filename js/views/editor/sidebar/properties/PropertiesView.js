@@ -6,6 +6,7 @@ define([
   'backbone',
   'eventor',
   'logic/editor/Editor',
+  'logic/editor/EditorConstants',
   'views/editor/sidebar/properties/tag/PropertiesTagView',
   'views/editor/sidebar/properties/components/PropertiesComponentView',
   'views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalView',
@@ -21,6 +22,7 @@ function($,
  Backbone,
  eventor,
  editor,
+ eConstants,
  TagView,
  ComponentView,
  ComponentModal,
@@ -32,7 +34,7 @@ function($,
  notificationTemplate
  ){
     var propertiesView = Backbone.View.extend({
-        viewConstants : editor.constants.propertiesView,
+        viewConstants : eConstants.propertiesView,
         id: 'editorPropertiesView',
         template: _.template(viewTemplate),
         tagView: {},
@@ -41,6 +43,7 @@ function($,
         activeNode: null,
         initialize: function()
         {
+            this.foo = editor;
             this.tagView = new TagView();
             this.componentsView = new ComponentView();
             //Create the add component modal
@@ -48,7 +51,7 @@ function($,
             this.appendComponentModal();
             //Create default node
             var entityFactory = new EntityFactory();
-            this.activeNode = entityFactory.createDummy();
+            this.activeNode = entityFactory.createDummy(this.foo);
             //Bind up events
             eventor.on('editor.entity.selected',_.bind(this.onSelectedEntityChanged,this));
             eventor.on('editor.entity.component.add',_.bind(this.addComponent,this));

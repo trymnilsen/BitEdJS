@@ -2,18 +2,20 @@
 
 define([
     'logic/editor/Editor',
+    'logic/editor/EditorConstants',
     'models/editor/entity/EditorEntityModel',
     'models/editor/component/EditorComponentFactory'
 ], 
 function (
     editor,
+    eConstants,
     EditorEntity,
     ComponentFactory
 ) {
 
     function EditorEntityModelFactory()
     {
-
+        this.compFactory = new ComponentFactory();
     }
 
 
@@ -22,7 +24,7 @@ function (
         createEntity: function(options)
         {
             //Get all default components
-            var defaultComponents = ComponentFactory.createComponentsWhere({
+            var defaultComponents = this.compFactory.createComponentsWhere({
                                         isDefault: true
                                     });
 
@@ -30,10 +32,9 @@ function (
             newEntity.get('components').add(defaultComponents);
             return newEntity;
         },
-        createDummy: function()
+        createDummy: function(test)
         {
-            var entityName = editor
-                            .constants
+            var entityName = eConstants
                             .propertiesView
                             .noItemSelectedString;
             return new EditorEntity({name:entityName});

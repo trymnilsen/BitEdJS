@@ -4,6 +4,7 @@ define([
     'underscore',
     'backbone',
     'models/editor/component/EditorComponent',
+    'collections/editor/component/EditorComponentCollection',
     //Component Definitions loaded 
     'models/editor/component/data/rendering/RenderSpriteComponent',
     'models/editor/component/data/editor/EntityIconComponent'
@@ -12,7 +13,8 @@ define([
 function (
     _,
     Backbone,
-    BaseComponent
+    BaseComponent,
+    ComponentDataCollection
 ) {
 
     function EditorComponentFactory()
@@ -21,7 +23,7 @@ function (
     }
 
     EditorComponentFactory.LOADEDCOMPONENTS = arguments;
-    EditorComponentFactory.COMPONENT_DATA = new Backbone.Collection();
+    EditorComponentFactory.COMPONENT_DATA = new ComponentDataCollection();
 
     EditorComponentFactory.prototype = {
         constructor: EditorComponentFactory,
@@ -30,13 +32,13 @@ function (
         {
 
             //Retrieves data for the components or undefined if no results
-            var data = _.findWhere(EditorComponentFactory.COMPONENT_DATA,{
+            var data = EditorComponentFactory.COMPONENT_DATA.where({
                                                         componentId: componentId
                         });
             //Check if a match was found for the component id
             if(data !== undefined)
             {
-                var newComponent = new BaseComponent(data);
+                var newComponent = new BaseComponent(data[0]);
                 return newComponent;
             }
             else
@@ -51,19 +53,19 @@ function (
             //No condition was given, return all
             if(condition === null)
             {
-                conditionResults = EditorComponentFactory.COMPONENT_DATA;
+                //Make sure to get array of collection
+                conditionResults = EditorComponentFactory.COMPONENT_DATA.models;
             }
             else
             {
-                conditionResults = _.findWhere(
-                            EditorComponentFactory.COMPONENT_DATA,
-                            condition
-                        );
+                conditionResults = EditorComponentFactory.COMPONENT_DATA.where(
+                                    condition
+                                );
             }
 
             if(conditionResults !== undefined)
             {
-                conditionResults.each(function(element,foo,bar){
+                _.each(conditionResults, function(element){
                         newComponents.push(this.createComponent(element.get('componentId')));
                 }, this);
             }
@@ -77,6 +79,10 @@ function (
         registerComponents: function()
         {
             var lc = EditorComponentFactory.LOADEDCOMPONENTS;
+            if(EditorComponentFactory.COMPONENT_DATA.length > 0)
+            {
+                return;
+            }
             for (var i = 0; i < lc.length; i++) {
                 var componentData       = lc[i];
 
@@ -89,8 +95,9 @@ function (
                 var generatedId         = this.generatedComponentId(componentData);
                 var componentDataWithId = _.extend(componentData, 
                                                     {componentId: generatedId});
+                var dataModel           = new BaseComponent(componentDataWithId);
 
-                EditorComponentFactory.COMPONENT_DATA.add(componentDataWithId);
+                EditorComponentFactory.COMPONENT_DATA.add(dataModel);
             }
         },
         generatedComponentId: function(data)

@@ -67,8 +67,11 @@ define([
             this.set('componentResources', []); //Clear the array reference
             this.set('parameters', []); //Clear the parameter reference
             //For each parameter add it
-            for (var i = 0; i < options.parameters.length; i++) {
-                this.addParameter(options.parameters[i]);
+            if('parameters' in options)
+            {
+                for (var i = 0; i < options.parameters.length; i++) {
+                    this.addParameter(options.parameters[i]);
+                }
             }
             console.log('Initialize::CreatedComponent {options}', options);
         },
