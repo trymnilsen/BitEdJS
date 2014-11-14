@@ -13,8 +13,7 @@ define([
 function (
     _,
     Backbone,
-    BaseComponent,
-    ComponentDataCollection
+    BaseComponent
 ) {
 
     function EditorComponentFactory()
@@ -23,7 +22,7 @@ function (
     }
 
     EditorComponentFactory.LOADEDCOMPONENTS = arguments;
-    EditorComponentFactory.COMPONENT_DATA = new ComponentDataCollection();
+    EditorComponentFactory.COMPONENT_DATA = [];
 
     EditorComponentFactory.prototype = {
         constructor: EditorComponentFactory,
@@ -32,13 +31,13 @@ function (
         {
 
             //Retrieves data for the components or undefined if no results
-            var data = EditorComponentFactory.COMPONENT_DATA.where({
+            var data = _.findWhere(EditorComponentFactory.COMPONENT_DATA,{
                                                         componentId: componentId
                         });
             //Check if a match was found for the component id
             if(data !== undefined)
             {
-                var newComponent = new BaseComponent(data[0]);
+                var newComponent = new BaseComponent(data);
                 return newComponent;
             }
             else
@@ -54,11 +53,11 @@ function (
             if(condition === null)
             {
                 //Make sure to get array of collection
-                conditionResults = EditorComponentFactory.COMPONENT_DATA.models;
+                conditionResults = EditorComponentFactory.COMPONENT_DATA;
             }
             else
             {
-                conditionResults = EditorComponentFactory.COMPONENT_DATA.where(
+                conditionResults = _.where(EditorComponentFactory.COMPONENT_DATA,
                                     condition
                                 );
             }
@@ -66,7 +65,7 @@ function (
             if(conditionResults !== undefined)
             {
                 _.each(conditionResults, function(element){
-                        newComponents.push(this.createComponent(element.get('componentId')));
+                        newComponents.push(this.createComponent(element.componentId));
                 }, this);
             }
 
@@ -95,9 +94,8 @@ function (
                 var generatedId         = this.generatedComponentId(componentData);
                 var componentDataWithId = _.extend(componentData, 
                                                     {componentId: generatedId});
-                var dataModel           = new BaseComponent(componentDataWithId);
 
-                EditorComponentFactory.COMPONENT_DATA.add(dataModel);
+                EditorComponentFactory.COMPONENT_DATA.push(componentDataWithId);
             }
         },
         generatedComponentId: function(data)
