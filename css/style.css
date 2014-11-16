@@ -715,7 +715,7 @@ html .modal-content {
   height: 100%;
   position: relative;
 }
-#editorPropertiesView .editor-properites-container .editor-properties-components i {
+#editorPropertiesView .editor-properites-container .editor-properties-components .empty-prompt-container i {
   position: absolute;
   top: 2px;
   width: 100%;
@@ -767,8 +767,7 @@ html .modal-content {
 .properties-components-container .properties-component-portlet {
   color: white;
 }
-.properties-components-container .properties-component-portlet-header {
-  padding: 0.2em 0.3em;
+.properties-component-portlet-header {
   border-bottom: 1px solid #1c1c1e;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -777,18 +776,50 @@ html .modal-content {
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+  position: relative;
+  background-color: #303030;
 }
-.properties-components-container .properties-component-portlet-header .collapse-icon {
+.properties-component-portlet-header span {
+  padding-left: 5px;
+  padding-top: 2px;
+  display: inline-block;
+}
+.properties-component-portlet-header i {
   width: 20px;
+  height: 20px;
+  padding: 3px;
+  vertical-align: top;
 }
-.properties-components-container .properties-component-portlet-content {
-  padding: 0.4em;
-  background-color: #1c1c1e;
+.properties-component-portlet-header .collapse-icon {
+  width: 20px;
+  background-color: #0db1c9;
 }
-.properties-components-container .portlet-placeholder {
+.properties-component-portlet-header .collapse-icon-open {
+  padding-left: 5px;
+  padding-top: 4px;
+}
+.properties-component-portlet-header .active-button {
+  background-color: #e17913;
+}
+.properties-component-portlet-header i:last-child {
+  padding-top: 3px;
+  text-align: center;
+  float: right;
+}
+.properties-component-portlet-header .remove-component-button {
+  background-color: #e6170d;
+}
+.properties-component-portlet-header .editor-component-button {
+  background-color: #0db1c9;
+}
+.properties-component-portlet-header .portlet-placeholder {
   border: 6px dotted black;
   margin: 0.5em;
   height: 50px;
+}
+.properties-component-portlet-content {
+  padding: 0.4em;
+  background-color: #1c1c1e;
 }
 .properties-add-modal .properties-add-component-modal-content-wrapper {
   display: table;
@@ -900,3 +931,4 @@ html .modal-content {
   height: calc(100% - 20px);
   width: 100%;
 }
+/* ---- ~ EDITOR STYLES ---- */

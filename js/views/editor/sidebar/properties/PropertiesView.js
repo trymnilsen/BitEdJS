@@ -68,7 +68,7 @@ function($,
             //Render and append them
             $('.properties-lower-tags',this.$el).html(this.tagView.render().el);
             $('.editor-properties-components',this.$el).prepend(this.componentsView.render().el);
-            $('.emptyPromptContainer',this.$el).html(notificationTemplate);
+            $('.empty-prompt-container',this.$el).html(notificationTemplate);
             //Check what is currently selected
             if(this.activeNode.get('name') === this.viewConstants.noItemSelectedString)
             {
@@ -89,7 +89,7 @@ function($,
          */
         renderOnEntitySelected: function()
         {
-            $('.emptyPromptContainer',this.$el).hide();
+            $('.empty-prompt-container',this.$el).hide();
             $('.editor-properties-add-remove',this.$el).addClass('editor-properties-add-remove-active');
         },
         /**
@@ -98,7 +98,7 @@ function($,
          */
         renderOnNoneSelected: function()
         {
-            $('.emptyPromptContainer',this.$el).show();
+            $('.empty-prompt-container',this.$el).show();
         },
         /**
          * checks if we have a selected entity and removes the "empty promt"
@@ -107,11 +107,11 @@ function($,
         {
             if(this.activeNode.name === this.viewConstants.noItemSelectedString)
             {
-                $('.emptyPromptContainer',this.$el).show();
+                $('.empty-prompt-container',this.$el).show();
             }
             else
             {
-                $('.emptyPromptContainer',this.$el).hide();
+                $('.empty-prompt-container',this.$el).hide();
                 $('.editor-properties-add-remove',this.$el).addClass('editor-properties-add-remove-active');
             }
         },

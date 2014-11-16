@@ -19,11 +19,12 @@ itemTemplate
         },
         render: function(component){
         	this.$el.html(this.template(component));
+            $('.properties-component-portlet-content',this.$el).hide();
             return this;
         },
         toggleHeader: function(){
             $('.properties-component-portlet-content',this.$el).toggle();
-        	$('.collapse-icon',this.$el).toggleClass('fa-chevron-right fa-chevron-down');
+        	$('.collapse-icon',this.$el).toggleClass('fa-chevron-right fa-chevron-down collapse-icon-open');
         }
     });
     return propComponentItemView;   
