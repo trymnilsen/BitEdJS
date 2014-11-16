@@ -40,8 +40,11 @@ function($,
             //first set out modal hdml
             this.$el.html(this.template());
             //Then handle our two subviews
-            $('.modal-body',this.$el).append(this.listView.render().$el);
-            $('.modal-body',this.$el).append(this.infoView.render().$el);
+            $('.properties-add-component-modal-content-wrapper',this.$el)
+                    .append(this.listView.render().$el);
+            $('.properties-add-component-modal-content-wrapper',this.$el)
+                    .append(this.infoView.render().$el);
+                    
             this.delegateEvents();
             return this;
         },

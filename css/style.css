@@ -7,6 +7,9 @@
 /* Editor palette */
 /* button styles*/
 /*General colors*/
+/**
+ * Properties
+ */
 body,
 html {
   height: 100%;
@@ -152,6 +155,9 @@ html .modal-content {
 /* Editor palette */
 /* button styles*/
 /*General colors*/
+/**
+ * Properties
+ */
 /*@sidebar-background-color : rgb(40, 45, 60);*/
 /*@sidebar-border-color : rgb(10, 11, 15);*/
 /*@sidebar-hover-color : rgb(63, 66, 103);*/
@@ -500,6 +506,7 @@ html .modal-content {
   padding: 4px;
   top: 0px;
   opacity: 0;
+  cursor: pointer;
   right: 32px;
   -webkit-transition: opacity 0.15s ease-in-out;
   -moz-transition: opacity 0.15s ease-in-out;
@@ -783,22 +790,61 @@ html .modal-content {
   margin: 0.5em;
   height: 50px;
 }
-.properties-add-modal .modal-content ul {
+.properties-add-modal .properties-add-component-modal-content-wrapper {
+  display: table;
+}
+.properties-add-modal .properties-add-component-modal-content-wrapper ul {
+  display: table-cell;
   list-style: none;
   padding: 0px;
   margin: 0px;
+  float: left;
+  width: 200px;
 }
-.properties-add-modal .modal-content ul li {
+.properties-add-modal .properties-add-component-modal-content-wrapper ul li {
   height: 20px;
 }
-.properties-add-modal .modal-content ul li:hover {
+.properties-add-modal .properties-add-component-modal-content-wrapper ul li:hover {
   background-color: #dcdcdc;
 }
-.properties-add-modal .modal-content ul li.selected-new-component {
+.properties-add-modal .properties-add-component-modal-content-wrapper ul li.selected-new-component {
   background-color: #36b89e;
 }
-.properties-add-modal .modal-content ul li.selected-new-component:hover {
+.properties-add-modal .properties-add-component-modal-content-wrapper ul li.selected-new-component:hover {
   background-color: #36b89e;
+}
+.properties-add-modal .properties-add-component-modal-content-wrapper .component-modal-info-container {
+  display: table-cell;
+  width: 100%;
+  vertical-align: top;
+}
+.properties-add-modal .properties-add-component-modal-content-wrapper .component-modal-info-container .component-modal-info-title {
+  margin-bottom: 10px;
+}
+.properties-add-modal .properties-add-component-modal-content-wrapper .component-modal-info-container .component-modal-info-title h1 {
+  margin: 0px;
+}
+.properties-add-modal .properties-add-component-modal-content-wrapper .component-modal-info-container .component-modal-info-title span {
+  color: #a0a0a0;
+}
+.properties-add-modal .properties-add-component-modal-content-wrapper .component-modal-info-params {
+  margin-top: 10px;
+}
+.properties-add-modal .properties-add-component-modal-content-wrapper .component-modal-info-params .component-modal-info-param-field {
+  margin-bottom: 10px;
+}
+.properties-add-modal .properties-add-component-modal-content-wrapper .component-modal-info-params .component-modal-info-param-field .component-modal-info-param-name {
+  font-size: 14px;
+  display: inline-block;
+}
+.properties-add-modal .properties-add-component-modal-content-wrapper .component-modal-info-params .component-modal-info-param-field .component-modal-info-param-type {
+  display: inline-block;
+  float: right;
+  color: #a0a0a0;
+  margin-right: 20px;
+}
+.properties-add-modal .properties-add-component-modal-content-wrapper .component-modal-info-params .component-modal-info-param-field .component-modal-info-param-desc {
+  display: block;
 }
 /*Navigation Styles */
 .editor-navbar {
@@ -853,4 +899,3 @@ html .modal-content {
   height: calc(100% - 20px);
   width: 100%;
 }
-/* ---- ~ EDITOR STYLES ---- */

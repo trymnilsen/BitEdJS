@@ -28,7 +28,12 @@ function($,
         render: function(data){
             var component = data === undefined ? 
                                             editor.components.at(0) : data;
-            this.$el.html(this.template(component));
+
+            var templateData = {
+                model : component,
+                undercoreProxy : _
+            };
+            this.$el.html(this.template(templateData));
             return this;
         },
         componentSelected: function(component)

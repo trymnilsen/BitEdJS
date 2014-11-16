@@ -1,13 +1,18 @@
 @import "css/darkColors.less";
 @import "css/mixins.less";
 
-.properties-add-modal .modal-content
+.properties-add-modal .properties-add-component-modal-content-wrapper
 {
+	@modal-add-list-width : 200px;
+	display: table;
 	ul
 	{
+		display: table-cell;
 		list-style: none;
 		padding: 0px;
 		margin: 0px;
+		float: left;
+		width: @modal-add-list-width;
 		li {
 			height: 20px;
 			&:hover
@@ -22,6 +27,46 @@
 			{
 				background-color: @editor-entity-color;
 			}
+		}
+	}
+	.component-modal-info-container
+	{
+		display: table-cell;
+		width: 100%;
+		vertical-align: top;
+
+		.component-modal-info-title 
+		{
+			margin-bottom: 10px;
+	
+			h1 {
+				margin: 0px;
+			}
+			span {
+				color: @smallHeaderColor;
+			}
+		}
+	}
+	.component-modal-info-params
+	{
+		margin-top: 10px;
+		.component-modal-info-param-field{
+			margin-bottom: 10px;
+
+			.component-modal-info-param-name{
+				font-size: 14px;
+				display: inline-block;
+			}
+			.component-modal-info-param-type{
+				display: inline-block;
+				float: right;
+				color: @smallHeaderColor;
+				margin-right: 20px;
+			}
+			.component-modal-info-param-desc{
+				display: block;
+			}
+
 		}
 	}
 }

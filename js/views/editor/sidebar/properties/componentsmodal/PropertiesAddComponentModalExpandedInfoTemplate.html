@@ -1,28 +1,34 @@
 <div class="component-modal-info-heading">
 	<img class="component-modal-info-icon"></img>
 	<div class="component-modal-info-title">
+		<h1>
+			<%= model.get('name') %>
+		</h1>
 		<span>
-		<%= get('name') %>
+			<%= model.get('category') %>
 		</span>
 	</div>
 </div>
 <div class="component-modal-info-description">
 	<span>
-		<%= get('description') %>
+		<%= model.get('description') %>
 	</span>
 </div>
 <div class="component-modal-info-params">
-  <% _.each(get('parameters'), function(param){ %>
-	<div class="component-modal-info-param-field">
-		<span class="component-modal-info-param-name">
-		<%= param.name %>
-		</span>
-		<span class="component-modal-info-param-type">
-		<%= param.type %>
-		</span>
-		<span class="component-modal-info-param-desc">
-		<%= param.description %>
-		</span>
-	</div>
-  <% }); %>
+	<% if(model.get('parameters').length>0) { %>
+		<h3>Parameters</h3>
+	  	<% undercoreProxy.each(model.get('parameters'), function(param){ %>
+			<div class="component-modal-info-param-field">
+				<span class="component-modal-info-param-name">
+				<%= param.name %>
+				</span>
+				<span class="component-modal-info-param-type">
+				<%= param.type %>
+				</span>
+				<span class="component-modal-info-param-desc">
+				<%= param.description %>
+				</span>
+			</div>
+	  	<% }); %>
+  	<% } %>
 </div>
