@@ -803,6 +803,7 @@ html .modal-content {
 }
 .properties-add-modal .properties-add-component-modal-content-wrapper ul li {
   height: 20px;
+  width: 180px;
 }
 .properties-add-modal .properties-add-component-modal-content-wrapper ul li:hover {
   background-color: #dcdcdc;
