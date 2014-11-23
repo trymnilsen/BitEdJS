@@ -4,11 +4,13 @@ define([
 'jquery',
 'underscore',
 'backbone',
+'views/editor/sidebar/properties/components/PropertiesComponentParameterList',
 'text!views/editor/sidebar/properties/components/PropertiesComponentItemTemplate.html'
 ], 
 function($,
 _, 
 Backbone,
+ParamList,
 itemTemplate
 ){
     var propComponentItemView = Backbone.View.extend({
@@ -20,6 +22,8 @@ itemTemplate
         render: function(component){
         	this.$el.html(this.template(component));
             $('.properties-component-portlet-content',this.$el).hide();
+            var params = new ParamList(component.parameters);
+            $('.properties-component-portlet-content',this.$el).append(params);
             return this;
         },
         toggleHeader: function(){

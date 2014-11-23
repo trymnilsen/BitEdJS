@@ -22,10 +22,21 @@ define([
         },
         render: function()
         {
+            this.$el.append('<div>This is a position</div>');
             return this;
         }
     });
-    ParameterPositionView.PROPERTIESVIEWTYPE = 
+    /**
+     * Defines if this parameter has dropp interactivity
+     * @static
+     * @type {Boolean}
+     */
+    ParameterPositionView.DROPPABLE = false;
+    /**
+     * The parameter types for this param view
+     * @type {String}
+     */
+    ParameterPositionView.PARAMVIEWTYPE = 
                       eConstants.components.parameters.types.vector2;
 
     return ParameterPositionView;

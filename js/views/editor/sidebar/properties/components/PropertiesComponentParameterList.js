@@ -4,6 +4,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'eventor',
   'logic/editor/EditorConstants',
   //Add The possible parameter views here
   'views/editor/sidebar/properties/components/views/ParameterAssetView',
@@ -11,7 +12,8 @@ define([
 ], function(
     $,
     _, 
-    Backbone, 
+    Backbone,
+    eventor,
     eConstants
     ){
 
@@ -29,13 +31,23 @@ define([
          * @type {Array}
          */
         parameters: [],
+        /**
+         * does the component have droppable params?
+         * @type {Boolean}
+         * @readOnly
+         */
+        canDrop   : false,
         initialize: function(options) {
 
             this.processLoadedParameterViews();
             this.parameters = options.parameters;
         },
         render: function() {
-            this.$el.app.append();
+            for (var i = 0; i < this.parameters.length; i++) {
+                //Create the param
+                var paramView = this.renderParameter(this.parameters[i]);
+                this.$el.append(paramView.el);
+            };
             return this;
         },
         renderParameter: function(parameter) {
@@ -44,16 +56,21 @@ define([
             {
                 return null;
             }
-
+            //If the param is droppable we enable highlighting of all of the
+            //component, when dragging starts
+            if(parameterViewConstructor.DROPPABLE)
+            {
+                this.canDrop = true;
+            }
             var parameterView = new parameterViewConstructor(parameter);
 
-            this.$el.append(parameterView.render().el);
+            return parameterView.render();
         },
         processLoadedParameterViews: function()
         {
             var lw = PropertiesComponentParameterList.LOADEDVIEWS;
             for (var i = 0; i < lw.length; i++) {
-                var type = lw[i].PROPERTIESVIEWTYPE;
+                var type = lw[i].PARAMVIEWTYPE;
                 if(type !== undefined)
                 {
                     this.viewTypes[type] = lw[i];
