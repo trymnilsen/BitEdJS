@@ -24,7 +24,7 @@ itemTemplate
         },
         toggleHeader: function(){
             $('.properties-component-portlet-content',this.$el).toggle();
-        	$('.collapse-icon',this.$el).toggleClass('fa-chevron-right fa-chevron-down collapse-icon-open');
+        	$('.collapse-icon',this.$el).toggleClass('fa-chevron-right fa-chevron-down collapse-icon-close');
         }
     });
     return propComponentItemView;   
