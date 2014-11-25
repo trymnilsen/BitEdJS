@@ -40,7 +40,7 @@ define([
         initialize: function(options) {
 
             this.processLoadedParameterViews();
-            this.parameters = options.parameters;
+            this.parameters = options;
         },
         render: function() {
             for (var i = 0; i < this.parameters.length; i++) {

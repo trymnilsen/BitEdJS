@@ -5,7 +5,8 @@ define([
   'underscore',
   'backbone',
   'text!views/editor/sidebar/fileassetview/FileAssetItemTemplate.html',
-  'bootstrapSweetAlert'
+  'bootstrapSweetAlert',
+  'jqueryui'
 ], function($, _, Backbone, ItemTemplate){
 
     var FileItemView = Backbone.View.extend({

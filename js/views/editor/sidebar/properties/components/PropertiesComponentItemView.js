@@ -22,8 +22,8 @@ itemTemplate
         render: function(component){
         	this.$el.html(this.template(component));
             $('.properties-component-portlet-content',this.$el).hide();
-            var params = new ParamList(component.parameters);
-            $('.properties-component-portlet-content',this.$el).append(params);
+            var params = new ParamList(component.get('parameters'));
+            $('.properties-component-portlet-content',this.$el).append(params.render().el);
             return this;
         },
         toggleHeader: function(){

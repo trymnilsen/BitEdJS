@@ -4,12 +4,14 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'eventor'
+  'eventor',
+  'logic/editor/EditorConstants'
 ], function(
     $, 
     _, 
     Backbone,
-    eventor
+    eventor,
+    eConstants
     ){
 
     var ParameterAssetView = Backbone.View.extend({
@@ -29,12 +31,12 @@ define([
      * @static
      * @type {Boolean}
      */
-    ParameterPositionView.DROPPABLE = true;
+    ParameterAssetView.DROPPABLE = true;
     /**
      * The parameter types for this param view
      * @type {String}
      */
-    ParameterPositionView.PARAMVIEWTYPE = 
+    ParameterAssetView.PARAMVIEWTYPE = 
                       eConstants.components.parameters.types.asset;
 
     return ParameterAssetView;
