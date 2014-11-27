@@ -19,7 +19,8 @@ require.config({
     'toastr'             : 'libs/toastr',
     'dropDownEnhanc'     : 'libs/dropdowns-enhancement',
     'backboneNestedModel': '../bower_components/backbone-nested-model/backbone-nested',
-    'bootstrapSweetAlert':'../bower_components/bootstrap-sweetalert/lib/sweet-alert.min'
+    'backboneToggleModel': '../bower_components/backbone.model.toggle/backbone.mode.toggle',
+    'bootstrapSweetAlert': '../bower_components/bootstrap-sweetalert/lib/sweet-alert.min'
 },
 
 shim : {

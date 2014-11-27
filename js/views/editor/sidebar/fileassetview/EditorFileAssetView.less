@@ -78,6 +78,9 @@
         {
             div
             {
+                /**
+                 * Set the size of the load percentage
+                 */
                 @loadProcentageWidth : 32px;
 
                 .keyframes(scrolling-asset-load-bar, {
@@ -147,15 +150,15 @@
                     cursor: pointer;
                     right: @loadProcentageWidth;
                     .transition(opacity .15s ease-in-out);
-                    &:hover
-                    {
-                        opacity: 1;
-                        background-color: @remove-color;
-                    }
                 }
                 .file-asset-extra-options
                 {
                     display: inline;
+                }
+                &:hover .fa-times
+                {
+                    opacity: 1;
+                    background-color: @remove-color;
                 }
 
             }

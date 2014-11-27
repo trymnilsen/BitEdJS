@@ -414,6 +414,9 @@ html .modal-content {
   display: block;
 }
 #FileAssetViewContainer ul li div {
+  /**
+                 * Set the size of the load percentage
+                 */
   position: relative;
 }
 @-webkit-keyframes scrolling-asset-load-bar {
@@ -514,12 +517,12 @@ html .modal-content {
   -o-transition: opacity 0.15s ease-in-out;
   transition: opacity 0.15s ease-in-out;
 }
-#FileAssetViewContainer ul li div .fa-times:hover {
-  opacity: 1;
-  background-color: #e6170d;
-}
 #FileAssetViewContainer ul li div .file-asset-extra-options {
   display: inline;
+}
+#FileAssetViewContainer ul li div:hover .fa-times {
+  opacity: 1;
+  background-color: #e6170d;
 }
 #FileAssetViewContainer ul li:hover {
   background-color: #303030;
@@ -769,12 +772,6 @@ html .modal-content {
 }
 .properties-component-portlet-header {
   border-bottom: 1px solid #1c1c1e;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   cursor: pointer;
   position: relative;
   background-color: #303030;
@@ -808,6 +805,7 @@ html .modal-content {
 }
 .properties-component-portlet-header .remove-component-button {
   background-color: #e6170d;
+  opacity: 0;
 }
 .properties-component-portlet-header .editor-component-button {
   background-color: #0db1c9;
@@ -816,6 +814,9 @@ html .modal-content {
   border: 6px dotted black;
   margin: 0.5em;
   height: 50px;
+}
+.properties-component-portlet-header:hover .remove-component-button {
+  opacity: 1;
 }
 .properties-component-portlet-content {
   padding: 0.4em;
@@ -931,4 +932,3 @@ html .modal-content {
   height: calc(100% - 20px);
   width: 100%;
 }
-/* ---- ~ EDITOR STYLES ---- */

@@ -9,6 +9,7 @@
   "private": true,
   "dependencies": {
     "bootstrap-sweetalert": "~0.4.2",
-    "backbone-nested-model": "~2.0.1"
+    "backbone-nested-model": "~2.0.1",
+    "backbone.model.toggle": "~0.1.0"
   }
 }

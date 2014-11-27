@@ -1,11 +1,17 @@
 <div class="properties-component-portlet-header">
-	<i class="fa fa-fx fa-chevron-right collapse-icon collapse-icon-close"></i>
-	<i class="fa fa-fx fa-eye active-button is-active"></i>
+	<% if(get('parameters').length > 0) { %>
+		<i class="fa fa-fx fa-chevron-right collapse-icon collapse-icon-close"></i>
+	<% } else { %>
+		<i class="fa fa-fx"></i>
+	<% } %>
+	<% if(get('category') !== 'Editor') { %>
+		<i class="fa fa-fx fa-eye active-button is-active"></i>
+	<% } else { %>
+		<i class="fa fa-fx fa-code editor-component-button-inactive"></i>
+	<% } %>
 	<span><%= get('name') %></span>
 	<% if(get('category') !== 'Editor') { %>
 		<i class="fa fa-fx fa-times remove-component-button"></i>
-	<% } else { %>
-		<i class="fa fa-fx fa-info editor-component-button"></i>
 	<% } %>
 </div>
 <div class="properties-component-portlet-content">
