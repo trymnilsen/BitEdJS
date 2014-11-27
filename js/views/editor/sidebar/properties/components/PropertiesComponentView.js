@@ -40,16 +40,16 @@ Itemview
             this.$el.html('');
         	for (var i = 0; i < this.components.length; i++) {
                 var comp = this.components.at(i);
-        		var itemView = new Itemview();
-        		this.$el.append(itemView.render(comp).el);
+        		var itemView = new Itemview(comp);
+        		this.$el.append(itemView.render().el);
         	}
             return this;
             
         },
         addOne: function(model, collection, options){
             console.log('On::AddOneComponent', model, collection, options);
-            var itemView = new Itemview();
-            this.$el.append(itemView.render(model).el);
+            var itemView = new Itemview(model);
+            this.$el.append(itemView.render().el);
         },
         addAll: function(){
             console.log('On:AddAll', arguments);
