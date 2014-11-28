@@ -36,7 +36,7 @@ itemTemplate
          */
         events : {
         	'click .properties-component-portlet-header' : 'toggleHeader',
-            'click .fa-eye'                              : 'toggleVisibility'
+            'click .active-component-button'             : 'toggleVisibility'
         },
         /**
          * Initializes this view
@@ -66,14 +66,20 @@ itemTemplate
         isActiveChanged: function()
         {
             console.log('Active Changed', arguments);
+            $('.active-component-button').toggleClass('component-button-selected');
+            $('.active-component-button').toggleClass('fa-eye');
+            $('.active-component-button').toggleClass('fa-ban');
         },
         /**
          * Toggles the content
          */
         toggleHeader: function()
         {
-            $('.properties-component-portlet-content',this.$el).toggle();
-        	$('.collapse-icon',this.$el).toggleClass('fa-chevron-right fa-chevron-down collapse-icon-close');
+            if(this.component.get('parameters').length>0)
+            {
+               $('.properties-component-portlet-content',this.$el).toggle();
+        	   $('.collapse-icon',this.$el).toggleClass('fa-chevron-right fa-chevron-down collapse-icon-close');
+            }
         },
         /**
          * Toggle the visibility

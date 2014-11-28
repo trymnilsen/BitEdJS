@@ -795,7 +795,7 @@ html .modal-content {
   padding-left: 5px;
   padding-top: 4px;
 }
-.properties-component-portlet-header .active-button {
+.properties-component-portlet-header .component-button-selected {
   background-color: #e17913;
 }
 .properties-component-portlet-header i:last-child {
@@ -809,6 +809,9 @@ html .modal-content {
 }
 .properties-component-portlet-header .editor-component-button {
   background-color: #0db1c9;
+}
+.properties-component-portlet-header .fa-ban.active-component-button {
+  color: #e6170d;
 }
 .properties-component-portlet-header .portlet-placeholder {
   border: 6px dotted black;

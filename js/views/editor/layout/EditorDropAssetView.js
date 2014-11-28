@@ -103,6 +103,7 @@ define([
                 case 'ok':
                     var puralFiles = result.count>1?'files':'file';
                     //was one or more files added?
+                    toastr.options.closeButton = true;
                     toastr.success('Added '+result.count+' '+puralFiles);
                     break;
                 case 'error':
