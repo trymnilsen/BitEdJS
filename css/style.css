@@ -321,6 +321,13 @@ html .modal-content {
   z-index: 50 !important;
   overflow: visible !important;
 }
+.ui-layout-east {
+  overflow: visible !important;
+  z-index: 49 !important;
+}
+.ui-layout-east .ui-layout-pane-north {
+  z-index: 49 !important;
+}
 /*File asset Styles*/
 .editor-panel-controls {
   height: 20px;
@@ -410,7 +417,16 @@ html .modal-content {
   padding: 0;
   list-style: none;
 }
+#FileAssetViewContainer ul .drag-asset-preview {
+  font-size: 32px;
+  background-color: #303030;
+  margin: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+}
 #FileAssetViewContainer ul li {
+  overflow: hidden;
   display: block;
 }
 #FileAssetViewContainer ul li div {
