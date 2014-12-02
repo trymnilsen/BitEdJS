@@ -38,7 +38,7 @@ function($,
         id: 'editorPropertiesView',
         template: _.template(viewTemplate),
         tagView: {},
-        componentsView: {},
+        componentsView: null,
         addComponentView: {},
         activeNode: null,
         initialize: function()
@@ -64,10 +64,16 @@ function($,
             //Give the current settings to our subviews
             //TODO SetSubviewsData method?
             this.tagView.tags = this.activeNode.get('tags');
+            if(this.componentsView != null)
+            {
+              this.componentsView.dispose(this);
+            }
+            this.componentsView = new ComponentView();
             this.componentsView.setViewComponents(this.activeNode.get('components'));
             //Render and append them
             $('.properties-lower-tags',this.$el).html(this.tagView.render().el);
-            $('.editor-properties-components',this.$el).prepend(this.componentsView.render().el);
+            this.appendChildView(this.componentsView,'.editor-properties-components');
+           // $('.editor-properties-components',this.$el).prepend(this.componentsView.render().el);
             $('.empty-prompt-container',this.$el).html(notificationTemplate);
             //Check what is currently selected
             if(this.activeNode.get('name') === this.viewConstants.noItemSelectedString)

@@ -4,12 +4,28 @@
 		"selected_items":
 		[
 			[
+				"compo",
+				"ComponentView"
+			],
+			[
+				"components",
+				"componentsView"
+			],
+			[
+				"com",
+				"ComponentView"
+			],
+			[
 				"para",
-				"parameters"
+				"parameterListView"
 			],
 			[
 				"param",
-				"parameterViewConstructor"
+				"parameterListView"
+			],
+			[
+				"pa",
+				"params"
 			],
 			[
 				"parame",
@@ -84,10 +100,6 @@
 				"componentId"
 			],
 			[
-				"compo",
-				"componentData"
-			],
-			[
 				"new",
 				"newComponent"
 			],
@@ -98,10 +110,6 @@
 			[
 				"Edi",
 				"EditorComponentFactory"
-			],
-			[
-				"com",
-				"componentId"
 			],
 			[
 				"Ed",
@@ -508,10 +516,34 @@
 	"buffers":
 	[
 		{
+			"file": "bower_components/backbone.model.toggle/backbone.model.toggle.js",
+			"settings":
+			{
+				"buffer_size": 413,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/libs/backbone-disposable-view.js",
+			"settings":
+			{
+				"buffer_size": 794,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 1612,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "js/views/editor/sidebar/properties/components/PropertiesComponentParameterList.js",
 			"settings":
 			{
-				"buffer_size": 2514,
+				"buffer_size": 4264,
 				"line_ending": "Windows"
 			}
 		},
@@ -519,30 +551,23 @@
 			"file": "js/views/editor/sidebar/properties/components/PropertiesComponentItemView.js",
 			"settings":
 			{
-				"buffer_size": 1164,
+				"buffer_size": 3088,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "js/views/editor/sidebar/properties/components/views/ParameterPositionView.js",
+			"file": "js/views/editor/sidebar/properties/PropertiesView.js",
 			"settings":
 			{
-				"buffer_size": 849,
+				"buffer_size": 6198,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "js/views/editor/sidebar/properties/components/views/ParameterAssetView.js",
+			"file": "js/views/editor/sidebar/properties/components/PropertiesComponentView.js",
 			"settings":
 			{
-				"buffer_size": 832,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"settings":
-			{
-				"buffer_size": 0,
+				"buffer_size": 1787,
 				"line_ending": "Windows"
 			}
 		},
@@ -639,26 +664,24 @@
 	"expanded_folders":
 	[
 		"/C/Users/Trym/code/BitEdJS/BitEdJS",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/css",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/collections",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/collections/editor",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/collections/editor/component",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/collections/editor/entity",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/libs",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/logic",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/logic/editor",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/logic/editor/runtimebridge",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/logic/editor/scenegraph",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/logic/runtime",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/component",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/component/data",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/component/data/editor",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/component/data/rendering",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/entity",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/services",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/app",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/navbar",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/navbar/menues",
@@ -671,36 +694,52 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagItemTemplate.html",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentList.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/css/bootstrap/component-animations.less",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/component/EditorComponentFactory.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.less",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentItemTemplate.html",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/views/ParameterAssetView.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalTemplate.html",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentParameterList.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/css/darkColors.less",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/logic/editor/scenegraph/SceneGraph.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/libs/backbone-disposable-view.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentItemView.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/fileassetview/FileAssetItemView.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/fileassetview/FileAssetItemTemplate.html",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/logic/editor/pipeline/AssetPipeline.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/css/appStyle.less",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/app.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/main.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/views/ParameterPositionView.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/bower_components/backbone.model.toggle/backbone.model.toggle.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/libs/backbone-min.js",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/layout/EditorBottomLayoutTemplate.html",
+		"/C/Users/Trym/code/BitEdJS/BitEdJS/bower.json",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/.gitignore",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/css/bootstrap/input-groups.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/index.html",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/logic/editor/scenegraph/SceneGraph.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/bitedjs.sublime-project",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/less.sublime-build",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/views/ParameterAssetView.js",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.js",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentItemTemplate.html",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/component/EditorComponentFactory.js",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentParameterList.js",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentView.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/runtime/renderarea/RenderAreaView.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/css/bootstrap/responsive-embed.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/router.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/componentproperties/ComponentPropertiesView.js",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/css/darkColors.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModal.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetView.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/entity/EditorEntityModel.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/PropertiesNoneSelectedTemplate.html",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/entity/EditorEntityModelFactory.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/component/data/editor/EntityIconComponent.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/component/EditorComponent.js",
 		"/C/Users/Trym/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/PropertiesViewTemplate.html",
 		"/C/Users/Trym/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/components/PropertiesComponentItemView.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeTemplate.html",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/entitytree/EntityTreeView.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/eventor.js",
@@ -708,7 +747,6 @@
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/css/bootstrap/mixins/responsive-visibility.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/css/bootstrap/modals.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/app/menu/AppMenuOverlayView.js",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/main.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetListTemplate.html",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetList.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetView.js",
@@ -716,11 +754,8 @@
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/templates/projects/projectsTemplate.html",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/project/ProjectModel.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagViewModal.html",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentModalTemplate.html",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagItemTemplate.html",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/css/bootstrap/mixins/text-emphasis.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/collections/editor/entity/EditorEntitySceneGraphCollection.js",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/css/bootstrap/component-animations.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/layout/panelcontainer/EditorPanelContainerView.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/layout/EditorRightLayoutTemplate.html",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/collections/editor/component/EditorComponentDataCollection.js",
@@ -734,12 +769,10 @@
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/logic/editor/components/ComponentResolver.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/models/editor/assets/EditorFileAssetModel.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/collections/editor/assets/EditorFileAssetsCollection.js",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/fileassetview/FileAssetItemView.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/app/user/navbar/AppUserNavbarView.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/app/user/navbar/AppUserNavbarViewTemplate.html",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/app/user/navbar/AppUserNavbarView.less",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/layout/EditorLayoutView.less",
-		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentList.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/sidebar/properties/componentsmodal/PropertiesAddComponentListItemTemplate.html",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/logic/editor/components/ComponentBank.js",
 		"/C/Users/Trym/code/BitEdJS/BitEdJS/js/views/editor/layout/EditorLayoutView.js",
@@ -788,21 +821,11 @@
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/logic/editor/scenegraph/SceneGraph.js",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagView.js",
 		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/PropertiesView.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagViewTemplate.html",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/libs/bootstrap-monkey-modal.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap.css",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/darkColors.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/bootstrap/type.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/css/appStyle.less",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/FileAssetItemView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/fileassetview/EditorFileAssetView.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/models/editor/assets/EditorFileAssetModel.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/collections/editor/assets/EditorFileAssetsCollection.js",
-		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/layout/EditorDropAssetView.js"
+		"/C/Users/Skynet/Documents/GitHub/BitEdJS/js/views/editor/sidebar/properties/tag/PropertiesTagViewTemplate.html"
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -818,6 +841,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"intialize",
+			"componentSelected",
 			"parameterView",
 			"parameterViewConstructor",
 			"category",
@@ -897,120 +922,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "js/views/editor/sidebar/properties/components/PropertiesComponentParameterList.js",
+					"file": "bower_components/backbone.model.toggle/backbone.model.toggle.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2514,
+						"buffer_size": 413,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2050,
-								2050
+								413,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 60.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/views/editor/sidebar/properties/components/PropertiesComponentItemView.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1164,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1033,
-								1033
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 16.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/views/editor/sidebar/properties/components/views/ParameterPositionView.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 849,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								438,
-								352
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "js/views/editor/sidebar/properties/components/views/ParameterAssetView.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 832,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								139,
-								139
-							],
-							[
-								349,
-								349
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1020,31 +949,181 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 1,
+					"file": "js/libs/backbone-disposable-view.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 794,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								763,
+								763
 							]
 						],
 						"settings":
 						{
-							"default_dir": "C:\\Users\\Trym\\code\\BitEdJS\\BitEdJS\\js\\views\\editor\\sidebar\\properties\\components\\views",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1612,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 14.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/views/editor/sidebar/properties/components/PropertiesComponentParameterList.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4264,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1426,
+								1426
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1163.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/views/editor/sidebar/properties/components/PropertiesComponentItemView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3088,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1949,
+								1964
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 737.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/views/editor/sidebar/properties/PropertiesView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6198,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2300,
+								2300
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1020.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/views/editor/sidebar/properties/components/PropertiesComponentView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1787,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1616,
+								1631
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 460.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1054,7 +1133,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "js/models/editor/component/data/rendering/RenderSpriteComponent.js",
 					"semi_transient": false,
 					"settings":
@@ -1079,7 +1158,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1113,7 +1192,7 @@
 		"cols":
 		[
 			0.0,
-			0.571327274581,
+			0.643088071923,
 			1.0
 		],
 		"rows":
@@ -1138,6 +1217,38 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"propcomview",
+				"js\\views\\editor\\sidebar\\properties\\components\\PropertiesComponentView.js"
+			],
+			[
+				"properite",
+				"js\\views\\editor\\sidebar\\properties\\PropertiesView.js"
+			],
+			[
+				"componentli",
+				"js\\views\\editor\\sidebar\\properties\\componentsmodal\\PropertiesAddComponentList.js"
+			],
+			[
+				"compitem",
+				"js\\views\\editor\\sidebar\\properties\\components\\PropertiesComponentItemView.js"
+			],
+			[
+				"paramlist",
+				"js\\views\\editor\\sidebar\\properties\\components\\PropertiesComponentParameterList.js"
+			],
+			[
+				"scene",
+				"js\\logic\\editor\\scenegraph\\SceneGraph.js"
+			],
+			[
+				"componentitem",
+				"js\\views\\editor\\sidebar\\properties\\components\\PropertiesComponentItemView.js"
+			],
+			[
+				"compview",
+				"js\\views\\editor\\sidebar\\properties\\components\\PropertiesComponentView.js"
+			],
 			[
 				"ignore",
 				".gitignore"
@@ -1617,38 +1728,6 @@
 			[
 				"editorfilea",
 				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetViewTemplate.html"
-			],
-			[
-				"projectmo",
-				"js\\models\\project\\ProjectModel.js"
-			],
-			[
-				"project",
-				"templates\\projects\\projectsListTemplate.html"
-			],
-			[
-				"prjectste",
-				"templates\\projects\\projectsTemplate.html"
-			],
-			[
-				"editorfile",
-				"js\\collections\\editor\\assets\\EditorFileAssetsCollection.js"
-			],
-			[
-				"editorasstem",
-				"js\\views\\editor\\sidebar\\fileassetview\\EditorFileAssetViewTemplate.html"
-			],
-			[
-				"projectslistview",
-				"js\\views\\projects\\ProjectsListView.js"
-			],
-			[
-				"projectsv",
-				"js\\views\\projects\\ProjectsView.js"
-			],
-			[
-				"appsty",
-				"css\\appStyle.less"
 			]
 		],
 		"width": 0.0

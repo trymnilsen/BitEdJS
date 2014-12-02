@@ -6,7 +6,8 @@ define([
 'backbone',
 'views/editor/sidebar/properties/components/PropertiesComponentParameterList',
 'text!views/editor/sidebar/properties/components/PropertiesComponentItemTemplate.html',
-'backboneToggleModel'
+'backboneToggleModel',
+'backbone-dispose'
 ], 
 function($,
 _, 
@@ -31,6 +32,11 @@ itemTemplate
          */
         component: null, 
         /**
+         * reference to param list view
+         * @type {Object}
+         */
+        parameterListView: null,
+        /**
          * The delegated events for this view
          * @type {Object}
          */
@@ -42,11 +48,10 @@ itemTemplate
          * Initializes this view
          * @param  {Object} component The component model for this view
          */
-        initialize: function(component)
-        {
-            this.component = component;
-            this.component.on('change:isActive',_.bind(this.isActiveChanged,this));
-        },
+         initialize: function(comp)
+         {
+            this.component = comp;
+         },
         /**
          * Render this view
          * @param  {Object} define a component to render
@@ -56,8 +61,12 @@ itemTemplate
         {
         	this.$el.html(this.template(this.component));
             $('.properties-component-portlet-content',this.$el).hide();
-            var params = new ParamList(this.component.get('parameters'));
-            $('.properties-component-portlet-content',this.$el).append(params.render().el);
+
+            this.component.on('change:isActive',_.bind(this.isActiveChanged,this));
+
+            this.parameterListView = new ParamList(this.component.get('parameters'));
+            this.appendChildView(this.parameterListView,'.properties-component-portlet-content');
+
             return this;
         },
         /**

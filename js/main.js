@@ -9,6 +9,7 @@ require.config({
   paths: {
     'jquery'             : 'libs/jquery-min',
     'underscore'         : 'libs/underscore-min',
+    'backbone-dispose'   : 'libs/backbone-disposable-view',
     'backbone'           : 'libs/backbone-min',
     'templates'          : '../templates', 
     'jquery.layout'      : 'libs/jquery.layout-latest',

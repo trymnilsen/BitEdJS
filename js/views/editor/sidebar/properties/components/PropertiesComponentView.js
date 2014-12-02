@@ -49,7 +49,7 @@ Itemview
         addOne: function(model, collection, options){
             console.log('On::AddOneComponent', model, collection, options);
             var itemView = new Itemview(model);
-            this.$el.append(itemView.render().el);
+            this.appendChildView(itemView);
         },
         addAll: function(){
             console.log('On:AddAll', arguments);

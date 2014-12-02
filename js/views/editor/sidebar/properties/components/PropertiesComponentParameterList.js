@@ -41,11 +41,10 @@ define([
          * Called as constructor, initalizes the view
          * @param  {Object} options the parameteres for this view
          */
-        initialize: function(options) {
+        initialize: function(params) {
 
             this.processLoadedParameterViews();
-            this.parameters = options;
-
+            this.parameters = params;
             this.listenTo(eventor, 'editor.asset.drag.start', this.highlightDropZone);
             eventor.on('editor.asset.drag.stop',
                                     _.bind(this.unHighlightDropZone,this));
@@ -55,6 +54,7 @@ define([
          * @return {[type]} [description]
          */
         render: function() {
+
             for (var i = 0; i < this.parameters.length; i++) {
                 //Create the param
                 var paramView = this.renderParameter(this.parameters[i]);
